@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "clipped-overflow-container",
+        "value": "*",
+        "files": [
+          "Proyectos Claude/Nano_Pizza/index.html"
+        ],
+        "createdAt": "2026-10-21T10:11:05.293Z",
+        "reason": "Claude: overflow:hidden on .hero (clips decorative fire glow) and .map (rounds iframe corners) is intentional; no tooltips/popovers inside"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "Proyectos Claude/Nano_Pizza/index.html"
+        ],
+        "createdAt": "2026-10-21T10:54:00.741Z",
+        "reason": "Claude: sub-1.3 line-heights only on display headings (Bodoni 40-130px) and single-line wordmarks; body text is 1.6"
+      }
+    ]
+  }
+}

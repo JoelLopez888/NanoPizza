@@ -1,0 +1,4 @@
+# Caché de sesión de la herramienta de diseño
+.impeccable/hook.cache.json
+# Temporal de scripts/prerender.py
+_prerender_tmp.html
