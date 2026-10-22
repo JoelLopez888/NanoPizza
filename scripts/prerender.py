@@ -1,5 +1,5 @@
 """Escribe en index.html el contenido que genera el JavaScript (carta, especialidades,
-pizzas ilustradas y horario) para que la página se lea sin JavaScript y Google
+pizzas ilustradas, créditos de fotos y horario) para que la página se lea sin JavaScript y Google
 encuentre los platos en el HTML.
 
 Uso (desde la carpeta del proyecto):  python scripts/prerender.py
@@ -18,7 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PAGE = ROOT / "index.html"
 TMP = ROOT / "_prerender_tmp.html"
-IDS = ["formas-list", "tabs", "panels", "hours", "foot-hours"]
+IDS = ["formas-list", "tabs", "panels", "carta-credit", "hours", "foot-hours"]
 
 BROWSERS = [
     r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
