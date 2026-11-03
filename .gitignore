@@ -2,3 +2,5 @@
 .impeccable/hook.cache.json
 # Temporal de scripts/prerender.py
 _prerender_tmp.html
+# Temporales de scripts/build.py
+_prerender_*.html
