@@ -123,7 +123,7 @@ button{cursor:pointer;touch-action:manipulation}
 
 /* ---------- Hero: parallax por capas (fondo, titular, pizza, degradado, texto) ----------
    Una sola variable --p (0 al cargar, 1 cuando el hero ha salido) mueve todas las capas. */
-.hero{position:relative;z-index:2;height:max(100svh,720px);overflow:hidden;isolation:isolate;--p:0;display:flex;flex-direction:column;align-items:center;padding-top:clamp(96px,13vh,132px)}
+.hero{position:relative;z-index:2;height:max(100svh,640px);overflow:hidden;isolation:isolate;--p:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:var(--nav-h) 0 clamp(40px,8vh,96px)}
 .px{position:absolute;inset:0;pointer-events:none}
 .px-bg{z-index:1;transform:translate3d(0,calc(var(--p) * 28%),0) scale(calc(1.06 - var(--p) * .04));transform-origin:50% 30%}
 .px-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
@@ -137,32 +137,24 @@ button{cursor:pointer;touch-action:manipulation}
 .wm-pizza{display:flex;align-items:center;gap:18px;margin-top:6px;font-size:clamp(14px,1.5vw,20px);font-weight:300;letter-spacing:.9em;color:var(--cream-dim);padding-left:.9em}
 .wm-pizza::before,.wm-pizza::after{content:"";height:1px;flex:0 0 clamp(32px,5vw,72px);background:var(--gold);opacity:.6}
 .wm-pizza::after{margin-left:-.9em}
-.px-front{position:relative;inset:auto;z-index:4;display:flex;justify-content:center;margin-top:clamp(20px,4vh,44px);transform:translate3d(0,calc(var(--p) * -42%),0) rotate(calc(var(--p) * -8deg))}
-.px-front img{width:min(52vw,760px);height:auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,.6))}
 .px-fade{z-index:5;top:auto;height:30%;background:linear-gradient(transparent,rgba(20,16,13,.72) 45%,var(--char))}
 .hero-tail{display:flex;flex-direction:column;align-items:center}
-.hero-lead{font-family:var(--ff-display);font-weight:400;font-size:clamp(24px,2.4vw,34px);line-height:1.15;margin:clamp(20px,3vh,32px) 0 0}
+.hero-lead{text-wrap:balance;font-family:var(--ff-display);font-weight:400;font-size:clamp(24px,2.4vw,34px);line-height:1.15;margin:clamp(20px,3vh,32px) 0 0}
 .hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
 .hero-ctas .btn{white-space:nowrap}
 .status{display:inline-flex;align-items:center;gap:10px;margin-top:14px;font-size:15px;color:var(--cream-dim)}
 .status i{width:8px;height:8px;border-radius:50%;background:var(--cream-dim);flex:none}
 .status.is-open i{background:var(--ok)}
-@media (max-width:1024px){
-  .px-front img{width:min(76vw,640px)}
-}
 @media (max-width:640px){
-  .hero{height:max(100svh,680px)}
+  .hero{height:max(100svh,600px)}
   .wm-nano{font-size:24vw}
   .wm-pizza{letter-spacing:.6em;gap:10px}
   .hero-ctas .btn{padding:0 18px}
-  .px-front img{width:118vw;max-width:none}
 }
 
-/* Entrada al cargar: letras de NANO, foto del horno y pizza que sube */
+/* Entrada al cargar: letras de NANO y foto del horno */
 .anim .px-bg img{animation:bgIn 1.6s var(--ease-out) both}
-.anim .px-front img{animation:pizzaIn 1.3s var(--ease-out) .35s both}
 @keyframes bgIn{from{opacity:0;transform:scale(1.12)}to{opacity:1;transform:none}}
-@keyframes pizzaIn{from{opacity:0;transform:translateY(22%) rotate(10deg)}to{opacity:1;transform:none}}
 .anim .wm-nano .ch span{animation:rise .9s var(--ease-out) calc(.2s + var(--i)*80ms) both}
 .anim .wm-pizza,.anim .hero-lead,.anim .hero-ctas,.anim .status{animation:fadeIn .8s var(--ease-out) both}
 .anim .wm-pizza{animation-delay:.6s}
