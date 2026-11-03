@@ -70,7 +70,8 @@ def main():
     TMP.write_text(empty.replace("</body>", EXTRACT + "</body>"), encoding="utf-8")
     try:
         dom = subprocess.run(
-            [browser(), "--headless=new", "--disable-gpu", "--virtual-time-budget=4000",
+            # idioma fijo: la página elige el del navegador y el HTML base tiene que salir en castellano
+            [browser(), "--headless=new", "--disable-gpu", "--virtual-time-budget=4000", "--lang=es-ES", "--accept-lang=es-ES",
              "--window-size=1440,900", "--dump-dom", TMP.as_uri()],
             capture_output=True, text=True, encoding="utf-8", timeout=120).stdout
     finally:
