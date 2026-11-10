@@ -8,6 +8,7 @@ const STR = {
   es:{skip:"Saltar al contenido",nav_formas:"Especialidades",nav_menu:"Carta",nav_book:"Reservar",nav_find:"Dónde estamos",call:"Llamar",call_aria:"Llamar al 647 306 534",order:"Pedido",menu:"Menú",
     hero_lead:"Pizza de horno de leña en Reus.",hero_sub:"Masa hecha cada día, veinte pizzas en carta y cuatro especialidades de la casa. Ven a comer, reserva mesa o pídela para recoger.",
     cta_order:"Pedir para recoger",cta_book:"Reservar mesa",
+    hero_t1:"Pizza de leña",hero_t2:"para",hero_w0:"comer aquí",hero_words:"comer aquí|llevar|compartir",hero_sr:"comer aquí, para llevar o para compartir",casa_a:"Del ",casa_m:"fuego",casa_b:" a la mesa",big_t:"La carta, en tu móvil",big_p:"Elige, añádelo al pedido y envíanoslo por WhatsApp. Lo recoges en C/ Josep Carner 4.",st_a:"Lo que sale del ",st_m:"horno",st_b:"",st_pizzas:"pizzas en carta",st_formas:"especialidades de la casa",st_horno:"horno de leña",formas_a:"Más allá de la pizza ",formas_m:"redonda",formas_b:"",rv_a:"Lo que dicen en ",rv_m:"Reus",rv_b:"",find_a:"Dónde ",find_m:"estamos",find_b:"",hg_a:"¿Te ha entrado ",hg_m:"hambre",hg_b:"?",
     open_until:"Abierto ahora, hasta las {t}",closed_next:"Ahora cerrado. Abrimos {w} a las {t}",today:"hoy",tomorrow:"mañana",on_day:"el {d}",
     formas_t:"Más allá de la pizza redonda",formas_sub:"La misma masa, en cuatro formas de la casa.",
     menu_t:"La carta",menu_sub:"Añade lo que te apetezca y envíanos el pedido por WhatsApp. Lo tendrás listo para recoger en C/ Josep Carner 4.",
@@ -35,6 +36,7 @@ const STR = {
   ca:{skip:"Salta al contingut",nav_formas:"Especialitats",nav_menu:"Carta",nav_book:"Reservar",nav_find:"On som",call:"Trucar",call_aria:"Truca al 647 306 534",order:"Comanda",menu:"Menú",
     hero_lead:"Pizza al forn de llenya a Reus.",hero_sub:"Massa feta cada dia, vint pizzes a la carta i quatre especialitats de la casa. Vine a menjar, reserva taula o demana-la per emportar.",
     cta_order:"Demanar per emportar",cta_book:"Reservar taula",
+    hero_t1:"Pizza de llenya",hero_t2:"per",hero_w0:"menjar aquí",hero_words:"menjar aquí|emportar|compartir",hero_sr:"menjar aquí, per emportar o per compartir",casa_a:"Del ",casa_m:"foc",casa_b:" a la taula",big_t:"La carta, al teu mòbil",big_p:"Tria, afegeix-ho a la comanda i envia-la per WhatsApp. La recolliràs al C/ Josep Carner 4.",st_a:"El que surt del ",st_m:"forn",st_b:"",st_pizzas:"pizzes a la carta",st_formas:"especialitats de la casa",st_horno:"forn de llenya",formas_a:"Més enllà de la pizza ",formas_m:"rodona",formas_b:"",rv_a:"El que diuen a ",rv_m:"Reus",rv_b:"",find_a:"On ",find_m:"som",find_b:"",hg_a:"T'ha vingut ",hg_m:"gana",hg_b:"?",
     open_until:"Obert ara, fins a les {t}",closed_next:"Ara tancat. Obrim {w} a les {t}",today:"avui",tomorrow:"demà",on_day:"{d}",
     formas_t:"Més enllà de la pizza rodona",formas_sub:"La mateixa massa, en quatre formes de la casa.",
     menu_t:"La carta",menu_sub:"Afegeix el que et vingui de gust i envia'ns la comanda per WhatsApp. La tindràs a punt per recollir al C/ Josep Carner 4.",
@@ -62,6 +64,7 @@ const STR = {
   en:{skip:"Skip to content",nav_formas:"Specialities",nav_menu:"Menu",nav_book:"Book",nav_find:"Find us",call:"Call",call_aria:"Call 647 306 534",order:"Order",menu:"Menu",
     hero_lead:"Wood-fired pizza in Reus.",hero_sub:"Dough made every day, twenty pizzas on the menu and four house specialities. Eat in, book a table or order for pickup.",
     cta_order:"Order for pickup",cta_book:"Book a table",
+    hero_t1:"Wood-fired pizza",hero_t2:"to",hero_w0:"eat in",hero_words:"eat in|take away|share",hero_sr:"eat in, take away or share",casa_a:"From the ",casa_m:"fire",casa_b:" to your table",big_t:"The menu, on your phone",big_p:"Pick your food, add it to your order and send it to us on WhatsApp. Collect it at C/ Josep Carner 4.",st_a:"Fresh out of the ",st_m:"oven",st_b:"",st_pizzas:"pizzas on the menu",st_formas:"house specialities",st_horno:"wood-fired oven",formas_a:"Beyond the ",formas_m:"round",formas_b:" pizza",rv_a:"What ",rv_m:"Reus",rv_b:" is saying",find_a:"Find ",find_m:"us",find_b:"",hg_a:"Feeling ",hg_m:"hungry",hg_b:"?",
     open_until:"Open now until {t}",closed_next:"Closed now. We open {w} at {t}",today:"today",tomorrow:"tomorrow",on_day:"on {d}",
     formas_t:"Beyond the round pizza",formas_sub:"The same dough, baked into four house shapes.",
     menu_t:"The menu",menu_sub:"Add what you fancy and send us the order on WhatsApp. It'll be ready to pick up at C/ Josep Carner 4.",
@@ -755,6 +758,7 @@ function applyLang(l, initial){
   lang = l;
   document.documentElement.lang = l;
   $$("[data-i18n]").forEach(el => el.textContent = t(el.dataset.i18n));
+  cycleReset?.();
   $$("[data-i18n-ph]").forEach(el => el.placeholder = t(el.dataset.i18nPh));
   $$("[data-i18n-aria]").forEach(el => el.setAttribute("aria-label", t(el.dataset.i18nAria)));
   $$("[data-i18n-title]").forEach(el => el.title = t(el.dataset.i18nTitle));
@@ -865,7 +869,51 @@ document.addEventListener("click", e => {
 });
 
 
-/* Nav background + mobile bar + parallax del hero */
+
+/* ================= Portada: palabra que cambia, revelado al hacer scroll y cifras ================= */
+var cycleReset = null;
+(function homeMotion(){
+  if (PAGE !== "inicio") return;
+  const mark = $(".cycle"), word = $(".cycle-w");
+  if (mark && word){
+    let i = 0, timer = 0;
+    const fit = () => { mark.style.width = ""; mark.style.width = mark.getBoundingClientRect().width + "px"; };
+    const words = () => t("hero_words").split("|");
+    const next = () => {
+      i = (i + 1) % words().length;
+      word.classList.remove("in"); word.classList.add("out");
+      setTimeout(() => {
+        word.textContent = words()[i];
+        mark.style.width = ""; const w = mark.getBoundingClientRect().width;
+        word.classList.remove("out"); void word.offsetWidth; word.classList.add("in");
+        mark.style.width = w + "px";
+      }, 320);
+    };
+    cycleReset = () => { i = 0; word.textContent = words()[0]; word.classList.remove("out","in"); fit(); };
+    // Sin movimiento reducido: cambia cada 2,6 s, y se para con la pestaña oculta
+    if (!REDUCED){
+      const start = () => { clearInterval(timer); timer = setInterval(next, 2600); };
+      document.addEventListener("visibilitychange", () => document.hidden ? clearInterval(timer) : start());
+      document.fonts?.ready.then(fit);
+      start();
+    }
+  }
+  if (REDUCED || !("IntersectionObserver" in window)) return;
+  document.documentElement.classList.add("reveal-on");
+  const count = (el) => {
+    const to = +el.dataset.countTo, t0 = performance.now(), d = 900;
+    const step = (now) => { const k = Math.min(1, (now - t0) / d); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  };
+  const io = new IntersectionObserver((entries) => entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add("in"); io.unobserve(e.target);
+    e.target.querySelectorAll("[data-count-to]").forEach(count);
+  }), {rootMargin:"0px 0px -12% 0px"});
+  $$("[data-reveal], .big-card").forEach(el => io.observe(el));
+})();
+
+/* Nav background + mobile bar */
 const nav = $("#nav"), bar = $("#bar");
 let ticking = false;
 function onScroll(){

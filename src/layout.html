@@ -6,7 +6,7 @@
 {{head_extra}}<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{title}}</title>
 <meta name="description" content="{{description}}">
-{{robots}}<meta name="theme-color" content="#F2EADB">
+{{robots}}<meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="restaurant">
@@ -29,24 +29,27 @@
 <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
 
 <header class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="index.html" aria-label="Nano Pizza" translate="no">
-      <img class="brand-mark" src="Imagenes/marca-nano-96.webp" srcset="Imagenes/marca-nano-96.webp 1x, Imagenes/marca-nano-144.webp 1.5x, Imagenes/marca-nano-320.webp 3x" width="48" height="48" alt="">
-      <span>NANO PIZZA</span>
-    </a>
-    <nav aria-label="Principal" data-i18n-aria="aria_nav">
-      <ul class="nav-links">
-        <li><a href="index.html#formas" data-i18n="nav_formas">Especialidades</a></li>
-        <li><a href="carta.html" data-nav="carta" data-i18n="nav_menu">Carta</a></li>
-        <li><a href="reservar.html" data-nav="reservar" data-i18n="nav_book">Reservar</a></li>
-        <li><a href="index.html#donde" data-i18n="nav_find">Dónde estamos</a></li>
-      </ul>
-    </nav>
-    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="aria_lang">
+  <div class="nav-in">
+    <div class="lang pill" role="group" aria-label="Idioma" data-i18n-aria="aria_lang">
       <button type="button" data-lang="es" aria-pressed="true">ES</button>
       <button type="button" data-lang="ca" aria-pressed="false">CA</button>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
     </div>
+    <div class="nav-pill pill">
+      <a class="brand" href="index.html" aria-label="Nano Pizza" translate="no">
+        <img class="brand-mark" src="Imagenes/marca-nano-96.webp" srcset="Imagenes/marca-nano-96.webp 1x, Imagenes/marca-nano-144.webp 1.5x, Imagenes/marca-nano-320.webp 3x" width="40" height="40" alt="">
+        <span>NANO</span>
+      </a>
+      <nav aria-label="Principal" data-i18n-aria="aria_nav">
+        <ul class="nav-links">
+          <li><a href="index.html#formas" data-i18n="nav_formas">Especialidades</a></li>
+          <li><a href="carta.html" data-nav="carta" data-i18n="nav_menu">Carta</a></li>
+          <li><a href="reservar.html" data-nav="reservar" data-i18n="nav_book">Reservar</a></li>
+          <li><a href="index.html#donde" data-i18n="nav_find">Dónde estamos</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-end pill">
     <a class="icon-btn call-btn" href="tel:+34647306534">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="#i-phone"/></svg>
       <span>647 306 534</span>
@@ -60,6 +63,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
       <span class="sr-only" data-i18n="menu">Menú</span>
     </button>
+    </div>
   </div>
 </header>
 <div class="mobile-menu" id="mobile-menu">
@@ -123,7 +127,8 @@
         </div>
       </nav>
     </div>
-{{credit}}    <div class="foot-meta">
+{{credit}}    <p class="foot-giant" aria-hidden="true" translate="no">NANO</p>
+    <div class="foot-meta">
       <p>© 2026 Nano Pizza</p>
       <a class="foot-a" href="#main" data-i18n="foot_top">Volver arriba</a>
     </div>

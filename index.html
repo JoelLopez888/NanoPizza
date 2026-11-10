@@ -11,7 +11,7 @@ if(to){var s=q.toString();location.replace(to+(s?"?"+s:"")+h)}})()</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Nano Pizza | Pizzería en Reus</title>
 <meta name="description" content="Nano Pizza, pizzería con horno de leña en C/ Josep Carner 4, Reus. Carta, pedidos para recoger y reservas por WhatsApp.">
-<meta name="theme-color" content="#F2EADB">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="restaurant">
@@ -441,24 +441,27 @@ if(to){var s=q.toString();location.replace(to+(s?"?"+s:"")+h)}})()</script>
 <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
 
 <header class="nav" id="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="index.html" aria-label="Nano Pizza" translate="no">
-      <img class="brand-mark" src="Imagenes/marca-nano-96.webp" srcset="Imagenes/marca-nano-96.webp 1x, Imagenes/marca-nano-144.webp 1.5x, Imagenes/marca-nano-320.webp 3x" width="48" height="48" alt="">
-      <span>NANO PIZZA</span>
-    </a>
-    <nav aria-label="Principal" data-i18n-aria="aria_nav">
-      <ul class="nav-links">
-        <li><a href="index.html#formas" data-i18n="nav_formas">Especialidades</a></li>
-        <li><a href="carta.html" data-nav="carta" data-i18n="nav_menu">Carta</a></li>
-        <li><a href="reservar.html" data-nav="reservar" data-i18n="nav_book">Reservar</a></li>
-        <li><a href="index.html#donde" data-i18n="nav_find">Dónde estamos</a></li>
-      </ul>
-    </nav>
-    <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="aria_lang">
+  <div class="nav-in">
+    <div class="lang pill" role="group" aria-label="Idioma" data-i18n-aria="aria_lang">
       <button type="button" data-lang="es" aria-pressed="true">ES</button>
       <button type="button" data-lang="ca" aria-pressed="false">CA</button>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
     </div>
+    <div class="nav-pill pill">
+      <a class="brand" href="index.html" aria-label="Nano Pizza" translate="no">
+        <img class="brand-mark" src="Imagenes/marca-nano-96.webp" srcset="Imagenes/marca-nano-96.webp 1x, Imagenes/marca-nano-144.webp 1.5x, Imagenes/marca-nano-320.webp 3x" width="40" height="40" alt="">
+        <span>NANO</span>
+      </a>
+      <nav aria-label="Principal" data-i18n-aria="aria_nav">
+        <ul class="nav-links">
+          <li><a href="index.html#formas" data-i18n="nav_formas">Especialidades</a></li>
+          <li><a href="carta.html" data-nav="carta" data-i18n="nav_menu">Carta</a></li>
+          <li><a href="reservar.html" data-nav="reservar" data-i18n="nav_book">Reservar</a></li>
+          <li><a href="index.html#donde" data-i18n="nav_find">Dónde estamos</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-end pill">
     <a class="icon-btn call-btn" href="tel:+34647306534">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><use href="#i-phone"/></svg>
       <span>647 306 534</span>
@@ -472,6 +475,7 @@ if(to){var s=q.toString();location.replace(to+(s?"?"+s:"")+h)}})()</script>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
       <span class="sr-only" data-i18n="menu">Menú</span>
     </button>
+    </div>
   </div>
 </header>
 <div class="mobile-menu" id="mobile-menu">
@@ -491,45 +495,61 @@ if(to){var s=q.toString();location.replace(to+(s?"?"+s:"")+h)}})()</script>
 
 <main id="main">
   <section class="hero" id="top">
+    <div class="hero-bg" aria-hidden="true"><img src="Imagenes/Demo/horno-llamas-1920.webp" srcset="Imagenes/Demo/horno-llamas-960.webp 960w, Imagenes/Demo/horno-llamas-1920.webp 1920w" sizes="100vw" width="1920" height="1280" alt="" fetchpriority="high"></div>
     <div class="wrap hero-in">
-      <h1 class="wordmark" translate="no">
-        <span class="sr-only">Nano Pizza</span>
-        <span class="wm-nano" aria-hidden="true"><span class="ch"><span style="--i:0">N</span></span><span class="ch"><span style="--i:1">A</span></span><span class="ch"><span style="--i:2">N</span></span><span class="ch"><span style="--i:3">O</span></span></span>
-        <span class="wm-pizza" aria-hidden="true">PIZZA</span>
+      <h1 class="hero-t">
+        <span class="ln"><span class="ln-in" data-i18n="hero_t1">Pizza de leña</span></span>
+        <span class="ln"><span class="ln-in"><span data-i18n="hero_t2">para</span> <mark class="mk mk-red cycle" aria-hidden="true"><span class="cycle-w" data-i18n="hero_w0">comer aquí</span></mark><span class="sr-only" data-i18n="hero_sr">comer aquí, para llevar o para compartir</span></span></span>
       </h1>
-      <div class="hero-tail">
-        <p class="hero-lead" data-i18n="hero_lead">Pizza de horno de leña en Reus.</p>
+      <div class="hero-foot">
         <div class="hero-ctas">
-          <a class="btn btn-gold" href="carta.html" data-i18n="cta_order">Pedir para recoger</a>
-          <a class="btn btn-ghost" href="reservar.html" data-i18n="cta_book">Reservar mesa</a>
+          <a class="btn btn-gold" href="carta.html"><span class="btn-t" data-i18n="cta_order">Pedir para recoger</span></a>
+          <a class="btn btn-glass" href="reservar.html"><span class="btn-t" data-i18n="cta_book">Reservar mesa</span></a>
         </div>
-        <p class="status" data-status role="status"><i aria-hidden="true"></i><span></span></p>
+        <div class="hero-side">
+          <div>
+            <p class="hero-lead" data-i18n="hero_lead">Pizza de horno de leña en Reus.</p>
+            <p class="hero-addr">C/ Josep Carner 4, Reus</p>
+            <p class="status" data-status role="status"><i aria-hidden="true"></i><span></span></p>
+          </div>
+          <a class="round-go" href="carta.html" aria-label="Ver la carta" data-i18n-aria="bar_empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
       </div>
-      <figure class="hero-photo" aria-hidden="true"><img src="Imagenes/Demo/horno-llamas-1920.webp" srcset="Imagenes/Demo/horno-llamas-960.webp 960w, Imagenes/Demo/horno-llamas-1920.webp 1920w" sizes="(max-width:1200px) 100vw, 1200px" width="1920" height="1280" alt="" fetchpriority="high"></figure>
     </div>
   </section>
 
+  <nav class="cats" aria-label="Carta" data-i18n-aria="nav_menu">
+    <ul class="wrap cats-in">
+      <li><a class="cat" href="carta.html?carta=pizzas" data-i18n="c_pizzas">Pizzas</a></li>
+      <li><a class="cat" href="carta.html?carta=especiales" data-i18n="c_especiales">Especialidades</a></li>
+      <li><a class="cat" href="carta.html?carta=pasta" data-i18n="c_pasta">Pasta fresca</a></li>
+      <li><a class="cat" href="carta.html?carta=ensaladas" data-i18n="c_ensaladas">Ensaladas</a></li>
+      <li><a class="cat" href="carta.html?carta=tapas" data-i18n="c_tapas">Tapas</a></li>
+      <li><a class="cat" href="carta.html?carta=postres" data-i18n="c_postres">Postres</a></li>
+    </ul>
+  </nav>
+
   <section class="section" id="casa" aria-labelledby="casa-t">
     <div class="wrap">
-      <div class="section-head">
-        <h2 class="h-display h2" id="casa-t" data-i18n="casa_t">Del fuego a la mesa</h2>
+      <div class="section-head" data-reveal>
+        <h2 class="h-big" id="casa-t"><span data-i18n="casa_a">Del </span><mark class="mk mk-bronze" data-i18n="casa_m">fuego</mark><span data-i18n="casa_b"> a la mesa</span></h2>
         <p class="lede" data-i18n="casa_sub">Un horno de leña, tres pasos y ningún atajo.</p>
       </div>
       <ol class="casa-steps">
-        <li class="casa-step">
-          <figure class="casa-photo"><img src="Imagenes/Demo/horno-boca-960.webp" srcset="Imagenes/Demo/horno-boca-960.webp 960w, Imagenes/Demo/horno-boca-1920.webp 1920w" sizes="(max-width:860px) 92vw, 30vw" width="960" height="640" loading="lazy" alt="" data-i18n-alt="casa_alt1"></figure>
+        <li class="casa-step" data-reveal style="--i:0">
+          <figure class="casa-photo shape-circle"><img src="Imagenes/Demo/horno-boca-960.webp" srcset="Imagenes/Demo/horno-boca-960.webp 960w, Imagenes/Demo/horno-boca-1920.webp 1920w" sizes="(max-width:860px) 92vw, 30vw" width="960" height="640" loading="lazy" alt="" data-i18n-alt="casa_alt1"></figure>
           <span class="casa-num" aria-hidden="true">1</span>
           <h3 data-i18n="casa_h1">Encendemos el horno</h3>
           <p data-i18n="casa_p1">Cada día empieza igual: leña, fuego y paciencia hasta que el horno coge temperatura.</p>
         </li>
-        <li class="casa-step">
-          <figure class="casa-photo"><img src="Imagenes/Demo/horno-llamas-960.webp" srcset="Imagenes/Demo/horno-llamas-960.webp 960w, Imagenes/Demo/horno-llamas-1920.webp 1920w" sizes="(max-width:860px) 92vw, 30vw" width="960" height="640" loading="lazy" alt="" data-i18n-alt="casa_alt2"></figure>
+        <li class="casa-step" data-reveal style="--i:1">
+          <figure class="casa-photo shape-arch"><img src="Imagenes/Demo/horno-llamas-960.webp" srcset="Imagenes/Demo/horno-llamas-960.webp 960w, Imagenes/Demo/horno-llamas-1920.webp 1920w" sizes="(max-width:860px) 92vw, 30vw" width="960" height="640" loading="lazy" alt="" data-i18n-alt="casa_alt2"></figure>
           <span class="casa-num" aria-hidden="true">2</span>
           <h3 data-i18n="casa_h2">Horneamos junto a las llamas</h3>
           <p data-i18n="casa_p2">La pizza entra directa sobre la piedra, al lado del fuego, y se hace en pocos minutos.</p>
         </li>
-        <li class="casa-step">
-          <figure class="casa-photo"><img src="Imagenes/Demo/pizza-brasas-960.webp" srcset="Imagenes/Demo/pizza-brasas-960.webp 960w, Imagenes/Demo/pizza-brasas-1920.webp 1920w" sizes="(max-width:860px) 92vw, 30vw" width="960" height="640" loading="lazy" alt="" data-i18n-alt="casa_alt3"></figure>
+        <li class="casa-step" data-reveal style="--i:2">
+          <figure class="casa-photo shape-pill"><img src="Imagenes/Demo/pizza-brasas-960.webp" srcset="Imagenes/Demo/pizza-brasas-960.webp 960w, Imagenes/Demo/pizza-brasas-1920.webp 1920w" sizes="(max-width:860px) 92vw, 30vw" width="960" height="640" loading="lazy" alt="" data-i18n-alt="casa_alt3"></figure>
           <span class="casa-num" aria-hidden="true">3</span>
           <h3 data-i18n="casa_h3">Sale al punto</h3>
           <p data-i18n="casa_p3">Con el borde hinchado y tostado. De la pala a tu mesa, o a tu caja para llevar.</p>
@@ -539,10 +559,29 @@ if(to){var s=q.toString();location.replace(to+(s?"?"+s:"")+h)}})()</script>
     </div>
   </section>
 
-  <section class="section formas" id="formas" aria-labelledby="formas-t">
+  <section class="section section-tight" id="carta-movil" aria-labelledby="big-t">
     <div class="wrap">
-      <div class="section-head">
-        <h2 class="h-display h2" id="formas-t" data-i18n="formas_t">Más allá de la pizza redonda</h2>
+      <div class="big-card" data-reveal>
+        <img src="Imagenes/Demo/pizza-brasas-1920.webp" srcset="Imagenes/Demo/pizza-brasas-960.webp 960w, Imagenes/Demo/pizza-brasas-1920.webp 1920w" sizes="(max-width:1200px) 100vw, 1200px" width="1920" height="1280" loading="lazy" alt="" data-i18n-alt="casa_alt3">
+        <div class="big-panel">
+          <h2 id="big-t" data-i18n="big_t">La carta, en tu móvil</h2>
+          <p data-i18n="big_p">Elige, añádelo al pedido y envíanoslo por WhatsApp. Lo recoges en C/ Josep Carner 4.</p>
+          <a class="btn btn-gold" href="carta.html"><span class="btn-t" data-i18n="bar_empty">Ver la carta</span></a>
+        </div>
+      </div>
+      <h2 class="h-big h-center stats-t" data-reveal><span data-i18n="st_a">Lo que sale del </span><mark class="mk mk-navy" data-i18n="st_m">horno</mark><span data-i18n="st_b"></span></h2>
+      <ul class="stats">
+        <li data-reveal style="--i:0"><span class="stat-n" data-count-to="20">20</span><span class="stat-l" data-i18n="st_pizzas">pizzas en carta</span></li>
+        <li data-reveal style="--i:1"><span class="stat-n" data-count-to="4">4</span><span class="stat-l" data-i18n="st_formas">especialidades de la casa</span></li>
+        <li data-reveal style="--i:2"><span class="stat-n" data-count-to="1">1</span><span class="stat-l" data-i18n="st_horno">horno de leña</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="formas" aria-labelledby="formas-t">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2 class="h-big" id="formas-t"><span data-i18n="formas_a">Más allá de la pizza </span><mark class="mk mk-red" data-i18n="formas_m">redonda</mark><span data-i18n="formas_b"></span></h2>
         <p class="lede" data-i18n="formas_sub">La misma masa, en cuatro formas de la casa.</p>
       </div>
       <ul class="formas-grid" id="formas-list"><!--pre:formas-list--><li class="forma" data-key="special:panuzzo"><svg viewBox="0 0 64 56" aria-hidden="true"><path pathLength="1" d="M8 26c0-9 10-15 24-15s24 6 24 15z"></path><path pathLength="1" d="M8 31c4 3 8-3 12 0s8 3 12 0 8-3 12 0 8 3 12 0"></path><path pathLength="1" d="M8 36h48c0 6-10 10-24 10S8 42 8 36z"></path></svg><h3>Panuzzo</h3><p>Sándwich de masa de pizza relleno de rúcula, aceite de oliva, burrata, tomates frescos y jamón cocido o curado.</p>
@@ -555,68 +594,70 @@ if(to){var s=q.toString();location.replace(to+(s?"?"+s:"")+h)}})()</script>
 
   <section class="section" id="opiniones" aria-labelledby="rv-t">
     <div class="wrap">
-      <div class="section-head">
-        <h2 class="h-display h2" id="rv-t" data-i18n="rv_t">Lo que dicen en Reus</h2>
+      <div class="section-head section-head-center" data-reveal>
+        <h2 class="h-big h-center" id="rv-t"><span data-i18n="rv_a">Lo que dicen en </span><mark class="mk mk-bronze" data-i18n="rv_m">Reus</mark><span data-i18n="rv_b"></span></h2>
         <p class="sample-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span data-i18n="rv_note">Opiniones de ejemplo para la demo. Antes de publicar se sustituirán por reseñas reales de Google.</span></p>
       </div>
-      </div>
-      <div class="rv-marquee" id="rv-marquee">
-        <div class="rv-row rv-left">
-          <ul class="rv-track">
-            <li class="rv-card">
-              <div class="rv-top"><span class="rv-avatar" aria-hidden="true">MG</span><span class="rv-who"><span class="rv-name">Marta G.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
-              <blockquote data-i18n="rv1">«La Seguin, con miel y queso de cabra, es otra cosa. Masa fina en el centro y el borde bien tostado.»</blockquote>
-            </li>
-            <li class="rv-card">
-              <div class="rv-top"><span class="rv-avatar" aria-hidden="true">JP</span><span class="rv-who"><span class="rv-name">Jordi P.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
-              <blockquote data-i18n="rv2">«Pedimos para recoger un viernes y en veinte minutos estaba lista. El Pipo fue un descubrimiento.»</blockquote>
-            </li>
-            <li class="rv-card">
-              <div class="rv-top"><span class="rv-avatar" aria-hidden="true">LS</span><span class="rv-who"><span class="rv-name">Laura S.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
-              <blockquote data-i18n="rv3">«Fuimos a cenar con niños y nos atendieron genial. La burrata, imprescindible.»</blockquote>
-            </li>
-            <li class="rv-card">
-              <div class="rv-top"><span class="rv-avatar" aria-hidden="true">PM</span><span class="rv-who"><span class="rv-name">Pere M.</span><span class="stars" role="img" aria-label="4/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg class="off" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
-              <blockquote data-i18n="rv4">«El Calzone llega cerrado y humeante; dentro, la pizza entera. Repetiremos.»</blockquote>
-            </li>
-          </ul>
-        </div>
-        <div class="rv-row rv-right">
-          <ul class="rv-track">
-            <li class="rv-card">
-              <div class="rv-top"><span class="rv-avatar" aria-hidden="true">NF</span><span class="rv-who"><span class="rv-name">Núria F.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
-              <blockquote data-i18n="rv5">«La pasta en bol de masa de pizza es un acierto. Gnocchis con gorgonzola, de diez.»</blockquote>
-            </li>
-            <li class="rv-card">
-              <div class="rv-top"><span class="rv-avatar" aria-hidden="true">CR</span><span class="rv-who"><span class="rv-name">Carlos R.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
-              <blockquote data-i18n="rv6">«Pedido por WhatsApp en un minuto y listo a la hora que nos dijeron.»</blockquote>
-            </li>
-            <li class="rv-card">
-              <div class="rv-top"><span class="rv-avatar" aria-hidden="true">AV</span><span class="rv-who"><span class="rv-name">Anna V.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
-              <blockquote data-i18n="rv7">«Borde con manchas de horno de leña, como en Nápoles. La Margherita, sencilla y perfecta.»</blockquote>
-            </li>
-            <li class="rv-card">
-              <div class="rv-top"><span class="rv-avatar" aria-hidden="true">DL</span><span class="rv-who"><span class="rv-name">David L.</span><span class="stars" role="img" aria-label="4/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg class="off" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
-              <blockquote data-i18n="rv8">«Buen precio para la calidad. La Top, con parmesano y jamón curado, es mi favorita.»</blockquote>
-            </li>
-          </ul>
-        </div>
-      </div>
+    </div>
+    <ul class="rv-row" id="rv-row">
+      <li class="rv-card">
+        <div class="rv-top"><span class="rv-avatar" aria-hidden="true">MG</span><span class="rv-who"><span class="rv-name">Marta G.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
+        <blockquote data-i18n="rv1">«La Seguin, con miel y queso de cabra, es otra cosa. Masa fina en el centro y el borde bien tostado.»</blockquote>
+      </li>
+      <li class="rv-card">
+        <div class="rv-top"><span class="rv-avatar" aria-hidden="true">JP</span><span class="rv-who"><span class="rv-name">Jordi P.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
+        <blockquote data-i18n="rv2">«Pedimos para recoger un viernes y en veinte minutos estaba lista. El Pipo fue un descubrimiento.»</blockquote>
+      </li>
+      <li class="rv-card">
+        <div class="rv-top"><span class="rv-avatar" aria-hidden="true">LS</span><span class="rv-who"><span class="rv-name">Laura S.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
+        <blockquote data-i18n="rv3">«Fuimos a cenar con niños y nos atendieron genial. La burrata, imprescindible.»</blockquote>
+      </li>
+      <li class="rv-card">
+        <div class="rv-top"><span class="rv-avatar" aria-hidden="true">PM</span><span class="rv-who"><span class="rv-name">Pere M.</span><span class="stars" role="img" aria-label="4/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg class="off" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
+        <blockquote data-i18n="rv4">«El Calzone llega cerrado y humeante; dentro, la pizza entera. Repetiremos.»</blockquote>
+      </li>
+      <li class="rv-card">
+        <div class="rv-top"><span class="rv-avatar" aria-hidden="true">NF</span><span class="rv-who"><span class="rv-name">Núria F.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
+        <blockquote data-i18n="rv5">«La pasta en bol de masa de pizza es un acierto. Gnocchis con gorgonzola, de diez.»</blockquote>
+      </li>
+      <li class="rv-card">
+        <div class="rv-top"><span class="rv-avatar" aria-hidden="true">CR</span><span class="rv-who"><span class="rv-name">Carlos R.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
+        <blockquote data-i18n="rv6">«Pedido por WhatsApp en un minuto y listo a la hora que nos dijeron.»</blockquote>
+      </li>
+      <li class="rv-card">
+        <div class="rv-top"><span class="rv-avatar" aria-hidden="true">AV</span><span class="rv-who"><span class="rv-name">Anna V.</span><span class="stars" role="img" aria-label="5/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
+        <blockquote data-i18n="rv7">«Borde con manchas de horno de leña, como en Nápoles. La Margherita, sencilla y perfecta.»</blockquote>
+      </li>
+      <li class="rv-card">
+        <div class="rv-top"><span class="rv-avatar" aria-hidden="true">DL</span><span class="rv-who"><span class="rv-name">David L.</span><span class="stars" role="img" aria-label="4/5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg><svg class="off" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span></span><span class="sample" data-i18n="sample">Ejemplo</span></div>
+        <blockquote data-i18n="rv8">«Buen precio para la calidad. La Top, con parmesano y jamón curado, es mi favorita.»</blockquote>
+      </li>
+    </ul>
   </section>
 
-  <section class="section find" id="donde" aria-labelledby="find-t">
+  <section class="section" id="donde" aria-labelledby="find-t">
     <div class="wrap find-grid">
-      <div>
-        <h2 class="h-display h2" id="find-t" data-i18n="find_t">Dónde estamos</h2>
+      <div data-reveal>
+        <h2 class="h-big" id="find-t"><span data-i18n="find_a">Dónde </span><mark class="mk mk-navy" data-i18n="find_m">estamos</mark><span data-i18n="find_b"></span></h2>
         <address class="addr">C/ Josep Carner 4<br>Reus, Tarragona</address>
         <div class="find-ctas">
-          <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&destination=Carrer%20de%20Josep%20Carner%204%2C%20Reus" target="_blank" rel="noopener" data-i18n="directions">Cómo llegar</a>
-          <a class="btn btn-ghost" href="tel:+34647306534"><span data-i18n="call">Llamar</span>&nbsp;647 306 534</a>
+          <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&destination=Carrer%20de%20Josep%20Carner%204%2C%20Reus" target="_blank" rel="noopener"><span class="btn-t" data-i18n="directions">Cómo llegar</span></a>
+          <a class="btn btn-ghost" href="tel:+34647306534"><span class="btn-t"><span data-i18n="call">Llamar</span>&nbsp;647 306 534</span></a>
         </div>
         <table class="hours" id="hours"><!--pre:hours--><caption>Horario</caption><tbody><tr class=""><th scope="row">Lunes a jueves</th><td>12:30 – 15:30<br>19:30 – 22:30</td></tr><tr class=""><th scope="row">Viernes y sábado</th><td>12:30 – 15:30<br>19:30 – 23:30</td></tr><tr class=""><th scope="row">Domingo</th><td>Cerrado</td></tr></tbody><!--/pre:hours--></table>
       </div>
-      <div class="map">
+      <div class="map" data-reveal style="--i:1">
         <iframe loading="lazy" data-i18n-title="map_title" title="Mapa: Nano Pizza, C/ Josep Carner 4, Reus" src="https://maps.google.com/maps?q=Carrer%20de%20Josep%20Carner%204%2C%20Reus&z=16&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="hungry" aria-labelledby="hungry-t">
+    <div class="wrap hungry-in" data-reveal>
+      <h2 class="h-big h-center" id="hungry-t"><span data-i18n="hg_a">¿Te ha entrado </span><mark class="mk mk-bronze" data-i18n="hg_m">hambre</mark><span data-i18n="hg_b">?</span></h2>
+      <div class="hero-ctas">
+        <a class="btn btn-light" href="carta.html"><span class="btn-t" data-i18n="cta_order">Pedir para recoger</span></a>
+        <a class="btn btn-glass" href="reservar.html"><span class="btn-t" data-i18n="cta_book">Reservar mesa</span></a>
       </div>
     </div>
   </section>
@@ -664,6 +705,7 @@ if(to){var s=q.toString();location.replace(to+(s?"?"+s:"")+h)}})()</script>
         </div>
       </nav>
     </div>
+    <p class="foot-giant" aria-hidden="true" translate="no">NANO</p>
     <div class="foot-meta">
       <p>© 2026 Nano Pizza</p>
       <a class="foot-a" href="#main" data-i18n="foot_top">Volver arriba</a>
