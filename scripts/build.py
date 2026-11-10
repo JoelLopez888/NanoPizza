@@ -109,8 +109,7 @@ def assemble(page, body, title, desc, opts):
 
 def clean(markup):
     # Estado que depende del momento o del scroll: lo recalcula el JavaScript al cargar.
-    markup = re.sub(r'(<div class="panel"[^>]*?)\s+hidden(="")?', r"\1", markup)
-    markup = re.sub(r'\s+class="panel enter"', ' class="panel"', markup)
+    markup = re.sub(r'(<(?:div|section|a) class="(?:panel|tab)"[^>]*?)\s+hidden(="")?', r"\1", markup)
     markup = markup.replace(' class="is-today"', ' class=""')
     markup = re.sub(r'<span class="tag">.*?</span>', "", markup)
     return markup

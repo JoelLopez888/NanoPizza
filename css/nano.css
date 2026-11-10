@@ -289,46 +289,67 @@ button{cursor:pointer;touch-action:manipulation}
 @media (max-width:560px){.formas-grid{grid-template-columns:1fr}.forma{min-height:0}}
 
 /* ---------- Carta ---------- */
-.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-block:10px;margin-bottom:clamp(32px,5vw,56px)}
+/* Una sola página: la barra de secciones se queda fija y marca la sección que se está leyendo */
+.tabs{position:relative;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-block:10px}
 .tabs::-webkit-scrollbar{display:none}
-.tab{flex:none;display:inline-flex;align-items:center;background:var(--surface);border:0;min-height:46px;padding:0 20px;border-radius:999px;font-size:16px;font-weight:500;color:var(--ink);position:relative;transition:background-color .2s ease,color .2s ease}
-.tab[aria-selected="true"]{background:var(--ink);color:var(--paper)}
-/* Pestañas fijas bajo la barra de navegación mientras se recorre la carta: con el mismo fondo que la barra, se leen como una sola cabecera */
-.tabs{position:relative}
-.carta-bar{position:sticky;top:var(--nav-h);z-index:5;margin-bottom:clamp(32px,5vw,56px);clip-path:inset(0 -100vmax);transition:background-color var(--dur-3) var(--ease-out),box-shadow var(--dur-3) var(--ease-out)}
-.carta-bar .tabs{margin-bottom:0}
+.tab{flex:none;display:inline-flex;align-items:center;background:var(--surface);border:0;min-height:44px;padding:0 18px;border-radius:999px;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none;transition:background-color .2s ease,color .2s ease}
+.tab[aria-current="true"]{background:var(--ink);color:var(--paper)}
+.tab[hidden]{display:none}
+.tab:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){.tab:not([aria-current="true"]):hover{background:var(--surface-2)}}
+.carta-bar{position:sticky;top:var(--nav-h);z-index:5;margin-bottom:clamp(20px,3vw,32px);clip-path:inset(0 -100vmax);transition:background-color var(--dur-3) var(--ease-out),box-shadow var(--dur-3) var(--ease-out)}
 .tabs-mark{height:1px;margin-bottom:-1px}
 .carta-bar.is-stuck{background:rgba(255,255,255,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 0 0 100vmax rgba(255,255,255,.95)}
-.tab:active{transform:scale(.97)}
-.tab-ink{display:none;position:absolute;left:0;bottom:-1px;height:2px;width:100px;background:var(--accent);transform-origin:0 0;transform:translateX(var(--x,0)) scaleX(var(--s,0));pointer-events:none}
-.tab-ink.ready{transition:transform .25s cubic-bezier(.34,1.25,.64,1)}
-@media (hover:hover) and (pointer:fine){.tab:not([aria-selected="true"]):hover{background:var(--surface-2)}}
-.panel[hidden]{display:none}
-.panel.enter{animation:panelIn .15s var(--ease-out)}
-@keyframes panelIn{from{opacity:0}to{opacity:1}}
-.panel-note{color:var(--ink-dim);margin:0 0 28px;max-width:60ch}
-.dishes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.dish{position:relative;display:flex;flex-direction:column;padding:20px;border-radius:var(--r-l);background:var(--surface)}
 
-.dish-head{display:flex;align-items:baseline;gap:12px}
-.dish-name{font-weight:600;font-size:21px;line-height:1.2;letter-spacing:-.015em;margin:0}
-.dish-leader{flex:1;min-width:12px}
-.dish-price{font-weight:600;font-size:20px;color:var(--accent-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
-.dish-desc{text-wrap:pretty;margin:4px 0 0;color:var(--ink-dim);font-size:16px;line-height:1.45}
-.dish-foot{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:auto;padding-top:14px}
-.dish > *{position:relative}
-.dish-foot .add{margin-left:auto}
+.panel{scroll-margin-top:calc(var(--nav-h) + var(--tabs-h,64px) + 12px)}
+.panel[hidden]{display:none}
+.panel + .panel{margin-top:clamp(44px,6vw,72px)}
+.cat-h{display:flex;align-items:baseline;gap:12px;margin:0 0 4px;font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-.03em}
+.cat-h:focus{outline:none}
+.cat-n{font-size:15px;font-weight:500;letter-spacing:0;color:var(--ink-dim)}
+.cat-n:empty{display:none}
+.panel-note{color:var(--ink-dim);margin:6px 0 8px;max-width:60ch;font-size:15px}
+
+/* Platos: filas como en una app de reparto. Foto cuadrada, nombre y precio en una línea, alérgenos en iconos */
+.dishes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;column-gap:clamp(32px,5vw,64px)}
+@media (min-width:900px){.dishes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.dish{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--line-soft)}
+.dish.has-img{grid-template-columns:88px minmax(0,1fr)}
 .dish[hidden],.pasta[hidden]{display:none}
-.dish-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:10px 0 0;font-size:14px;line-height:1.45;color:var(--ink)}
-.al-l{color:var(--ink-dim)}
-.al-list{display:contents;list-style:none;margin:0;padding:0}
-.al-list li{display:inline-flex;align-items:center;gap:5px}
-.al-list svg{width:18px;height:18px;flex:none;color:var(--accent)}
-.al-txt{color:var(--ink-dim)}
-.dtag{display:inline-flex;align-items:center;gap:6px}
+.dish-img{display:block;width:88px;height:88px;object-fit:cover;border-radius:18px;background:var(--surface-2)}
+.dish-ico{display:grid;place-items:center;background:var(--bronze);color:var(--ink)}
+.dish-ico svg{width:54px;height:48px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.dish-body{display:flex;flex-direction:column;min-width:0}
+.dish-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.dish-name{font-weight:600;font-size:18px;line-height:1.25;letter-spacing:-.01em;margin:0}
+.dish-price{font-weight:600;font-size:18px;color:var(--accent-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dish-desc{text-wrap:pretty;margin:3px 0 0;color:var(--ink-dim);font-size:15px;line-height:1.4}
+.dish-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:10px}
+.dish-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0;font-size:13px;line-height:1.3;color:var(--ink)}
+.al-l{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.al-list{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.al-list li{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--surface)}
+.al-list li svg{width:17px;height:17px;color:var(--accent)}
+.al-list .al-txt{width:auto;padding:0 10px;border-radius:999px;color:var(--ink-dim)}
+.al-name{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 .dtag svg{width:16px;height:16px;flex:none}
-.dtag-veg svg,.fchip[data-f="veg"] svg{color:var(--basil)}
-.dtag-hot svg,.fchip[data-f="hot"] svg{color:var(--ember)}
+.dtag-veg svg,.fchip[data-f="veg"] svg,.al-legend .dtag-veg svg{color:var(--basil)}
+.dtag-hot svg,.fchip[data-f="hot"] svg,.al-legend .dtag-hot svg{color:var(--ember)}
+.dish-opts{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px}
+.dish-opts .err{flex-basis:100%}
+/* Añadir en las filas: botón redondo con el + (el texto queda para lectores de pantalla) */
+.dish .add{width:44px;height:44px;min-height:0;padding:0;justify-content:center;flex:none;border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.dish .add span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+@media (hover:hover) and (pointer:fine){.dish .add:hover{background:var(--accent);border-color:var(--accent)}}
+@media (max-width:560px){
+  .dish.has-img{grid-template-columns:76px minmax(0,1fr);gap:14px}
+  .dish-img{width:76px;height:76px;border-radius:16px}
+  .dish-ico svg{width:46px;height:40px}
+}
+/* Leyenda de iconos, dentro de "Alérgenos y sin gluten" */
+.al-legend{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px 18px;list-style:none;margin:16px 0 0;padding:0;font-size:14px}
+.al-legend li{display:flex;align-items:center;gap:10px}
+.al-legend svg{width:30px;height:30px;padding:6px;flex:none;border-radius:50%;background:var(--surface);color:var(--accent)}
 
 /* Filtros de la carta */
 .diet{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:0 0 4px}
@@ -374,45 +395,12 @@ button{cursor:pointer;touch-action:manipulation}
 .foot-credit{margin:0 0 20px}
 .diet-note{font-size:14px;line-height:1.5;color:var(--ink-dim);max-width:62ch;margin:0 0 clamp(28px,4vw,40px)}
 .tab-n{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;margin-left:8px;border-radius:999px;background:var(--bg);font-size:13px;color:var(--ink);font-variant-numeric:tabular-nums}
-.tab[aria-selected="true"] .tab-n{background:var(--bronze);color:var(--ink)}
-.tab.is-empty .tab-n{background:none;box-shadow:inset 0 0 0 1px var(--line-soft);color:var(--ink-dim)}
+.tab[aria-current="true"] .tab-n{background:var(--bronze);color:var(--ink)}
 .no-match{padding:8px 0 24px}
 .no-match p{font-weight:600;letter-spacing:-.015em;font-size:clamp(22px,2.6vw,28px);line-height:1.3;margin:0 0 20px;max-width:30ch}
 .no-match-go{display:flex;flex-wrap:wrap;gap:10px}
 .chip input:disabled{cursor:not-allowed}
 .chip input:disabled + span{opacity:.38;text-decoration:line-through}
-.dish-foot > .err{order:3;flex-basis:100%}
-/* Foto del plato: miniatura cuadrada junto al nombre (la carta se lee como una lista, no como un catálogo) */
-.dish-img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:18px;background:var(--surface-2)}
-@media (min-width:761px){
-  /* Miniatura a la izquierda; "Añadir" a la altura de los alérgenos, las opciones debajo */
-  .dish.has-img{display:grid;grid-template-columns:104px minmax(0,1fr) auto;column-gap:20px;align-content:start}
-  .dish.has-img > .dish-img{grid-column:1;grid-row:1 / span 4;align-self:start}
-  .dish.has-img > .dish-head,.dish.has-img > .dish-desc{grid-column:2 / -1}
-  .dish.has-img > .dish-meta{grid-column:2;grid-row:3}
-  .dish.has-img .dish-foot{display:contents}
-  .dish.has-img .add{grid-column:3;grid-row:3;align-self:end;margin-top:8px}
-  .dish.has-img .dish-foot > .seg,.dish.has-img .dish-foot > .pick{grid-column:2;grid-row:4;justify-self:start;margin-top:12px}
-  .dish.has-img .dish-foot > .err{grid-column:2 / -1}
-}
-@media (max-width:760px){
-  .dish.has-img{grid-template-columns:72px minmax(0,1fr) auto}
-  .dish.has-img > .dish-img{grid-column:1;grid-row:1 / span 2;align-self:start}
-  .dish.has-img .dish-head{grid-column:2 / -1}
-  .dish.has-img .dish-desc{grid-column:2 / -1;margin-top:2px}
-  .dish.has-img .dish-meta{grid-column:1 / 3;grid-row:3}
-  .dish.has-img .add{grid-column:3;grid-row:3;align-self:center}
-  .dish-meta{grid-column:1/-1}
-  .dishes{grid-template-columns:1fr}
-  .dishes{gap:12px}
-  .dish{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:14px;align-items:center;padding:16px}
-  .dish-head{grid-column:1;grid-row:1}
-  .dish-desc,.dish-foot > *:not(.add){grid-column:1/-1}
-  .dish-foot{display:contents}
-  .dish-foot > .seg,.dish-foot > .pick{justify-self:start;margin-top:12px}
-  .dish .add{grid-column:2;grid-row:1;width:44px;height:44px;padding:0;justify-content:center}
-  .dish .add span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
-}
 
 .add{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px 0 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:15px;font-weight:500;transition:background-color var(--dur-2) var(--ease-out),border-color var(--dur-2),color var(--dur-2)}
 .add svg{width:18px;height:18px}

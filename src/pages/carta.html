@@ -14,9 +14,10 @@
       <details class="diet-info">
         <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5h.01"/></svg><span data-i18n="diet_info">Alérgenos y sin gluten</span></summary>
         <p class="diet-note" data-i18n="diet_note">Cada plato indica sus alérgenos. «Sin gluten» son platos sin gluten en la receta, pero en la cocina usamos harina de trigo y puede haber trazas: si eres celíaco o tienes una alergia, dínoslo al pedir.</p>
+        <ul class="al-legend" id="al-legend"><!--pre:al-legend--><!--/pre:al-legend--></ul>
       </details>
       <div class="carta-bar" id="carta-bar">
-        <div class="tabs" role="tablist" id="tabs"><!--pre:tabs--><!--/pre:tabs--></div>
+        <nav class="tabs" id="tabs" aria-label="Secciones de la carta" data-i18n-aria="aria_sections"><!--pre:tabs--><!--/pre:tabs--></nav>
         <div class="active-f" id="active-f" hidden><span class="diet-status" id="diet-status"></span><button class="diet-clear" type="button" data-clear-f data-i18n="clear_f">Quitar filtros</button></div>
       </div>
       <div id="panels"><!--pre:panels--><!--/pre:panels--></div>
