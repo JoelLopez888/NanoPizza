@@ -6,8 +6,9 @@
 {{head_extra}}<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{title}}</title>
 <meta name="description" content="{{description}}">
-{{robots}}<meta name="theme-color" content="#14100D">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+{{robots}}<meta name="theme-color" content="#F2EADB">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="restaurant">
 <meta property="og:site_name" content="Nano Pizza">
 <meta property="og:title" content="{{title}}">
@@ -30,7 +31,7 @@
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="brand" href="index.html" aria-label="Nano Pizza" translate="no">
-      <img class="brand-mark" src="Imagenes/logo-nano-emblema-192.webp" width="48" height="48" alt="">
+      <img class="brand-mark" src="Imagenes/marca-nano-96.webp" srcset="Imagenes/marca-nano-96.webp 1x, Imagenes/marca-nano-144.webp 1.5x, Imagenes/marca-nano-320.webp 3x" width="48" height="48" alt="">
       <span>NANO PIZZA</span>
     </a>
     <nav aria-label="Principal" data-i18n-aria="aria_nav">
@@ -84,13 +85,13 @@
   <div class="foot-inner">
     <div class="foot-glow" aria-hidden="true"></div>
     <div class="foot-main">
-      <div class="foot-brand enter" style="--i:0">
-        <a class="foot-name" href="index.html" translate="no"><img class="foot-emblem" src="Imagenes/logo-nano-emblema-192.webp" width="40" height="40" alt="" loading="lazy"><span>NANO PIZZA</span></a>
+      <div class="foot-brand">
+        <a class="foot-name" href="index.html" translate="no"><img class="foot-emblem" src="Imagenes/marca-nano-320.webp" width="128" height="128" alt="Nano Pizza" loading="lazy"></a>
         <p class="foot-desc" data-i18n="foot_desc">Pizzería con horno de leña en Reus. Ven a comer, reserva mesa o pídela para recoger.</p>
         <dl class="foot-hours" id="foot-hours"><!--pre:foot-hours--><!--/pre:foot-hours--></dl>
       </div>
       <nav class="foot-nav" aria-label="Pie de página" data-i18n-aria="aria_foot">
-        <div class="foot-col enter" style="--i:1">
+        <div class="foot-col">
           <a class="foot-title" href="carta.html" data-i18n="nav_menu">Carta</a>
           <ul class="foot-list">
             <li><a class="foot-a" href="carta.html?carta=pizzas" data-goto-cat="pizzas" data-i18n="c_pizzas">Pizzas</a></li>
@@ -101,7 +102,7 @@
             <li><a class="foot-a foot-more" href="carta.html"><span data-i18n="foot_all_menu">Ver toda la carta</span><svg class="foot-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
           </ul>
         </div>
-        <div class="foot-col enter" style="--i:2">
+        <div class="foot-col">
           <a class="foot-title" href="index.html#donde" data-i18n="foot_visit">Visítanos</a>
           <ul class="foot-list">
             <li><a class="foot-a" href="https://www.google.com/maps/dir/?api=1&amp;destination=Carrer%20de%20Josep%20Carner%204%2C%20Reus" target="_blank" rel="noopener" data-i18n="directions">Cómo llegar</a></li>
@@ -111,7 +112,7 @@
             <li><a class="foot-a" href="index.html#opiniones" data-i18n="foot_reviews">Opiniones</a></li>
           </ul>
         </div>
-        <div class="foot-col enter" style="--i:3">
+        <div class="foot-col">
           <a class="foot-title" href="tel:+34647306534" data-i18n="foot_contact">Contacto</a>
           <ul class="foot-list">
             <li><a class="foot-a foot-phone" href="tel:+34647306534">647 306 534</a></li>
@@ -122,7 +123,7 @@
         </div>
       </nav>
     </div>
-{{credit}}    <div class="foot-meta enter" style="--i:4">
+{{credit}}    <div class="foot-meta">
       <p>© 2026 Nano Pizza</p>
       <a class="foot-a" href="#main" data-i18n="foot_top">Volver arriba</a>
     </div>
