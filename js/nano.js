@@ -11,7 +11,7 @@ const STR = {
     hero_t1:"Pizza de leña",hero_t2:"para",hero_w0:"comer aquí",hero_words:"comer aquí|llevar|compartir",hero_sr:"comer aquí, para llevar o para compartir",casa_a:"Del ",casa_m:"fuego",casa_b:" a la mesa",big_t:"La carta, en tu móvil",big_p:"Elige, añádelo al pedido y envíanoslo por WhatsApp. Lo recoges en C/ Josep Carner 4.",st_a:"Lo que sale del ",st_m:"horno",st_b:"",st_pizzas:"pizzas en carta",st_formas:"especialidades de la casa",st_horno:"horno de leña",formas_a:"Más allá de la pizza ",formas_m:"redonda",formas_b:"",rv_a:"Lo que dicen en ",rv_m:"Reus",rv_b:"",find_a:"Dónde ",find_m:"estamos",find_b:"",hg_a:"¿Te ha entrado ",hg_m:"hambre",hg_b:"?",
     open_until:"Abierto ahora, hasta las {t}",closed_next:"Ahora cerrado. Abrimos {w} a las {t}",today:"hoy",tomorrow:"mañana",on_day:"el {d}",
     formas_t:"Más allá de la pizza redonda",formas_sub:"La misma masa, en cuatro formas de la casa.",
-    menu_t:"La carta",menu_sub:"Añade lo que te apetezca y envíanos el pedido por WhatsApp. Lo tendrás listo para recoger en C/ Josep Carner 4.",
+    menu_t:"La carta",menu_a:"La ",menu_m:"carta",menu_b:"",book_a:"Reserva tu ",book_m:"mesa",book_b:"",menu_sub:"Añade lo que te apetezca y envíanos el pedido por WhatsApp. Lo tendrás listo para recoger en C/ Josep Carner 4.",
     c_pizzas:"Pizzas",c_especiales:"Especialidades",c_pasta:"Pasta fresca",c_ensaladas:"Ensaladas",c_tapas:"Tapas",c_postres:"Postres",
     add:"Añadir",added:"Añadido",base:"Base",opt_tomate:"Tomate",opt_nata:"Nata",opt_carne:"Carne",opt_pollo:"Pollo",opt_cocido:"Jamón cocido",opt_curado:"Jamón curado",meat:"Carne",ham:"Jamón",choose_pizza:"Elige tu pizza",
     pasta_t:"Pasta fresca casera",pasta_desc:"Elige la pasta y la salsa. Si quieres, te la servimos dentro de un bol de masa de pizza.",pick_pasta:"Elige tu pasta",pick_sauce:"Elige tu salsa",bowl:"En bol de masa de pizza (+3 €)",
@@ -39,7 +39,7 @@ const STR = {
     hero_t1:"Pizza de llenya",hero_t2:"per",hero_w0:"menjar aquí",hero_words:"menjar aquí|emportar|compartir",hero_sr:"menjar aquí, per emportar o per compartir",casa_a:"Del ",casa_m:"foc",casa_b:" a la taula",big_t:"La carta, al teu mòbil",big_p:"Tria, afegeix-ho a la comanda i envia-la per WhatsApp. La recolliràs al C/ Josep Carner 4.",st_a:"El que surt del ",st_m:"forn",st_b:"",st_pizzas:"pizzes a la carta",st_formas:"especialitats de la casa",st_horno:"forn de llenya",formas_a:"Més enllà de la pizza ",formas_m:"rodona",formas_b:"",rv_a:"El que diuen a ",rv_m:"Reus",rv_b:"",find_a:"On ",find_m:"som",find_b:"",hg_a:"T'ha vingut ",hg_m:"gana",hg_b:"?",
     open_until:"Obert ara, fins a les {t}",closed_next:"Ara tancat. Obrim {w} a les {t}",today:"avui",tomorrow:"demà",on_day:"{d}",
     formas_t:"Més enllà de la pizza rodona",formas_sub:"La mateixa massa, en quatre formes de la casa.",
-    menu_t:"La carta",menu_sub:"Afegeix el que et vingui de gust i envia'ns la comanda per WhatsApp. La tindràs a punt per recollir al C/ Josep Carner 4.",
+    menu_t:"La carta",menu_a:"La ",menu_m:"carta",menu_b:"",book_a:"Reserva la teva ",book_m:"taula",book_b:"",menu_sub:"Afegeix el que et vingui de gust i envia'ns la comanda per WhatsApp. La tindràs a punt per recollir al C/ Josep Carner 4.",
     c_pizzas:"Pizzes",c_especiales:"Especialitats",c_pasta:"Pasta fresca",c_ensaladas:"Amanides",c_tapas:"Tapes",c_postres:"Postres",
     add:"Afegir",added:"Afegit",base:"Base",opt_tomate:"Tomàquet",opt_nata:"Nata",opt_carne:"Carn",opt_pollo:"Pollastre",opt_cocido:"Pernil dolç",opt_curado:"Pernil curat",meat:"Carn",ham:"Pernil",choose_pizza:"Tria la teva pizza",
     pasta_t:"Pasta fresca casolana",pasta_desc:"Tria la pasta i la salsa. Si vols, te la servim dins d'un bol de massa de pizza.",pick_pasta:"Tria la pasta",pick_sauce:"Tria la salsa",bowl:"En bol de massa de pizza (+3 €)",
@@ -67,7 +67,7 @@ const STR = {
     hero_t1:"Wood-fired pizza",hero_t2:"to",hero_w0:"eat in",hero_words:"eat in|take away|share",hero_sr:"eat in, take away or share",casa_a:"From the ",casa_m:"fire",casa_b:" to your table",big_t:"The menu, on your phone",big_p:"Pick your food, add it to your order and send it to us on WhatsApp. Collect it at C/ Josep Carner 4.",st_a:"Fresh out of the ",st_m:"oven",st_b:"",st_pizzas:"pizzas on the menu",st_formas:"house specialities",st_horno:"wood-fired oven",formas_a:"Beyond the ",formas_m:"round",formas_b:" pizza",rv_a:"What ",rv_m:"Reus",rv_b:" is saying",find_a:"Find ",find_m:"us",find_b:"",hg_a:"Feeling ",hg_m:"hungry",hg_b:"?",
     open_until:"Open now until {t}",closed_next:"Closed now. We open {w} at {t}",today:"today",tomorrow:"tomorrow",on_day:"on {d}",
     formas_t:"Beyond the round pizza",formas_sub:"The same dough, baked into four house shapes.",
-    menu_t:"The menu",menu_sub:"Add what you fancy and send us the order on WhatsApp. It'll be ready to pick up at C/ Josep Carner 4.",
+    menu_t:"The menu",menu_a:"The ",menu_m:"menu",menu_b:"",book_a:"Book your ",book_m:"table",book_b:"",menu_sub:"Add what you fancy and send us the order on WhatsApp. It'll be ready to pick up at C/ Josep Carner 4.",
     c_pizzas:"Pizzas",c_especiales:"Specialities",c_pasta:"Fresh pasta",c_ensaladas:"Salads",c_tapas:"Tapas",c_postres:"Desserts",
     add:"Add",added:"Added",base:"Base",opt_tomate:"Tomato",opt_nata:"Cream",opt_carne:"Beef",opt_pollo:"Chicken",opt_cocido:"Cooked ham",opt_curado:"Cured ham",meat:"Meat",ham:"Ham",choose_pizza:"Choose your pizza",
     pasta_t:"Homemade fresh pasta",pasta_desc:"Pick your pasta and sauce. We can also serve it inside a pizza-dough bowl.",pick_pasta:"Choose your pasta",pick_sauce:"Choose your sauce",bowl:"In a pizza-dough bowl (+€3)",
@@ -873,7 +873,6 @@ document.addEventListener("click", e => {
 /* ================= Portada: palabra que cambia, revelado al hacer scroll y cifras ================= */
 var cycleReset = null;
 (function homeMotion(){
-  if (PAGE !== "inicio") return;
   const mark = $(".cycle"), word = $(".cycle-w");
   if (mark && word){
     let i = 0, timer = 0;
