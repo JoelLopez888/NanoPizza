@@ -370,7 +370,7 @@ function panelHTML(cat){
   if (cat === "especiales") return `<ul class="dishes">${SPECIALS.map(p => dishHTML("special:"+p.id, p.n, p.p, L(p.d), p.opt, "ico:"+p.icon)).join("")}</ul>`;
   if (cat === "ensaladas") return `<ul class="dishes">${SALADS.map(p => dishHTML("salad:"+p.id, L(p.n), p.p, L(p.d))).join("")}</ul>`;
   if (cat === "tapas") return `<p class="panel-note">${esc(t("tapas_note"))}</p><ul class="dishes">${TAPAS.map(p => dishHTML("tapa:"+p.id, L(p.n), p.p, p.d ? L(p.d) : "")).join("")}</ul>`;
-  if (cat === "postres") return `<p class="desserts">${esc(t("desserts"))}</p>`;
+  if (cat === "postres") return `<p class="desserts"><span>${esc(t("desserts"))}</span></p>`;
   if (cat === "pasta") return `<div class="pasta" data-key="pasta">
     <div><h3>${esc(t("pasta_t"))}</h3><p class="pasta-price" data-pasta-price>${money(PASTA.p)}</p><p class="dish-desc pasta-desc">${esc(t("pasta_desc"))}</p>${metaBox("pasta", {pasta:PASTA.pastas[0][0], sauce:PASTA.sauces[0][0]})}</div>
     <div>

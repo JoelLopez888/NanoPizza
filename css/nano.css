@@ -438,6 +438,8 @@ button{cursor:pointer;touch-action:manipulation}
 @media (max-width:760px){.pasta{grid-template-columns:1fr}}
 
 .desserts{font-size:clamp(24px,3vw,34px);font-weight:600;letter-spacing:-.02em;line-height:1.25;max-width:28ch;margin:0;padding:clamp(24px,4vw,48px);border-radius:var(--r-l);background:var(--surface)}
+/* Texto de los postres marcado en bronce, línea a línea, como cuando se selecciona */
+.desserts span{background:rgba(184,141,98,.35);padding:0 .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 
 /* ---------- Reservar ---------- */
 .book-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,7vw,112px);align-items:start}
