@@ -380,7 +380,7 @@ const cardImg = (id, cls, sizes, eager) => PHOTOS[id] ? `<img class="${cls}" src
 function pizzaCardHTML(p, i){
   const key = "pizza:" + p.id, uid = key.replace(/[^a-z0-9]/gi, "-");
   // La primera foto es lo más grande al abrir la carta: se pide antes que el resto
-  const img = cardImg(p.id, "pc-img", "(max-width:639px) calc(100vw - 32px), (max-width:1023px) 46vw, 380px", i === 0 ? "high" : i < 3);
+  const img = cardImg(p.id, "pc-img", "(max-width:1023px) 46vw, 380px", i === 0 ? "high" : i < 3);
   return `<li class="dish pcard" data-key="${key}"><div class="pc-media" aria-hidden="true">${img}</div><div class="pc-body">
     <div class="dish-head"><h3 class="dish-name">${esc(p.n)}</h3><span class="dish-price">${money(p.p)}</span></div>
     <p class="dish-desc">${esc(ingText(p.ing))}</p>${metaBox(key)}${p.opt ? `<div class="pc-opt">${optsHTML(uid, p.opt)}</div>` : ""}${sgHTML(F.gf)}
@@ -742,7 +742,7 @@ const FIXED_ING = new Set(["tomnata", "picpollo"]);
 let cuKey = null, cuFrom = null, cuQty = 1, cuPrice = 0;
 function openCustom(btn){
   const dlg = $("#custom");
-  if (!dlg?.showModal) return;
+  if (!dlg) return;
   cuKey = btn.dataset.custom; cuFrom = btn; cuQty = 1;
   const p = PIZZAS.find(x => "pizza:" + x.id === cuKey), card = btn.closest("[data-key]");
   const cur = readOpts(card);
@@ -773,20 +773,31 @@ function openCustom(btn){
       </div>
       <button class="btn btn-gold cu-add" type="button" data-cu-add><span class="btn-t">${esc(t("cu_add"))} · <span data-cu-total>${money(p.p)}</span></span></button>
     </div>`;
+  // Panel propio (no <dialog>): funciona igual en Safari de iPhone que en el resto
+  const scrim = $("#cu-scrim");
+  clearTimeout(cuHide);
+  dlg.hidden = scrim.hidden = false;
   document.body.style.overflow = "hidden";
-  dlg.showModal();
+  void dlg.offsetWidth;
+  dlg.classList.add("is-open"); scrim.classList.add("is-open");
   $(".cu-scroll", dlg).scrollTop = 0;
+  setTimeout(() => $(".cu-close", dlg)?.focus({preventScroll:true}), 60);
 }
+let cuHide = 0;
+const customOpen = () => $("#custom")?.classList.contains("is-open");
 function closeCustom(){
-  const dlg = $("#custom");
-  if (dlg?.open) dlg.close();
+  const dlg = $("#custom"), scrim = $("#cu-scrim");
+  if (!customOpen()) return;
+  dlg.classList.remove("is-open"); scrim.classList.remove("is-open");
+  document.body.style.overflow = "";
+  cuHide = setTimeout(() => { dlg.hidden = scrim.hidden = true; }, REDUCED ? 0 : 300);
+  cuFrom?.focus({preventScroll:true});
 }
 if ($("#custom")){
   const dlg = $("#custom");
-  dlg.addEventListener("close", () => { document.body.style.overflow = ""; cuFrom?.focus(); });
   // Tocar fuera del panel lo cierra
+  $("#cu-scrim").addEventListener("click", closeCustom);
   dlg.addEventListener("click", e => {
-    if (e.target === dlg) return closeCustom();
     if (e.target.closest("[data-cu-close]")) return closeCustom();
     const qb = e.target.closest("[data-cu-qty]");
     if (qb){
@@ -940,7 +951,14 @@ document.addEventListener("change", e => {
   if (e.target.matches('#panels [data-opt="pizza"], #panels [data-opt="pasta"], #panels [data-opt="sauce"], #panels [data-opt="sg"]')) updateMeta(e.target.closest("[data-key]"));
 });
 document.addEventListener("keydown", e => {
-  if (e.key === "Escape"){ if ($("#drawer").classList.contains("is-open")) closeCart(); else toggleMenu(false); }
+  if (e.key === "Escape"){ if (customOpen()) return closeCustom(); if ($("#drawer").classList.contains("is-open")) closeCart(); else toggleMenu(false); }
+  if (e.key === "Tab" && customOpen()){
+    const f = $$('#custom button:not([disabled]),#custom input,#custom textarea').filter(x => x.offsetParent !== null);
+    if (f.length){
+      if (e.shiftKey && document.activeElement === f[0]){ e.preventDefault(); f[f.length-1].focus(); }
+      else if (!e.shiftKey && document.activeElement === f[f.length-1]){ e.preventDefault(); f[0].focus(); }
+    }
+  }
   if (e.key === "Tab" && $("#drawer").classList.contains("is-open")){
     const f = $$('#drawer button:not([disabled]),#drawer a[href],#drawer input,#drawer select,#drawer textarea').filter(x => x.offsetParent !== null);
     if (!f.length) return;

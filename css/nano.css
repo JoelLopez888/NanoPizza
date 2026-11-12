@@ -140,15 +140,20 @@ button{cursor:pointer;touch-action:manipulation}
   .nav-pill{padding-right:5px}
 }
 @media (max-width:560px){
-  .nav .lang,.nav .call-btn{display:none}
-  .nav-in{grid-template-columns:auto 1fr}
-  .nav-end{grid-column:2}
+  /* Móvil: marca a la izquierda, idioma y pedido/menú a la derecha; el idioma ya no va dentro del menú */
+  .nav .call-btn{display:none}
+  .nav-in{grid-template-columns:auto 1fr auto;gap:8px}
+  .nav-pill{grid-column:1;grid-row:1}
+  .nav .lang{grid-column:2;grid-row:1;justify-self:end;padding:4px;border-radius:14px}
+  .nav .lang button{min-width:34px;height:34px;padding:0 6px;font-size:12px}
+  .nav-end{grid-column:3;grid-row:1}
+  .mobile-menu .lang{display:none}
   .is-mesa .nav-end{display:none}
 }
 .mobile-menu{position:fixed;inset:var(--nav-h) 12px auto;z-index:var(--z-nav);background:var(--ink);color:var(--paper);border-radius:var(--r-m);padding:12px 20px 24px;box-shadow:0 16px 40px rgba(28,35,43,.24);transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity var(--dur-2) var(--ease-out),transform var(--dur-2) var(--ease-out),visibility 0s linear var(--dur-2)}
 .mobile-menu.is-open{opacity:1;transform:none;visibility:visible;transition-delay:0s}
 .mobile-menu ul{list-style:none;margin:0;padding:0}
-.mobile-menu a{display:block;padding:14px 0;font-weight:600;font-size:26px;letter-spacing:-.02em;text-decoration:none;border-bottom:1px solid rgba(245,241,234,.14)}
+.mobile-menu a{display:block;padding:12px 0;font-weight:500;font-size:19px;letter-spacing:-.02em;text-decoration:none;border-bottom:1px solid rgba(245,241,234,.14)}
 .mobile-menu a[aria-current="page"]{color:var(--bronze)}
 .mobile-menu .lang{margin-top:20px;width:max-content;border-color:rgba(245,241,234,.24)}
 .mobile-menu .lang button{color:rgba(245,241,234,.75)}
@@ -373,9 +378,11 @@ button{cursor:pointer;touch-action:manipulation}
 
 /* Panel Personalizar: foto arriba, secciones, pie fijo con cantidad y precio.
    Hoja desde abajo en el móvil, ventana centrada en el ordenador */
-.custom{width:min(560px,100%);max-height:min(90svh,820px);margin:auto;padding:0;border:0;border-radius:var(--r-l);background:var(--bg);color:var(--ink);overflow:hidden;box-shadow:0 24px 64px rgba(28,35,43,.3)}
-.custom::backdrop{background:rgba(28,35,43,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
-.custom[open]{display:flex;flex-direction:column}
+.custom{position:fixed;z-index:calc(var(--z-drawer) + 10);left:50%;top:50%;width:min(560px,calc(100% - 32px));max-height:90vh;max-height:min(90dvh,820px);margin:0;padding:0;border:0;border-radius:var(--r-l);display:flex;flex-direction:column;opacity:0;transform:translate(-50%,-48%) scale(.98);transition:opacity .25s var(--ease-out),transform .3s var(--ease-out);background:var(--bg);color:var(--ink);overflow:hidden;box-shadow:0 24px 64px rgba(28,35,43,.3)}
+.custom[hidden],.cu-scrim[hidden]{display:none}
+.custom.is-open{opacity:1;transform:translate(-50%,-50%)}
+.cu-scrim{position:fixed;inset:0;z-index:calc(var(--z-drawer) + 9);background:rgba(28,35,43,.55);opacity:0;transition:opacity .25s ease}
+.cu-scrim.is-open{opacity:1}
 .custom-body{display:flex;flex-direction:column;min-height:0;flex:1}
 .cu-hero{position:relative;flex:none;aspect-ratio:16/9;max-height:34svh;width:100%;background:var(--surface-2);overflow:hidden}
 .cu-img{width:100%;height:100%;object-fit:cover;display:block}
@@ -413,7 +420,8 @@ fieldset.cu-sec legend + *{clear:both}
 .cu-qty .qty{min-width:26px;font-weight:600;font-size:17px}
 .cu-add{flex:1;min-width:0;min-height:52px;padding:0 16px;white-space:nowrap}
 @media (max-width:640px){
-  .custom{width:100%;max-width:none;max-height:94svh;margin:auto 0 0;border-radius:var(--r-l) var(--r-l) 0 0}
+  .custom{left:0;right:0;top:auto;bottom:0;width:100%;max-height:92vh;max-height:92dvh;border-radius:var(--r-l) var(--r-l) 0 0;transform:translateY(100%)}
+  .custom.is-open{transform:none}
   .cu-hero{aspect-ratio:16/10}
   .cu-scroll{padding:18px 18px 8px}
   .cu-foot{padding-inline:18px}
@@ -422,10 +430,6 @@ fieldset.cu-sec legend + *{clear:both}
   .cu-qty .qty-btn{width:36px;height:36px}
   .cu-add{font-size:15px;padding:0 12px}
 }
-.anim .custom[open]{animation:sheetIn .3s var(--ease-out)}
-@media (max-width:640px){.anim .custom[open]{animation-name:sheetUp}}
-@keyframes sheetIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
-@keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
 
 /* Leyenda de iconos, dentro de "Alérgenos y sin gluten" */
 .al-legend{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px 18px;list-style:none;margin:16px 0 0;padding:0;font-size:14px}
@@ -842,6 +846,107 @@ button.how-step:focus-visible{outline:2px solid var(--accent-ink);outline-offset
 .book-steps li{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:var(--r-m);background:var(--surface)}
 .book-steps span{display:grid;place-items:center;width:32px;height:32px;flex:none;border-radius:50%;background:var(--ink);color:var(--paper);font-weight:600;font-size:15px}
 .book-steps p{margin:0;font-size:15px}
+
+/* ================= Repaso móvil ================= */
+@media (max-width:640px){
+  /* Menos aire entre secciones: en el móvil cada píxel de alto es scroll */
+  .section{padding-block:56px}
+  .section-tight{padding-top:0}
+  .section.page-top{padding-top:calc(var(--nav-h) + var(--tb) + 24px)}
+  .section-head{margin-bottom:28px}
+  .stats-t{margin-top:0}
+  /* Portada: primero los botones; la frase del cristal repite el titular */
+  .hero-foot{flex-direction:column;gap:20px}
+  .hero-lead{display:none}
+  .hero-addr{margin:0}
+  /* Pide en tres pasos: el botón ya está en la barra de abajo */
+  .how-grid > div > .btn{display:none}
+  .how-steps{margin:24px 0 8px}
+  button.how-step{padding:12px 14px}
+  .how-h{font-size:17px}
+  .how-p{font-size:14px}
+  .chat-body{min-height:240px}
+}
+@media (max-width:560px){
+  /* Bento: sin la foto, las tres cifras en una fila */
+  .bento{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-areas:"a a a" "c c c" "d e f" "g g g";gap:10px}
+  .bt-b{display:none}
+  .bt{padding:18px}
+  .bt-num{padding:14px 12px}
+  .bt-num .stat-n{font-size:48px}
+  .bt-l{font-size:13px;line-height:1.3}
+  .receipt{padding:14px}
+  /* Especialidades: se deslizan en horizontal en vez de apilarse */
+  .formas-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter);scroll-padding-inline:var(--gutter)}
+  .formas-grid::-webkit-scrollbar{display:none}
+  .forma{scroll-snap-align:start;min-height:340px;padding:22px}
+  /* Lo esencial: dos columnas compactas */
+  .ess{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .ess-i{padding:14px}
+  .ess-i h3{font-size:14px}
+  .ess-i p,.ess-hours{font-size:13.5px}
+  .ess-i a{display:inline-block;padding:10px 0}
+}
+@media (max-width:639px){
+  /* Carta en el móvil: dos pizzas por fila */
+  .pizza-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .pcard{border-radius:20px}
+  .pc-media{aspect-ratio:4/3}
+  .pc-body{padding:12px 12px 14px}
+  .pcard .dish-head{flex-direction:column;align-items:flex-start;gap:2px}
+  .pcard .dish-name{font-size:16px;line-height:1.2}
+  .pcard .dish-price{font-size:15px}
+  .pcard .dish-desc{font-size:13px;line-height:1.35}
+  .pcard .dish-meta{margin-top:8px}
+  .pcard .al-list{gap:4px}
+  .pcard .al-list li{width:26px;height:26px}
+  .pcard .al-list li svg{width:15px;height:15px}
+  .pcard .al-list .al-txt{font-size:12px;padding:0 8px}
+  .pc-opt{margin-top:10px}
+  .pc-opt .seg span{min-height:34px;padding:0 10px;font-size:13px}
+  .sg-check{margin:8px 0 0;min-height:36px;gap:8px;font-size:13px}
+  .sg-check input{width:18px;height:18px}
+  .pc-actions{grid-template-columns:1fr;gap:6px;padding-top:12px}
+  .pcard .add{min-height:44px;font-size:15px;padding:0 10px}
+  .pcard .btn-outline{min-height:40px;font-size:14px;padding:0 10px}
+}
+@media (max-width:860px){
+  /* Reservar: el formulario justo después del título; el teléfono y los pasos, debajo */
+  .book-grid{gap:20px}
+  .book-grid > div:first-child{display:contents}
+  .book-grid .h-big{order:1}
+  .book-grid .lede{order:2;margin-top:0}
+  .book-grid .form{order:3}
+  .book-grid .book-phone{order:4;margin-top:8px;justify-self:start}
+  .book-grid .help-after{order:5;margin-top:-8px}
+  .book-grid .book-steps{order:6;margin-top:0}
+}
+
+@media (max-width:640px){
+  /* Del fuego a la mesa: filas con foto pequeña en vez de fotos a pantalla completa */
+  .casa-steps{grid-template-columns:1fr;grid-auto-flow:row;grid-auto-columns:auto;overflow:visible;margin-inline:0;padding-inline:0;gap:14px}
+  .casa-step{display:grid;grid-template-columns:96px minmax(0,1fr);column-gap:16px;align-items:center}
+  .casa-photo{grid-row:1 / span 3;width:96px;align-self:start}
+  .shape-circle,.shape-arch,.shape-pill{aspect-ratio:1}
+  .shape-arch{border-radius:999px 999px 18px 18px}
+  .shape-pill{border-radius:999px;aspect-ratio:3/4}
+  .casa-num{width:26px;height:26px;margin:0 0 4px;font-size:13px}
+  .casa-step h3{font-size:18px;margin:0 0 2px}
+  .casa-step p{font-size:14px;line-height:1.4}
+  /* Pide en tres pasos: los pasos en una fila de tres; la explicación la da la pantalla de ejemplo */
+  .how-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:20px 0 14px}
+  button.how-step{flex-direction:column;align-items:flex-start;gap:8px;height:100%;padding:12px 10px}
+  .how-n{width:28px;height:28px;font-size:14px}
+  .how-h{margin:0;font-size:13.5px;line-height:1.25}
+  .how-p{display:none}
+  .demo{max-width:none}
+  .chat-body{min-height:0;padding:14px 12px}
+  .msg{font-size:13.5px}
+  .dm-list li{padding:8px 0}
+  .dm-list img{width:44px;height:44px}
+  .demo-pick{padding:24px 18px}
+  .dp-time{font-size:32px}
+}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
