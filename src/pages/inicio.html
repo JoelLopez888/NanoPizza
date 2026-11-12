@@ -6,9 +6,16 @@
         <span class="ln"><span class="ln-in"><span data-i18n="hero_t2">para</span> <mark class="mk mk-red cycle" aria-hidden="true"><span class="cycle-w" data-i18n="hero_w0">comer aquí</span></mark><span class="sr-only" data-i18n="hero_sr">comer aquí, para llevar o para compartir</span></span></span>
       </h1>
       <div class="hero-foot">
-        <div class="hero-ctas">
-          <a class="btn btn-gold" href="carta.html"><span class="btn-t" data-i18n="cta_order">Pedir para recoger</span></a>
-          <a class="btn btn-glass" href="reservar.html"><span class="btn-t" data-i18n="cta_book">Reservar mesa</span></a>
+        <div class="hero-act">
+          <div class="hero-ctas">
+            <a class="btn btn-gold" href="carta.html"><span class="btn-t" data-i18n="cta_order">Pedir para recoger</span></a>
+            <a class="btn btn-glass" href="reservar.html"><span class="btn-t" data-i18n="cta_book">Reservar mesa</span></a>
+          </div>
+          <ul class="hero-proof">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-i18n="pr_1">Horno de leña</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-i18n="sg_dough">Masa sin gluten</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-i18n="pr_3">Pago al recoger</span></li>
+          </ul>
         </div>
         <div class="hero-side">
           <div>
@@ -63,22 +70,57 @@
     </div>
   </section>
 
-  <section class="section section-tight" id="carta-movil" aria-labelledby="big-t">
-    <div class="wrap">
-      <div class="big-card" data-reveal>
-        <img src="Imagenes/Demo/pizza-brasas-1920.webp" srcset="Imagenes/Demo/pizza-brasas-960.webp 960w, Imagenes/Demo/pizza-brasas-1920.webp 1920w" sizes="(max-width:1200px) 100vw, 1200px" width="1920" height="1280" loading="lazy" alt="" data-i18n-alt="casa_alt3">
-        <div class="big-panel">
-          <h2 id="big-t" data-i18n="big_t">La carta, en tu móvil</h2>
-          <p data-i18n="big_p">Elige, añádelo al pedido y envíanoslo por WhatsApp. Lo recoges en C/ Josep Carner 4.</p>
-          <a class="btn btn-gold" href="carta.html"><span class="btn-t" data-i18n="bar_empty">Ver la carta</span></a>
-        </div>
+  <section class="section" id="como" aria-labelledby="how-t">
+    <div class="wrap how-grid">
+      <div data-reveal>
+        <h2 class="h-big" id="how-t"><span data-i18n="how_a">Pide en </span><mark class="mk mk-red" data-i18n="how_m">tres pasos</mark><span data-i18n="how_b"></span></h2>
+        <p class="lede" data-i18n="how_sub">Sin apps ni registros: la carta, tu WhatsApp y listo.</p>
+        <ol class="how-steps">
+          <li class="how-step" data-step="1"><span class="how-n" aria-hidden="true">1</span><div><h3 data-i18n="how_h1">Elige en la carta</h3><p data-i18n="how_p1">Añade pizzas, quita ingredientes o pídela con masa sin gluten.</p></div></li>
+          <li class="how-step" data-step="2"><span class="how-n" aria-hidden="true">2</span><div><h3 data-i18n="how_h2">Envía el pedido por WhatsApp</h3><p data-i18n="how_p2">El mensaje se escribe solo: tu nombre, la hora de recogida y el total.</p></div></li>
+          <li class="how-step" data-step="3"><span class="how-n" aria-hidden="true">3</span><div><h3 data-i18n="how_h3">Recógelo y paga en el local</h3><p data-i18n="how_p3">Te esperamos en C/ Josep Carner 4, Reus, a la hora que elijas.</p></div></li>
+        </ol>
+        <a class="btn btn-gold" href="carta.html"><span class="btn-t" data-i18n="bar_empty">Ver la carta</span></a>
       </div>
-      <h2 class="h-big h-center stats-t" data-reveal><span data-i18n="st_a">Lo que sale del </span><mark class="mk mk-navy" data-i18n="st_m">horno</mark><span data-i18n="st_b"></span></h2>
-      <ul class="stats">
-        <li data-reveal style="--i:0"><span class="stat-n" data-count-to="20">20</span><span class="stat-l" data-i18n="st_pizzas">pizzas en carta</span></li>
-        <li data-reveal style="--i:1"><span class="stat-n" data-count-to="4">4</span><span class="stat-l" data-i18n="st_formas">especialidades de la casa</span></li>
-        <li data-reveal style="--i:2"><span class="stat-n" data-count-to="1">1</span><span class="stat-l" data-i18n="st_horno">horno de leña</span></li>
-      </ul>
+      <div class="chat" aria-hidden="true" data-reveal style="--i:1">
+        <div class="chat-head"><img src="Imagenes/marca-nano-96.webp" width="40" height="40" alt=""><div><b translate="no">Nano Pizza</b><span data-i18n="ch_online">en línea</span></div><span class="sample" data-i18n="sample">Ejemplo</span></div>
+        <div class="chat-body">
+          <p class="msg msg-out" data-i18n="ch_1">Hola Nano Pizza, quiero hacer un pedido para recoger:
+2 × Margherita (masa sin gluten)
+1 × Atún
+Total: 36,00 €
+Recogida: hoy a las 20:30</p>
+          <p class="msg msg-in msg-typing"><i></i><i></i><i></i></p>
+          <p class="msg msg-in" data-i18n="ch_2">¡Recibido! A las 20:30 lo tienes listo.</p>
+        </div>
+        <div class="chat-input"><span data-i18n="ch_input">Escribe un mensaje</span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tight" id="carta-movil" aria-labelledby="st-t">
+    <div class="wrap">
+      <h2 class="h-big h-center stats-t" id="st-t" data-reveal><span data-i18n="st_a">Lo que sale del </span><mark class="mk mk-navy" data-i18n="st_m">horno</mark><span data-i18n="st_b"></span></h2>
+      <div class="bento">
+        <article class="bt bt-a" data-reveal>
+          <div>
+            <h3 data-i18n="be_a_t">Sabes el total antes de enviar</h3>
+            <p data-i18n="be_a_p">El pedido suma cada pizza y cada extra. Lo que ves es lo que pagas al recoger.</p>
+          </div>
+          <div class="receipt" aria-hidden="true">
+            <p class="rc-l" data-i18n="cart_t">Tu pedido</p>
+            <ul><li><span>2 × Margherita</span><span>24,00 €</span></li><li><span>1 × Atún</span><span>12,00 €</span></li></ul>
+            <p class="rc-total"><span>Total</span><b>36,00 €</b><span class="rc-pill" data-i18n="be_pill">Por WhatsApp</span></p>
+          </div>
+          <a class="btn btn-light" href="carta.html"><span class="btn-t" data-i18n="bar_empty">Ver la carta</span></a>
+        </article>
+        <div class="bt bt-b bt-photo" data-reveal style="--i:1"><img src="Imagenes/Demo/pizza-brasas-960.webp" srcset="Imagenes/Demo/pizza-brasas-960.webp 960w, Imagenes/Demo/pizza-brasas-1920.webp 1920w" sizes="(max-width:860px) 100vw, 600px" width="960" height="640" loading="lazy" alt="" data-i18n-alt="casa_alt3"></div>
+        <article class="bt bt-c" data-reveal style="--i:1"><h3 data-i18n="sg_dough">Masa sin gluten</h3><p data-i18n="be_c_p">En todas las pizzas, sin coste extra.</p></article>
+        <article class="bt bt-d bt-num" data-reveal style="--i:2"><span class="stat-n" data-count-to="20">20</span><span class="bt-l" data-i18n="st_pizzas">pizzas en carta</span></article>
+        <article class="bt bt-e bt-num" data-reveal><span class="stat-n" data-count-to="4">4</span><span class="bt-l" data-i18n="st_formas">especialidades de la casa</span></article>
+        <article class="bt bt-f bt-num" data-reveal style="--i:1"><span class="stat-n" data-count-to="1">1</span><span class="bt-l" data-i18n="st_horno">horno de leña</span></article>
+        <article class="bt bt-g" data-reveal style="--i:2"><div><h3 data-i18n="be_g_t">¿Venís a cenar?</h3><p data-i18n="be_g_p">Elige día y hora y te confirmamos la mesa por WhatsApp.</p></div><a class="btn btn-gold" href="reservar.html"><span class="btn-t" data-i18n="cta_book">Reservar mesa</span></a></article>
+      </div>
     </div>
   </section>
 
@@ -133,6 +175,22 @@
         <blockquote data-i18n="rv8">«Buen precio para la calidad. La Top, con parmesano y jamón curado, es mi favorita.»</blockquote>
       </li>
     </ul>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-t">
+    <div class="wrap">
+      <div class="section-head section-head-center" data-reveal>
+        <h2 class="h-big h-center" id="faq-t"><span data-i18n="faq_a">Preguntas </span><mark class="mk mk-bronze" data-i18n="faq_m">frecuentes</mark><span data-i18n="faq_b"></span></h2>
+      </div>
+      <div class="faq" data-reveal>
+        <details class="faq-item"><summary><span data-i18n="q1">¿Tenéis masa sin gluten?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p data-i18n="a1">Sí, en todas las pizzas y sin coste extra. En la cocina usamos harina de trigo y puede haber trazas: si eres celíaco, dínoslo al pedir.</p></details>
+        <details class="faq-item"><summary><span data-i18n="q2">¿Cómo hago un pedido para recoger?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p data-i18n="a2">Entra en la carta, añade lo que quieras y envía el pedido por WhatsApp. El mensaje sale escrito con todo; mándalo y pasa a recogerlo a la hora que elegiste.</p></details>
+        <details class="faq-item"><summary><span data-i18n="q3">¿Cómo se paga?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p data-i18n="a3">En el local, al recoger el pedido.</p></details>
+        <details class="faq-item"><summary><span data-i18n="q4">¿Puedo reservar mesa?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p data-i18n="a4">Sí: elige día, hora y personas en Reservar y te confirmamos por WhatsApp. Para grupos de más de 12, llámanos al 647 306 534.</p></details>
+        <details class="faq-item"><summary><span data-i18n="q5">¿Puedo quitar ingredientes de una pizza?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p data-i18n="a5">Sí. En cada pizza pulsa «Personalizar»: puedes quitar ingredientes, elegir la masa y dejar una nota para la cocina.</p></details>
+        <details class="faq-item"><summary><span data-i18n="q6">¿Tenéis platos vegetarianos?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p data-i18n="a6">Sí. En la carta, el filtro «Vegetariano» deja solo los platos sin carne ni pescado.</p></details>
+      </div>
+    </div>
   </section>
 
   <section class="section" id="donde" aria-labelledby="find-t">

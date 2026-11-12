@@ -8,6 +8,7 @@ const STR = {
   es:{skip:"Saltar al contenido",nav_formas:"Especialidades",nav_menu:"Carta",nav_book:"Reservar",nav_find:"Dónde estamos",call:"Llamar",call_aria:"Llamar al 647 306 534",order:"Pedido",menu:"Menú",
     hero_lead:"Pizza de horno de leña en Reus.",hero_sub:"Masa hecha cada día, veinte pizzas en carta y cuatro especialidades de la casa. Ven a comer, reserva mesa o pídela para recoger.",
     cta_order:"Pedir para recoger",cta_book:"Reservar mesa",
+    tb_1:"Masa sin gluten en todas las pizzas, sin coste",tb_2:"Pide por WhatsApp y recoge en C/ Josep Carner 4",pr_1:"Horno de leña",pr_3:"Pago al recoger",how_a:"Pide en ",how_m:"tres pasos",how_b:"",how_sub:"Sin apps ni registros: la carta, tu WhatsApp y listo.",how_h1:"Elige en la carta",how_p1:"Añade pizzas, quita ingredientes o pídela con masa sin gluten.",how_h2:"Envía el pedido por WhatsApp",how_p2:"El mensaje se escribe solo: tu nombre, la hora de recogida y el total.",how_h3:"Recógelo y paga en el local",how_p3:"Te esperamos en C/ Josep Carner 4, Reus, a la hora que elijas.",ch_online:"en línea",ch_input:"Escribe un mensaje",ch_1:"Hola Nano Pizza, quiero hacer un pedido para recoger:\n2 × Margherita (masa sin gluten)\n1 × Atún\nTotal: 36,00 €\nRecogida: hoy a las 20:30",ch_2:"¡Recibido! A las 20:30 lo tienes listo.",be_a_t:"Sabes el total antes de enviar",be_a_p:"El pedido suma cada pizza y cada extra. Lo que ves es lo que pagas al recoger.",be_pill:"Por WhatsApp",be_c_p:"En todas las pizzas, sin coste extra.",be_g_t:"¿Venís a cenar?",be_g_p:"Elige día y hora y te confirmamos la mesa por WhatsApp.",faq_a:"Preguntas ",faq_m:"frecuentes",faq_b:"",q1:"¿Tenéis masa sin gluten?",a1:"Sí, en todas las pizzas y sin coste extra. En la cocina usamos harina de trigo y puede haber trazas: si eres celíaco, dínoslo al pedir.",q2:"¿Cómo hago un pedido para recoger?",a2:"Entra en la carta, añade lo que quieras y envía el pedido por WhatsApp. El mensaje sale escrito con todo; mándalo y pasa a recogerlo a la hora que elegiste.",q3:"¿Cómo se paga?",a3:"En el local, al recoger el pedido.",q4:"¿Puedo reservar mesa?",a4:"Sí: elige día, hora y personas en Reservar y te confirmamos por WhatsApp. Para grupos de más de 12, llámanos al 647 306 534.",q5:"¿Puedo quitar ingredientes de una pizza?",a5:"Sí. En cada pizza pulsa «Personalizar»: puedes quitar ingredientes, elegir la masa y dejar una nota para la cocina.",q6:"¿Tenéis platos vegetarianos?",a6:"Sí. En la carta, el filtro «Vegetariano» deja solo los platos sin carne ni pescado.",
     hero_t1:"Pizza de leña",hero_t2:"para",hero_w0:"comer aquí",hero_words:"comer aquí|llevar|compartir",hero_sr:"comer aquí, para llevar o para compartir",casa_a:"Del ",casa_m:"fuego",casa_b:" a la mesa",big_t:"La carta, en tu móvil",big_p:"Elige, añádelo al pedido y envíanoslo por WhatsApp. Lo recoges en C/ Josep Carner 4.",st_a:"Lo que sale del ",st_m:"horno",st_b:"",st_pizzas:"pizzas en carta",st_formas:"especialidades de la casa",st_horno:"horno de leña",formas_a:"Más allá de la pizza ",formas_m:"redonda",formas_b:"",rv_a:"Lo que dicen en ",rv_m:"Reus",rv_b:"",find_a:"Dónde ",find_m:"estamos",find_b:"",hg_a:"¿Te ha entrado ",hg_m:"hambre",hg_b:"?",
     open_until:"Abierto ahora, hasta las {t}",closed_next:"Ahora cerrado. Abrimos {w} a las {t}",today:"hoy",tomorrow:"mañana",on_day:"el {d}",
     formas_t:"Más allá de la pizza redonda",formas_sub:"La misma masa, en cuatro formas de la casa.",
@@ -36,6 +37,7 @@ const STR = {
   ca:{skip:"Salta al contingut",nav_formas:"Especialitats",nav_menu:"Carta",nav_book:"Reservar",nav_find:"On som",call:"Trucar",call_aria:"Truca al 647 306 534",order:"Comanda",menu:"Menú",
     hero_lead:"Pizza al forn de llenya a Reus.",hero_sub:"Massa feta cada dia, vint pizzes a la carta i quatre especialitats de la casa. Vine a menjar, reserva taula o demana-la per emportar.",
     cta_order:"Demanar per emportar",cta_book:"Reservar taula",
+    tb_1:"Massa sense gluten a totes les pizzes, sense cost",tb_2:"Demana per WhatsApp i recull al C/ Josep Carner 4",pr_1:"Forn de llenya",pr_3:"Pagament en recollir",how_a:"Demana en ",how_m:"tres passos",how_b:"",how_sub:"Sense apps ni registres: la carta, el teu WhatsApp i llestos.",how_h1:"Tria a la carta",how_p1:"Afegeix pizzes, treu ingredients o demana-la amb massa sense gluten.",how_h2:"Envia la comanda per WhatsApp",how_p2:"El missatge s'escriu sol: el teu nom, l'hora de recollida i el total.",how_h3:"Recull-la i paga al local",how_p3:"T'esperem al C/ Josep Carner 4, Reus, a l'hora que triïs.",ch_online:"en línia",ch_input:"Escriu un missatge",ch_1:"Hola Nano Pizza, vull fer una comanda per recollir:\n2 × Margherita (massa sense gluten)\n1 × Atún\nTotal: 36,00 €\nRecollida: avui a les 20:30",ch_2:"Rebut! A les 20:30 el tens a punt.",be_a_t:"Saps el total abans d'enviar",be_a_p:"La comanda suma cada pizza i cada extra. El que veus és el que pagues en recollir.",be_pill:"Per WhatsApp",be_c_p:"A totes les pizzes, sense cost extra.",be_g_t:"Veniu a sopar?",be_g_p:"Tria dia i hora i et confirmem la taula per WhatsApp.",faq_a:"Preguntes ",faq_m:"freqüents",faq_b:"",q1:"Teniu massa sense gluten?",a1:"Sí, a totes les pizzes i sense cost extra. A la cuina fem servir farina de blat i hi pot haver traces: si ets celíac, digues-nos-ho en demanar.",q2:"Com faig una comanda per recollir?",a2:"Entra a la carta, afegeix el que vulguis i envia la comanda per WhatsApp. El missatge surt escrit amb tot; envia'l i passa a recollir-la a l'hora que has triat.",q3:"Com es paga?",a3:"Al local, en recollir la comanda.",q4:"Puc reservar taula?",a4:"Sí: tria dia, hora i persones a Reservar i et confirmem per WhatsApp. Per a grups de més de 12, truca'ns al 647 306 534.",q5:"Puc treure ingredients d'una pizza?",a5:"Sí. A cada pizza prem «Personalitzar»: pots treure ingredients, triar la massa i deixar una nota per a la cuina.",q6:"Teniu plats vegetarians?",a6:"Sí. A la carta, el filtre «Vegetarià» deixa només els plats sense carn ni peix.",
     hero_t1:"Pizza de llenya",hero_t2:"per",hero_w0:"menjar aquí",hero_words:"menjar aquí|emportar|compartir",hero_sr:"menjar aquí, per emportar o per compartir",casa_a:"Del ",casa_m:"foc",casa_b:" a la taula",big_t:"La carta, al teu mòbil",big_p:"Tria, afegeix-ho a la comanda i envia-la per WhatsApp. La recolliràs al C/ Josep Carner 4.",st_a:"El que surt del ",st_m:"forn",st_b:"",st_pizzas:"pizzes a la carta",st_formas:"especialitats de la casa",st_horno:"forn de llenya",formas_a:"Més enllà de la pizza ",formas_m:"rodona",formas_b:"",rv_a:"El que diuen a ",rv_m:"Reus",rv_b:"",find_a:"On ",find_m:"som",find_b:"",hg_a:"T'ha vingut ",hg_m:"gana",hg_b:"?",
     open_until:"Obert ara, fins a les {t}",closed_next:"Ara tancat. Obrim {w} a les {t}",today:"avui",tomorrow:"demà",on_day:"{d}",
     formas_t:"Més enllà de la pizza rodona",formas_sub:"La mateixa massa, en quatre formes de la casa.",
@@ -64,6 +66,7 @@ const STR = {
   en:{skip:"Skip to content",nav_formas:"Specialities",nav_menu:"Menu",nav_book:"Book",nav_find:"Find us",call:"Call",call_aria:"Call 647 306 534",order:"Order",menu:"Menu",
     hero_lead:"Wood-fired pizza in Reus.",hero_sub:"Dough made every day, twenty pizzas on the menu and four house specialities. Eat in, book a table or order for pickup.",
     cta_order:"Order for pickup",cta_book:"Book a table",
+    tb_1:"Gluten-free base on every pizza, at no extra cost",tb_2:"Order on WhatsApp, pick up at C/ Josep Carner 4",pr_1:"Wood-fired oven",pr_3:"Pay on pickup",how_a:"Order in ",how_m:"three steps",how_b:"",how_sub:"No apps, no sign-up: the menu, your WhatsApp and you're done.",how_h1:"Pick from the menu",how_p1:"Add pizzas, leave out ingredients or ask for a gluten-free base.",how_h2:"Send the order on WhatsApp",how_p2:"The message writes itself: your name, pickup time and total.",how_h3:"Pick it up and pay in store",how_p3:"We'll have it ready at C/ Josep Carner 4, Reus, at the time you choose.",ch_online:"online",ch_input:"Type a message",ch_1:"Hi Nano Pizza, I'd like to order for pickup:\n2 × Margherita (gluten-free base)\n1 × Atún\nTotal: 36,00 €\nPickup: today at 20:30",ch_2:"Got it! It'll be ready at 20:30.",be_a_t:"You see the total before you send",be_a_p:"Your order adds up every pizza and every extra. What you see is what you pay at pickup.",be_pill:"Via WhatsApp",be_c_p:"On every pizza, at no extra cost.",be_g_t:"Coming for dinner?",be_g_p:"Pick a day and time and we'll confirm your table on WhatsApp.",faq_a:"Frequently asked ",faq_m:"questions",faq_b:"",q1:"Do you have a gluten-free base?",a1:"Yes, on every pizza at no extra cost. We use wheat flour in the kitchen and traces are possible: if you're coeliac, tell us when you order.",q2:"How do I order for pickup?",a2:"Open the menu, add what you want and send the order on WhatsApp. The message comes out fully written; send it and pick up your order at the time you chose.",q3:"How do I pay?",a3:"At the restaurant, when you pick up your order.",q4:"Can I book a table?",a4:"Yes: pick a day, time and number of people under Book and we'll confirm on WhatsApp. For groups of more than 12, call us on 647 306 534.",q5:"Can I leave ingredients out of a pizza?",a5:"Yes. On any pizza tap “Customise”: you can leave out ingredients, choose the base and add a note for the kitchen.",q6:"Do you have vegetarian dishes?",a6:"Yes. On the menu, the “Vegetarian” filter shows only dishes without meat or fish.",
     hero_t1:"Wood-fired pizza",hero_t2:"to",hero_w0:"eat in",hero_words:"eat in|take away|share",hero_sr:"eat in, take away or share",casa_a:"From the ",casa_m:"fire",casa_b:" to your table",big_t:"The menu, on your phone",big_p:"Pick your food, add it to your order and send it to us on WhatsApp. Collect it at C/ Josep Carner 4.",st_a:"Fresh out of the ",st_m:"oven",st_b:"",st_pizzas:"pizzas on the menu",st_formas:"house specialities",st_horno:"wood-fired oven",formas_a:"Beyond the ",formas_m:"round",formas_b:" pizza",rv_a:"What ",rv_m:"Reus",rv_b:" is saying",find_a:"Find ",find_m:"us",find_b:"",hg_a:"Feeling ",hg_m:"hungry",hg_b:"?",
     open_until:"Open now until {t}",closed_next:"Closed now. We open {w} at {t}",today:"today",tomorrow:"tomorrow",on_day:"on {d}",
     formas_t:"Beyond the round pizza",formas_sub:"The same dough, baked into four house shapes.",
@@ -367,11 +370,12 @@ function dishHTML(key, name, price, desc, opt, photo){
 }
 /* Masa sin gluten: se puede pedir en cualquier pizza, sin coste */
 const sgHTML = on => `<label class="check sg-check"><input type="checkbox" data-opt="sg"${on ? " checked" : ""}><span>${esc(t("sg_dough"))}</span></label>`;
-const cardImg = (id, cls, sizes, eager) => PHOTOS[id] ? `<img class="${cls}" src="Imagenes/Carta/${id}-card-480.webp" srcset="Imagenes/Carta/${id}-card-480.webp 480w, Imagenes/Carta/${id}-card-720.webp 720w" sizes="${sizes}" width="480" height="384" ${eager ? "" : 'loading="lazy" '}decoding="async" alt="">` : "";
+const cardImg = (id, cls, sizes, eager) => PHOTOS[id] ? `<img class="${cls}" src="Imagenes/Carta/${id}-card-480.webp" srcset="Imagenes/Carta/${id}-card-480.webp 480w, Imagenes/Carta/${id}-card-720.webp 720w" sizes="${sizes}" width="480" height="384" ${eager ? (eager === "high" ? 'fetchpriority="high" ' : "") : 'loading="lazy" '}decoding="async" alt="">` : "";
 /* Tarjeta de pizza: foto a sangre arriba, opciones a la vista y dos botones */
-function pizzaCardHTML(p){
+function pizzaCardHTML(p, i){
   const key = "pizza:" + p.id, uid = key.replace(/[^a-z0-9]/gi, "-");
-  const img = cardImg(p.id, "pc-img", "(max-width:639px) calc(100vw - 32px), (max-width:1023px) 46vw, 380px");
+  // La primera foto es lo más grande al abrir la carta: se pide antes que el resto
+  const img = cardImg(p.id, "pc-img", "(max-width:639px) calc(100vw - 32px), (max-width:1023px) 46vw, 380px", i === 0 ? "high" : i < 3);
   return `<li class="dish pcard" data-key="${key}"><div class="pc-media" aria-hidden="true">${img}</div><div class="pc-body">
     <div class="dish-head"><h3 class="dish-name">${esc(p.n)}</h3><span class="dish-price">${money(p.p)}</span></div>
     <p class="dish-desc">${esc(ingText(p.ing))}</p>${metaBox(key)}${p.opt ? `<div class="pc-opt">${optsHTML(uid, p.opt)}</div>` : ""}${sgHTML(F.gf)}
@@ -1002,6 +1006,21 @@ var cycleReset = null;
     e.target.querySelectorAll("[data-count-to]").forEach(count);
   }), {rootMargin:"0px 0px -12% 0px"});
   $$("[data-reveal], .big-card").forEach(el => io.observe(el));
+  const chat = $(".chat");
+  if (chat){
+    const steps = $$(".how-step"), msgs = $$(".msg", chat);
+    const step = n => steps.forEach(s => s.classList.toggle("is-active", +s.dataset.step === n));
+    const show = (i, on = true) => msgs[i].classList.toggle("on", on);
+    document.documentElement.classList.add("chat-on");
+    new IntersectionObserver(([e], o) => {
+      if (!e.isIntersecting) return;
+      o.disconnect();
+      step(1);
+      setTimeout(() => { step(2); show(0); }, 900);
+      setTimeout(() => show(1), 1900);
+      setTimeout(() => { show(1, false); show(2); step(3); }, 3100);
+    }, {threshold:.4}).observe(chat);
+  }
 })();
 
 /* Nav background + mobile bar */
@@ -1011,6 +1030,7 @@ function onScroll(){
   ticking = false;
   const y = scrollY;
   nav.classList.toggle("is-solid", y > 30);
+  document.documentElement.classList.toggle("scrolled", y > 30);
   tabsBar?.classList.toggle("is-stuck", y >= stickAt);
   spy();
   bar.classList.toggle("is-shown", y > innerHeight * .6);

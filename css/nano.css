@@ -671,6 +671,119 @@ textarea.input{min-height:96px;resize:vertical}
 .pickup-where{font-size:15px;color:var(--ink-dim);margin:0 0 16px}
 .flyer{position:fixed;z-index:300;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--accent);pointer-events:none}
 
+/* ---------- Barra de avisos (arriba del todo; se va al bajar) ---------- */
+:root{--tb:0px}
+:root:has(.topbar){--tb:34px}
+:root.scrolled,:root.is-mesa{--tb:0px}
+.topbar{position:fixed;inset:0 0 auto;z-index:calc(var(--z-nav) + 1);height:34px;background:var(--ink);color:var(--paper);font-size:13px;transform:translateY(calc(var(--tb) - 34px));transition:transform .3s var(--ease-out)}
+.topbar-in{display:flex;align-items:center;justify-content:center;gap:14px;height:100%;margin:0;padding:0 16px;white-space:nowrap;overflow:hidden}
+.topbar a{color:var(--bronze);text-decoration:underline;text-underline-offset:3px}
+.tb-sep{width:4px;height:4px;border-radius:50%;background:rgba(245,241,234,.4);flex:none}
+.is-mesa .topbar{display:none}
+@media (max-width:760px){.topbar .tb-2,.topbar .tb-sep{display:none}.topbar-in{font-size:12.5px}}
+.nav{top:var(--tb);transition:top .3s var(--ease-out)}
+.mobile-menu{top:calc(var(--nav-h) + var(--tb))}
+.page-top{padding-top:calc(var(--nav-h) + var(--tb) + clamp(28px,5vw,64px))}
+.hero-in{padding-top:calc(var(--nav-h) + var(--tb) + 48px)}
+
+/* ---------- Botón flotante de WhatsApp (ordenador; en el móvil está la barra de pedido) ---------- */
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:var(--z-bar);display:none;place-items:center;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;box-shadow:0 10px 28px rgba(28,35,43,.25);transition:transform .25s var(--ease-out)}
+.wa-float svg{width:30px;height:30px}
+@media (hover:hover) and (pointer:fine){.wa-float:hover{transform:scale(1.08)}}
+@media (min-width:861px){.wa-float{display:grid}}
+.is-mesa .wa-float{display:none}
+
+/* ---------- Portada: pruebas bajo los botones y tarjeta de estado de cristal ---------- */
+.hero-act{display:flex;flex-direction:column;gap:18px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:8px 18px;list-style:none;margin:0;padding:0;font-size:14px;color:rgba(255,255,255,.9)}
+.hero-proof li{display:inline-flex;align-items:center;gap:7px}
+.hero-proof svg{width:16px;height:16px;padding:3px;border-radius:50%;background:var(--accent);color:#fff;flex:none;box-sizing:content-box}
+.hero-side{padding:14px 14px 14px 22px;border-radius:24px;background:rgba(28,35,43,.42);border:1px solid rgba(255,255,255,.16);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+@media (max-width:640px){.hero-side{padding:12px 12px 12px 16px}}
+
+/* ---------- Pide en tres pasos: pasos a la izquierda, chat de WhatsApp de ejemplo a la derecha ---------- */
+.how-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.how-steps{list-style:none;margin:32px 0 32px;padding:0;display:grid;gap:10px}
+.how-step{display:flex;gap:16px;align-items:flex-start;padding:16px 18px;border-radius:var(--r-m);background:var(--surface);transition:background-color .3s ease,box-shadow .3s ease}
+.how-step h3{margin:2px 0 4px;font-weight:600;font-size:19px;letter-spacing:-.01em}
+.how-step p{margin:0;color:var(--ink-dim);font-size:15px;line-height:1.45}
+.how-n{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;flex:none;background:var(--bg);font-weight:600;transition:background-color .3s ease,color .3s ease}
+.how-step.is-active{background:var(--bg);box-shadow:0 0 0 1.5px var(--ink),0 12px 30px rgba(28,35,43,.08)}
+.how-step.is-active .how-n{background:var(--accent);color:var(--on-accent)}
+.chat{border-radius:28px;overflow:hidden;background:#EFE7DC;box-shadow:0 30px 60px rgba(28,35,43,.16);max-width:440px;justify-self:center;width:100%}
+.chat-head{display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--ink);color:var(--paper)}
+.chat-head img{width:40px;height:40px;border-radius:50%}
+.chat-head b{display:block;font-weight:600;font-size:16px}
+.chat-head div span{font-size:13px;color:rgba(245,241,234,.7)}
+.chat-head .sample{margin-left:auto;border-color:var(--bronze);color:var(--bronze)}
+.chat-body{display:flex;flex-direction:column;gap:10px;min-height:300px;padding:20px 16px;background:radial-gradient(rgba(28,35,43,.06) 1px,transparent 1.5px) 0 0/18px 18px}
+.msg{max-width:84%;margin:0;padding:10px 14px;border-radius:16px;font-size:14.5px;line-height:1.45;white-space:pre-line;box-shadow:0 1px 1px rgba(28,35,43,.08)}
+.msg-out{align-self:flex-end;background:#D9FDD3;border-bottom-right-radius:4px}
+.msg-in{align-self:flex-start;background:#fff;border-bottom-left-radius:4px}
+.msg-typing{display:none;gap:4px;padding:14px}
+.msg-typing i{width:7px;height:7px;border-radius:50%;background:var(--ink-dim);animation:typing 1s infinite}
+.msg-typing i:nth-child(2){animation-delay:.15s}.msg-typing i:nth-child(3){animation-delay:.3s}
+@keyframes typing{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+.chat-input{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 12px 12px;padding:10px 10px 10px 18px;border-radius:999px;background:#fff;color:var(--ink-dim);font-size:14px}
+.chat-input svg{width:36px;height:36px;padding:8px;border-radius:50%;background:#25D366;color:#fff;flex:none}
+/* Con JS y movimiento: los mensajes llegan uno a uno */
+.anim.chat-on .msg{opacity:0;transform:translateY(10px) scale(.98);transition:opacity .35s var(--ease-out),transform .35s var(--ease-out)}
+.anim.chat-on .msg.on{opacity:1;transform:none}
+.anim.chat-on .msg-typing.on{display:flex}
+@media (max-width:860px){.how-grid{grid-template-columns:1fr}}
+
+/* ---------- Bento de ventajas ---------- */
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-areas:"a a b b" "a a c d" "e f g g";gap:16px;margin-top:clamp(32px,4vw,48px)}
+.bt{position:relative;border-radius:var(--r-l);padding:clamp(20px,2.4vw,28px);background:var(--surface);overflow:hidden}
+.bt h3{margin:0 0 8px;font-weight:600;font-size:clamp(22px,2.2vw,28px);line-height:1.1;letter-spacing:-.025em}
+.bt p{margin:0;color:var(--ink-dim)}
+.bt-a{grid-area:a;display:flex;flex-direction:column;justify-content:space-between;gap:24px;background:var(--ink);color:var(--paper)}
+.bt-a p{color:rgba(245,241,234,.78);max-width:40ch}
+.bt-a .btn{align-self:flex-start}
+.bt-b{grid-area:b;padding:0;min-height:220px}
+.bt-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bt-c{grid-area:c;background:var(--accent);color:var(--on-accent)}
+.bt-c p{color:rgba(255,248,240,.88)}
+.bt-d{grid-area:d}.bt-e{grid-area:e}.bt-f{grid-area:f}
+.bt-g{grid-area:g;display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--bronze)}
+.bt-g p{color:var(--ink)}
+.bt-g .btn,.hero-ctas .btn,.find-ctas .btn{white-space:nowrap;flex:none}
+.bt-num{display:flex;flex-direction:column;justify-content:flex-end;gap:6px}
+.bt-num .stat-n{font-size:clamp(64px,7vw,104px);line-height:.9}
+.bt-l{font-size:15px;font-weight:500}
+.receipt{width:min(100%,340px);padding:18px;border-radius:18px;background:var(--bg);color:var(--ink);box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.rc-l{margin:0 0 10px!important;font-size:12px!important;font-weight:600;letter-spacing:.06em;color:var(--ink-dim)!important}
+.receipt ul{list-style:none;margin:0;padding:0 0 10px;border-bottom:1px solid var(--line-soft)}
+.receipt li{display:flex;justify-content:space-between;padding:4px 0;font-size:14px}
+.rc-total{display:flex!important;align-items:center;gap:10px;margin:10px 0 0!important;color:var(--ink)!important;font-size:15px}
+.rc-total b{margin-right:auto;font-weight:600}
+.rc-pill{display:inline-flex;align-items:center;padding:4px 10px;border-radius:999px;background:#25D366;color:#fff;font-size:12px;font-weight:600}
+@media (max-width:860px){
+  .bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"a a" "b b" "c d" "e f" "g g"}
+  .bt-g{flex-direction:column;align-items:flex-start}
+}
+
+/* ---------- Preguntas frecuentes ---------- */
+.faq{max-width:760px;margin:0 auto;display:grid;gap:10px}
+.faq-item{border-radius:var(--r-m);background:var(--surface)}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;padding:14px 22px;cursor:pointer;list-style:none;font-weight:600;font-size:17px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary svg{width:22px;height:22px;flex:none;transition:transform .25s var(--ease-out)}
+.faq-item[open] summary svg{transform:rotate(180deg)}
+.faq-item summary:focus-visible{outline:2px solid var(--accent-ink);outline-offset:2px;border-radius:var(--r-m)}
+.faq-item p{margin:0;padding:0 22px 20px;color:var(--ink-dim);max-width:62ch}
+.faq-item[open]{background:var(--bg);box-shadow:0 0 0 1px var(--line)}
+
+/* ---------- Opiniones escalonadas (ordenador) ---------- */
+@media (min-width:861px){
+  .rv-row{padding-bottom:28px}
+  .rv-card:nth-child(even){transform:translateY(28px)}
+}
+
+/* ---------- Revelado: los titulares además se enfocan ---------- */
+.anim.reveal-on :is(.section-head,h2)[data-reveal]{transition:opacity .9s var(--ease-out),transform .9s var(--ease-out),filter .9s var(--ease-out)}
+.anim.reveal-on :is(.section-head,h2)[data-reveal]:not(.in){filter:blur(8px)}
+
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
