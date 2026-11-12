@@ -13,7 +13,7 @@ const STR = {
     formas_t:"Más allá de la pizza redonda",formas_sub:"La misma masa, en cuatro formas de la casa.",
     menu_t:"La carta",menu_a:"La ",menu_m:"carta",menu_b:"",book_a:"Reserva tu ",book_m:"mesa",book_b:"",menu_sub:"Añade lo que te apetezca y envíanos el pedido por WhatsApp. Lo tendrás listo para recoger en C/ Josep Carner 4.",
     c_pizzas:"Pizzas",c_especiales:"Especialidades",c_pasta:"Pasta fresca",c_ensaladas:"Ensaladas",c_tapas:"Tapas",c_postres:"Postres",
-    add:"Añadir",added:"Añadido",base:"Base",opt_tomate:"Tomate",opt_nata:"Nata",opt_carne:"Carne",opt_pollo:"Pollo",opt_cocido:"Jamón cocido",opt_curado:"Jamón curado",meat:"Carne",ham:"Jamón",choose_pizza:"Elige tu pizza",
+    add:"Añadir",added:"Añadido",custom:"Personalizar",sg_dough:"Masa sin gluten",cu_opts:"Opciones",cu_ing:"Ingredientes",cu_ing_help:"Toca un ingrediente para quitarlo.",cu_note:"Nota para la cocina",cu_note_ph:"Por ejemplo: muy hecha, cortada en 8 trozos…",cu_add:"Añadir al pedido",cu_without:"sin",cu_added:"Añadido al pedido",base:"Base",opt_tomate:"Tomate",opt_nata:"Nata",opt_carne:"Carne",opt_pollo:"Pollo",opt_cocido:"Jamón cocido",opt_curado:"Jamón curado",meat:"Carne",ham:"Jamón",choose_pizza:"Elige tu pizza",
     pasta_t:"Pasta fresca casera",pasta_desc:"Elige la pasta y la salsa. Si quieres, te la servimos dentro de un bol de masa de pizza.",pick_pasta:"Elige tu pasta",pick_sauce:"Elige tu salsa",bowl:"En bol de masa de pizza (+3 €)",
     tapas_note:"Todas las tapas a 7,50 €.",desserts:"Postres caseros del momento, preparados con producto fresco. Pregúntanos qué hay hoy.",salads_note:"Ensaladas a 11 €.",
     
@@ -30,7 +30,7 @@ const STR = {
     remove:"Quitar",hero_alt:"Pizza margherita napolitana recién salida del horno, con el borde hinchado y tostado",rv4:"«El Calzone llega cerrado y humeante; dentro, la pizza entera. Repetiremos.»",rv5:"«La pasta en bol de masa de pizza es un acierto. Gnocchis con gorgonzola, de diez.»",rv6:"«Pedido por WhatsApp en un minuto y listo a la hora que nos dijeron.»",rv7:"«Borde con manchas de horno de leña, como en Nápoles. La Margherita, sencilla y perfecta.»",rv8:"«Buen precio para la calidad. La Top, con parmesano y jamón curado, es mi favorita.»",foot_desc:"Pizzería con horno de leña en Reus. Ven a comer, reserva mesa o pídela para recoger.",foot_all_menu:"Ver toda la carta",foot_reviews:"Opiniones",aria_foot:"Pie de página",casa_t:"Del fuego a la mesa",casa_sub:"Un horno de leña, tres pasos y ningún atajo.",casa_h1:"Encendemos el horno",casa_p1:"Cada día empieza igual: leña, fuego y paciencia hasta que el horno coge temperatura.",casa_h2:"Horneamos junto a las llamas",casa_p2:"La pizza entra directa sobre la piedra, al lado del fuego, y se hace en pocos minutos.",casa_h3:"Sale al punto",casa_p3:"Con el borde hinchado y tostado. De la pala a tu mesa, o a tu caja para llevar.",casa_alt1:"Boca de un horno de ladrillo con la leña ardiendo",casa_alt2:"Llamas dentro del horno de leña con dos pizzas cociéndose",casa_alt3:"Pizza horneándose junto a las brasas",credit:"Fotos de demostración vía Wikimedia Commons:",rv_t:"Lo que dicen en Reus",rv_note:"Opiniones de ejemplo para la demo. Antes de publicar se sustituirán por reseñas reales de Google.",sample:"Ejemplo",rv1:"«La Seguin, con miel y queso de cabra, es otra cosa. Masa fina en el centro y el borde bien tostado.»",rv2:"«Pedimos para recoger un viernes y en veinte minutos estaba lista. El Pipo fue un descubrimiento.»",rv3:"«Fuimos a cenar con niños y nos atendieron genial. La burrata, imprescindible.»",meta_title:"Nano Pizza | Pizzería en Reus",meta_desc:"Nano Pizza, pizzería con horno de leña en C/ Josep Carner 4, Reus. Carta, pedidos para recoger y reservas por WhatsApp.",aria_nav:"Principal",aria_sections:"Secciones de la carta",aria_lang:"Idioma",map_title:"Mapa: Nano Pizza, C/ Josep Carner 4, Reus",foot_visit:"Visítanos",foot_contact:"Contacto",foot_wa:"Escríbenos por WhatsApp",foot_top:"Volver arriba",err_pick_pizza:"Elige primero qué pizza quieres.",added_sr:"Añadido al pedido: {n}. Llevas {c} en total.",less:"Quitar uno",more:"Añadir uno",bar_empty:"Ver la carta",bar_items:"Ver pedido ({n}): {p}",
     pay_note:"El pago se hace en el local, al recoger.",pick_time:"Elige una hora",err_time_pick:"Elige a qué hora pasarás a recoger.",clear_cart:"Vaciar pedido",cleared:"Pedido vaciado.",undo:"Deshacer",sent_t:"¿Has enviado el pedido?",sent_p:"Lo abrimos en WhatsApp: {n}, {p}, recogida {w}. Si ya lo has enviado, te confirmamos la hora por WhatsApp.",sent_yes:"Sí, ya lo he enviado",sent_again:"Abrir WhatsApp otra vez",sent_edit:"Cambiar el pedido",done_t:"Pedido enviado",done_p:"Te confirmamos la hora por WhatsApp. ¡Hasta ahora!",art_1:"1 artículo",art_n:"{n} artículos",meta_title_carta:"Carta | Nano Pizza, pizzería en Reus",meta_desc_carta:"Carta de Nano Pizza: veinte pizzas de horno de leña, especialidades, pasta fresca, ensaladas y tapas, con los alérgenos de cada plato. Pide para recoger por WhatsApp.",meta_title_reservar:"Reservar mesa | Nano Pizza, Reus",meta_desc_reservar:"Reserva mesa en Nano Pizza, C/ Josep Carner 4, Reus. Elige día y hora y te confirmamos por WhatsApp.",diet_info:"Alérgenos y sin gluten",menu_sub_mesa:"Elige con calma: cuando lo tengas claro, díselo a tu camarero.",mesa_out:"Ver la web completa: pedidos para recoger y reservas",credit_menu:"Fotos de las pizzas: de demostración vía Wikimedia Commons, no son de Nano Pizza.",diet_l:"Ver solo",f_veg:"Vegetariano",f_hot:"Picante",f_gf:"Sin gluten",clear_f:"Quitar filtros",diet_n:"{n} platos",diet_n1:"1 plato",
     no_match:"Nada en esta sección con estos filtros.",al_l:"Alérgenos:",al_none:"ninguno de los 14 principales",al_pick:"y los de la pizza que elijas",
-    diet_note:"Cada plato indica sus alérgenos. «Sin gluten» son platos sin gluten en la receta, pero en la cocina usamos harina de trigo y puede haber trazas: si eres celíaco o tienes una alergia, dínoslo al pedir.",
+    diet_note:"Cada plato indica sus alérgenos. «Sin gluten» son platos sin gluten en la receta, pero en la cocina usamos harina de trigo y puede haber trazas: si eres celíaco o tienes una alergia, dínoslo al pedir. Todas las pizzas se pueden pedir con masa sin gluten, sin coste extra.",
     al:{gluten:"gluten",crustaceos:"crustáceos",huevo:"huevo",pescado:"pescado",cacahuetes:"cacahuetes",soja:"soja",lacteos:"lácteos",frutos:"frutos de cáscara",apio:"apio",mostaza:"mostaza",sesamo:"sésamo",sulfitos:"sulfitos",altramuces:"altramuces",moluscos:"moluscos"},
     days:["domingo","lunes","martes","miércoles","jueves","viernes","sábado"]},
   ca:{skip:"Salta al contingut",nav_formas:"Especialitats",nav_menu:"Carta",nav_book:"Reservar",nav_find:"On som",call:"Trucar",call_aria:"Truca al 647 306 534",order:"Comanda",menu:"Menú",
@@ -41,7 +41,7 @@ const STR = {
     formas_t:"Més enllà de la pizza rodona",formas_sub:"La mateixa massa, en quatre formes de la casa.",
     menu_t:"La carta",menu_a:"La ",menu_m:"carta",menu_b:"",book_a:"Reserva la teva ",book_m:"taula",book_b:"",menu_sub:"Afegeix el que et vingui de gust i envia'ns la comanda per WhatsApp. La tindràs a punt per recollir al C/ Josep Carner 4.",
     c_pizzas:"Pizzes",c_especiales:"Especialitats",c_pasta:"Pasta fresca",c_ensaladas:"Amanides",c_tapas:"Tapes",c_postres:"Postres",
-    add:"Afegir",added:"Afegit",base:"Base",opt_tomate:"Tomàquet",opt_nata:"Nata",opt_carne:"Carn",opt_pollo:"Pollastre",opt_cocido:"Pernil dolç",opt_curado:"Pernil curat",meat:"Carn",ham:"Pernil",choose_pizza:"Tria la teva pizza",
+    add:"Afegir",added:"Afegit",custom:"Personalitzar",sg_dough:"Massa sense gluten",cu_opts:"Opcions",cu_ing:"Ingredients",cu_ing_help:"Toca un ingredient per treure'l.",cu_note:"Nota per a la cuina",cu_note_ph:"Per exemple: ben feta, tallada en 8 trossos…",cu_add:"Afegir a la comanda",cu_without:"sense",cu_added:"Afegit a la comanda",base:"Base",opt_tomate:"Tomàquet",opt_nata:"Nata",opt_carne:"Carn",opt_pollo:"Pollastre",opt_cocido:"Pernil dolç",opt_curado:"Pernil curat",meat:"Carn",ham:"Pernil",choose_pizza:"Tria la teva pizza",
     pasta_t:"Pasta fresca casolana",pasta_desc:"Tria la pasta i la salsa. Si vols, te la servim dins d'un bol de massa de pizza.",pick_pasta:"Tria la pasta",pick_sauce:"Tria la salsa",bowl:"En bol de massa de pizza (+3 €)",
     tapas_note:"Totes les tapes a 7,50 €.",desserts:"Postres casolanes del dia, fetes amb producte fresc. Pregunta'ns què hi ha avui.",salads_note:"Amanides a 11 €.",
     
@@ -58,7 +58,7 @@ const STR = {
     remove:"Treure",hero_alt:"Pizza margherita napolitana acabada de sortir del forn, amb la vora inflada i torrada",rv4:"«El Calzone arriba tancat i fumejant; a dins, la pizza sencera. Hi tornarem.»",rv5:"«La pasta en bol de massa de pizza és un encert. Gnocchis amb gorgonzola, de deu.»",rv6:"«Comanda per WhatsApp en un minut i a punt a l\'hora que ens van dir.»",rv7:"«Vora amb taques de forn de llenya, com a Nàpols. La Margherita, senzilla i perfecta.»",rv8:"«Bon preu per la qualitat. La Top, amb parmesà i pernil curat, és la meva preferida.»",foot_desc:"Pizzeria amb forn de llenya a Reus. Vine a menjar, reserva taula o demana-la per emportar.",foot_all_menu:"Veure tota la carta",foot_reviews:"Opinions",aria_foot:"Peu de pàgina",casa_t:"Del foc a la taula",casa_sub:"Un forn de llenya, tres passos i cap drecera.",casa_h1:"Encenem el forn",casa_p1:"Cada dia comença igual: llenya, foc i paciència fins que el forn agafa temperatura.",casa_h2:"Coem al costat de les flames",casa_p2:"La pizza entra directa sobre la pedra, al costat del foc, i es fa en pocs minuts.",casa_h3:"Surt al punt",casa_p3:"Amb la vora inflada i torrada. De la pala a la teva taula, o a la caixa per emportar.",casa_alt1:"Boca d'un forn de maó amb la llenya cremant",casa_alt2:"Flames dins del forn de llenya amb dues pizzes coent-se",casa_alt3:"Pizza coent-se al costat de les brases",credit:"Fotos de demostració via Wikimedia Commons:",rv_t:"El que diuen a Reus",rv_note:"Opinions d'exemple per a la demo. Abans de publicar se substituiran per ressenyes reals de Google.",sample:"Exemple",rv1:"«La Seguin, amb mel i formatge de cabra, és una altra cosa. Massa fina al centre i la vora ben torrada.»",rv2:"«Vam demanar per emportar un divendres i en vint minuts era a punt. El Pipo va ser un descobriment.»",rv3:"«Vam anar a sopar amb nens i ens van atendre de meravella. La burrata, imprescindible.»",meta_title:"Nano Pizza | Pizzeria a Reus",meta_desc:"Nano Pizza, pizzeria amb forn de llenya al C/ Josep Carner 4, Reus. Carta, comandes per emportar i reserves per WhatsApp.",aria_nav:"Principal",aria_sections:"Seccions de la carta",aria_lang:"Idioma",map_title:"Mapa: Nano Pizza, C/ Josep Carner 4, Reus",foot_visit:"Visita'ns",foot_contact:"Contacte",foot_wa:"Escriu-nos per WhatsApp",foot_top:"Torna a dalt",err_pick_pizza:"Tria primer quina pizza vols.",added_sr:"Afegit a la comanda: {n}. En portes {c} en total.",less:"Treure'n un",more:"Afegir-ne un",bar_empty:"Veure la carta",bar_items:"Veure comanda ({n}): {p}",
     pay_note:"El pagament es fa al local, en recollir.",pick_time:"Tria una hora",err_time_pick:"Tria a quina hora passaràs a recollir.",clear_cart:"Buidar la comanda",cleared:"Comanda buidada.",undo:"Desfer",sent_t:"Has enviat la comanda?",sent_p:"L'hem obert a WhatsApp: {n}, {p}, recollida {w}. Si ja l'has enviada, et confirmem l'hora per WhatsApp.",sent_yes:"Sí, ja l'he enviada",sent_again:"Tornar a obrir WhatsApp",sent_edit:"Canviar la comanda",done_t:"Comanda enviada",done_p:"Et confirmem l'hora per WhatsApp. Fins ara!",art_1:"1 article",art_n:"{n} articles",meta_title_carta:"Carta | Nano Pizza, pizzeria a Reus",meta_desc_carta:"Carta de Nano Pizza: vint pizzes al forn de llenya, especialitats, pasta fresca, amanides i tapes, amb els al·lèrgens de cada plat. Demana per recollir per WhatsApp.",meta_title_reservar:"Reservar taula | Nano Pizza, Reus",meta_desc_reservar:"Reserva taula a Nano Pizza, C/ Josep Carner 4, Reus. Tria dia i hora i et confirmem per WhatsApp.",diet_info:"Al·lèrgens i sense gluten",menu_sub_mesa:"Tria amb calma: quan ho tinguis clar, digues-ho al cambrer.",mesa_out:"Veure la web completa: comandes per recollir i reserves",credit_menu:"Fotos de les pizzes: de demostració via Wikimedia Commons, no són de Nano Pizza.",diet_l:"Mostra només",f_veg:"Vegetarià",f_hot:"Picant",f_gf:"Sense gluten",clear_f:"Treure filtres",diet_n:"{n} plats",diet_n1:"1 plat",
     no_match:"Res d'aquesta secció amb aquests filtres.",al_l:"Al·lèrgens:",al_none:"cap dels 14 principals",al_pick:"i els de la pizza que triïs",
-    diet_note:"Cada plat indica els seus al·lèrgens. «Sense gluten» són plats sense gluten a la recepta, però a la cuina fem servir farina de blat i hi pot haver traces: si ets celíac o tens una al·lèrgia, digues-nos-ho en demanar.",
+    diet_note:"Cada plat indica els seus al·lèrgens. «Sense gluten» són plats sense gluten a la recepta, però a la cuina fem servir farina de blat i hi pot haver traces: si ets celíac o tens una al·lèrgia, digues-nos-ho en demanar. Totes les pizzes es poden demanar amb massa sense gluten, sense cost extra.",
     al:{gluten:"gluten",crustaceos:"crustacis",huevo:"ou",pescado:"peix",cacahuetes:"cacauets",soja:"soja",lacteos:"lactis",frutos:"fruits de closca",apio:"api",mostaza:"mostassa",sesamo:"sèsam",sulfitos:"sulfits",altramuces:"tramussos",moluscos:"mol·luscs"},
     days:["diumenge","dilluns","dimarts","dimecres","dijous","divendres","dissabte"]},
   en:{skip:"Skip to content",nav_formas:"Specialities",nav_menu:"Menu",nav_book:"Book",nav_find:"Find us",call:"Call",call_aria:"Call 647 306 534",order:"Order",menu:"Menu",
@@ -69,7 +69,7 @@ const STR = {
     formas_t:"Beyond the round pizza",formas_sub:"The same dough, baked into four house shapes.",
     menu_t:"The menu",menu_a:"The ",menu_m:"menu",menu_b:"",book_a:"Book your ",book_m:"table",book_b:"",menu_sub:"Add what you fancy and send us the order on WhatsApp. It'll be ready to pick up at C/ Josep Carner 4.",
     c_pizzas:"Pizzas",c_especiales:"Specialities",c_pasta:"Fresh pasta",c_ensaladas:"Salads",c_tapas:"Tapas",c_postres:"Desserts",
-    add:"Add",added:"Added",base:"Base",opt_tomate:"Tomato",opt_nata:"Cream",opt_carne:"Beef",opt_pollo:"Chicken",opt_cocido:"Cooked ham",opt_curado:"Cured ham",meat:"Meat",ham:"Ham",choose_pizza:"Choose your pizza",
+    add:"Add",added:"Added",custom:"Customise",sg_dough:"Gluten-free base",cu_opts:"Options",cu_ing:"Ingredients",cu_ing_help:"Tap an ingredient to leave it out.",cu_note:"Note for the kitchen",cu_note_ph:"For example: well done, cut into 8 slices…",cu_add:"Add to order",cu_without:"without",cu_added:"Added to your order",base:"Base",opt_tomate:"Tomato",opt_nata:"Cream",opt_carne:"Beef",opt_pollo:"Chicken",opt_cocido:"Cooked ham",opt_curado:"Cured ham",meat:"Meat",ham:"Ham",choose_pizza:"Choose your pizza",
     pasta_t:"Homemade fresh pasta",pasta_desc:"Pick your pasta and sauce. We can also serve it inside a pizza-dough bowl.",pick_pasta:"Choose your pasta",pick_sauce:"Choose your sauce",bowl:"In a pizza-dough bowl (+€3)",
     tapas_note:"All tapas €7.50.",desserts:"Homemade desserts of the day, made with fresh produce. Ask us what's on today.",salads_note:"Salads €11.",
     
@@ -86,7 +86,7 @@ const STR = {
     remove:"Remove",hero_alt:"Neapolitan margherita pizza fresh from the oven, with a puffed, charred crust",rv4:"“The Calzone arrives sealed and steaming, a whole pizza inside. We\'ll be back.”",rv5:"“Pasta in a pizza-dough bowl is a great idea. Gnocchi with gorgonzola, spot on.”",rv6:"“Ordered on WhatsApp in a minute, ready exactly when they said.”",rv7:"“Leopard-spotted crust, like in Naples. The Margherita is simple and perfect.”",rv8:"“Good value for the quality. La Top, with parmesan and cured ham, is my favourite.”",foot_desc:"Wood-fired pizzeria in Reus. Eat in, book a table or order for pickup.",foot_all_menu:"See the full menu",foot_reviews:"Reviews",aria_foot:"Footer",casa_t:"From the fire to your table",casa_sub:"A wood-fired oven, three steps and no shortcuts.",casa_h1:"We light the oven",casa_p1:"Every day starts the same way: wood, fire and patience until the oven is up to heat.",casa_h2:"We bake beside the flames",casa_p2:"The pizza goes straight onto the stone, next to the fire, and is ready in a few minutes.",casa_h3:"Out at its best",casa_p3:"Puffed, toasted crust. From the peel to your table, or into a box to take away.",casa_alt1:"Mouth of a brick oven with wood burning",casa_alt2:"Flames inside the wood-fired oven with two pizzas baking",casa_alt3:"Pizza baking beside the embers",credit:"Demo photos via Wikimedia Commons:",rv_t:"What Reus is saying",rv_note:"Sample reviews for the demo. They will be replaced with real Google reviews before launch.",sample:"Sample",rv1:"“The Seguin, with honey and goat's cheese, is something else. Thin in the middle, nicely charred crust.”",rv2:"“We ordered for pickup on a Friday and it was ready in twenty minutes. The Pipo was a discovery.”",rv3:"“We went for dinner with the kids and the service was lovely. Don't skip the burrata.”",meta_title:"Nano Pizza | Pizzeria in Reus",meta_desc:"Nano Pizza, wood-fired pizzeria at C/ Josep Carner 4, Reus. Menu, pickup orders and table bookings via WhatsApp.",aria_nav:"Main",aria_sections:"Menu sections",aria_lang:"Language",map_title:"Map: Nano Pizza, C/ Josep Carner 4, Reus",foot_visit:"Visit us",foot_contact:"Contact",foot_wa:"Message us on WhatsApp",foot_top:"Back to top",err_pick_pizza:"Choose which pizza you want first.",added_sr:"Added to your order: {n}. {c} items in total.",less:"Remove one",more:"Add one",bar_empty:"See the menu",bar_items:"View order ({n}): {p}",
     pay_note:"You pay at the restaurant when you pick up.",pick_time:"Choose a time",err_time_pick:"Choose when you'll pick it up.",clear_cart:"Empty order",cleared:"Order emptied.",undo:"Undo",sent_t:"Did you send the order?",sent_p:"We opened it in WhatsApp: {n}, {p}, pickup {w}. Once you've sent it, we'll confirm the time on WhatsApp.",sent_yes:"Yes, I've sent it",sent_again:"Open WhatsApp again",sent_edit:"Change the order",done_t:"Order sent",done_p:"We'll confirm the time on WhatsApp. See you soon!",art_1:"1 item",art_n:"{n} items",meta_title_carta:"Menu | Nano Pizza, pizzeria in Reus",meta_desc_carta:"Nano Pizza's menu: twenty wood-fired pizzas, specialities, fresh pasta, salads and tapas, with the allergens of every dish. Order for pickup via WhatsApp.",meta_title_reservar:"Book a table | Nano Pizza, Reus",meta_desc_reservar:"Book a table at Nano Pizza, C/ Josep Carner 4, Reus. Pick a day and time and we'll confirm on WhatsApp.",diet_info:"Allergens and gluten-free",menu_sub_mesa:"Take your time: when you're ready, just tell your server.",mesa_out:"See the full site: pickup orders and bookings",credit_menu:"Pizza photos: demo images via Wikimedia Commons, not Nano Pizza's own.",diet_l:"Show only",f_veg:"Vegetarian",f_hot:"Spicy",f_gf:"Gluten-free",clear_f:"Clear filters",diet_n:"{n} dishes",diet_n1:"1 dish",
     no_match:"Nothing in this section matches these filters.",al_l:"Allergens:",al_none:"none of the main 14",al_pick:"plus those of your chosen pizza",
-    diet_note:"Every dish lists its allergens. “Gluten-free” means no gluten in the recipe, but we use wheat flour in the kitchen and traces are possible: if you're coeliac or have an allergy, tell us when you order.",
+    diet_note:"Every dish lists its allergens. “Gluten-free” means no gluten in the recipe, but we use wheat flour in the kitchen and traces are possible: if you're coeliac or have an allergy, tell us when you order. Every pizza can be made with a gluten-free base at no extra cost.",
     al:{gluten:"gluten",crustaceos:"crustaceans",huevo:"egg",pescado:"fish",cacahuetes:"peanuts",soja:"soy",lacteos:"milk",frutos:"tree nuts",apio:"celery",mostaza:"mustard",sesamo:"sesame",sulfitos:"sulphites",altramuces:"lupin",moluscos:"molluscs"},
     days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}
 };
@@ -334,7 +334,7 @@ function dietOf(key, o={}){
   const x = DIET[key] || {};
   if (key.startsWith("pizza:")){
     const p = PIZZAS.find(q => "pizza:"+q.id === key);
-    return mkDiet(["gluten", ...p.ing.flatMap(i => words(ING_AL[i]))], !p.ing.some(i => NOT_VEG.has(i)), x.hot);
+    return mkDiet([...(o.sg ? [] : ["gluten"]), ...p.ing.flatMap(i => words(ING_AL[i]))], !p.ing.some(i => NOT_VEG.has(i)), x.hot);
   }
   if (key === "pasta") return mergeDiet(dietOf("pasta:"+o.pasta), dietOf("sauce:"+o.sauce));
   const d = mkDiet(words(x.al), x.veg, x.hot);
@@ -365,8 +365,19 @@ function dishHTML(key, name, price, desc, opt, photo){
   return `<li class="dish${photo ? " has-img" : ""}" data-key="${key}">${photo ? photoHTML(photo) : ""}<div class="dish-body"><div class="dish-head"><h3 class="dish-name">${esc(name)}</h3><span class="dish-price">${money(price)}</span></div>
     ${desc ? `<p class="dish-desc">${esc(desc)}</p>` : ""}<div class="dish-foot">${metaBox(key)}${addBtn(key)}</div>${opts ? `<div class="dish-opts">${opts}</div>` : ""}</div></li>`;
 }
+/* Masa sin gluten: se puede pedir en cualquier pizza, sin coste */
+const sgHTML = on => `<label class="check sg-check"><input type="checkbox" data-opt="sg"${on ? " checked" : ""}><span>${esc(t("sg_dough"))}</span></label>`;
+/* Tarjeta de pizza: foto redonda sobre azul noche, opciones a la vista y dos botones */
+function pizzaCardHTML(p){
+  const key = "pizza:" + p.id, uid = key.replace(/[^a-z0-9]/gi, "-");
+  const img = PHOTOS[p.id] ? `<img class="pc-img" src="Imagenes/Carta/${p.id}-sq.webp" width="240" height="240" loading="lazy" decoding="async" alt="">` : "";
+  return `<li class="dish pcard" data-key="${key}"><div class="pc-media" aria-hidden="true">${img}</div><div class="pc-body">
+    <div class="dish-head"><h3 class="dish-name">${esc(p.n)}</h3><span class="dish-price">${money(p.p)}</span></div>
+    <p class="dish-desc">${esc(ingText(p.ing))}</p>${metaBox(key)}${p.opt ? `<div class="pc-opt">${optsHTML(uid, p.opt)}</div>` : ""}${sgHTML(F.gf)}
+    <div class="pc-actions"><button class="btn btn-outline" type="button" data-custom="${key}" aria-haspopup="dialog"><span class="btn-t">${esc(t("custom"))}</span></button>${addBtn(key)}</div></div></li>`;
+}
 function panelHTML(cat){
-  if (cat === "pizzas") return `<ul class="dishes">${PIZZAS.map(p => dishHTML("pizza:"+p.id, p.n, p.p, ingText(p.ing), p.opt, PHOTOS[p.id] && p.id)).join("")}</ul>`;
+  if (cat === "pizzas") return `<ul class="dishes pizza-cards">${PIZZAS.map(pizzaCardHTML).join("")}</ul>`;
   if (cat === "especiales") return `<ul class="dishes">${SPECIALS.map(p => dishHTML("special:"+p.id, p.n, p.p, L(p.d), p.opt, "ico:"+p.icon)).join("")}</ul>`;
   if (cat === "ensaladas") return `<ul class="dishes">${SALADS.map(p => dishHTML("salad:"+p.id, L(p.n), p.p, L(p.d))).join("")}</ul>`;
   if (cat === "tapas") return `<p class="panel-note">${esc(t("tapas_note"))}</p><ul class="dishes">${TAPAS.map(p => dishHTML("tapa:"+p.id, L(p.n), p.p, p.d ? L(p.d) : "")).join("")}</ul>`;
@@ -430,6 +441,10 @@ function applyFilters(){
         [...sel.options].forEach(op => { if (op.value) op.hidden = op.disabled = !fits(mergeDiet(base, dietOf("pizza:"+op.value))); });
         if (sel.value && sel.selectedOptions[0].disabled){ sel.value = ""; updateMeta(li); }
         ok = [...sel.options].some(op => op.value && !op.disabled);
+      } else if (key.startsWith("pizza:")){
+        const sg = $('[data-opt="sg"]', li);
+        if (sg && sg.checked !== F.gf && (F.gf || sg.dataset.auto)){ sg.checked = F.gf; F.gf ? sg.dataset.auto = "1" : delete sg.dataset.auto; updateMeta(li); }
+        ok = fits(dietOf(key, readOpts(li)));
       } else ok = fits(dietOf(key));
       li.hidden = !ok;
       n = (n || 0) + (ok ? 1 : 0);
@@ -544,6 +559,9 @@ function itemInfo(line, l=lang){
   if (o.meat) opts.push(tl(OPTV.meat[o.meat]));
   if (o.ham) opts.push(tl(OPTV.ham[o.ham]));
   if (o.pizza) opts.push(PIZZAS.find(x => x.id === o.pizza).n);
+  if (o.sg) opts.push(tl("sg_dough").toLowerCase());
+  if (o.sin?.length) opts.push(`${tl("cu_without")} ${o.sin.map(k => ING[k][l]).join(", ")}`);
+  if (o.nota) opts.push(`«${o.nota}»`);
   return {name, price, opts};
 }
 const lineKey = (k, o) => k + "|" + JSON.stringify(o);
@@ -707,6 +725,55 @@ function onAdd(btn){
   fly(btn).then(() => $$("[data-count]").forEach(b => { b.classList.remove("roll"); void b.offsetWidth; b.classList.add("roll"); }));
 }
 
+/* ================= Personalizar una pizza ================= */
+// Ingredientes que van con la opción elegida (tomate o nata, carne o pollo) no se quitan desde aquí
+const FIXED_ING = new Set(["tomnata", "picpollo"]);
+let cuKey = null, cuFrom = null;
+function openCustom(btn){
+  const dlg = $("#custom");
+  if (!dlg?.showModal) return;
+  cuKey = btn.dataset.custom; cuFrom = btn;
+  const p = PIZZAS.find(x => "pizza:" + x.id === cuKey), card = btn.closest("[data-key]");
+  const cur = readOpts(card);
+  const opts = p.opt ? optsHTML("cu", p.opt).replace(/ checked/g, "").replace(new RegExp(`value="(${Object.values(cur).join("|")})"`, "g"), 'value="$1" checked') : "";
+  const img = PHOTOS[p.id] ? `<img class="cu-img" src="Imagenes/Carta/${p.id}-sq.webp" width="240" height="240" alt="">` : "";
+  $("#custom-body").innerHTML = `<div class="cu-head">${img}<div><h2 id="cu-t">${esc(p.n)}</h2><p class="cu-price">${money(p.p)}</p></div>
+    <button class="icon-btn cu-close" type="button" data-cu-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span class="sr-only">${esc(t("close"))}</span></button></div>
+    <div class="cu-scroll">
+      <div class="cu-sec">${opts ? `<h3>${esc(t("cu_opts"))}</h3>${opts}` : ""}${sgHTML(!!cur.sg)}</div>
+      <fieldset class="cu-sec"><legend>${esc(t("cu_ing"))}</legend><p class="help help-before">${esc(t("cu_ing_help"))}</p>
+        <div class="chips">${p.ing.filter(k => !FIXED_ING.has(k)).map(k => `<label class="chip chip-ing"><input type="checkbox" checked data-ing="${k}"><span>${esc(cap(ING[k][lang]))}</span></label>`).join("")}</div></fieldset>
+      <div class="field cu-sec"><label for="cu-note"><span>${esc(t("cu_note"))}</span> <span class="opt">${esc(t("optional"))}</span></label>
+        <textarea class="input" id="cu-note" maxlength="140" rows="2" placeholder="${esc(t("cu_note_ph"))}"></textarea></div>
+    </div>
+    <div class="cu-foot"><button class="btn btn-gold btn-block" type="button" data-cu-add><span class="btn-t">${esc(t("cu_add"))} · ${money(p.p)}</span></button></div>`;
+  document.body.style.overflow = "hidden";
+  dlg.showModal();
+}
+function closeCustom(){
+  const dlg = $("#custom");
+  if (dlg?.open) dlg.close();
+}
+if ($("#custom")){
+  const dlg = $("#custom");
+  dlg.addEventListener("close", () => { document.body.style.overflow = ""; cuFrom?.focus(); });
+  // Tocar fuera del panel lo cierra
+  dlg.addEventListener("click", e => {
+    if (e.target === dlg) return closeCustom();
+    if (e.target.closest("[data-cu-close]")) return closeCustom();
+    if (!e.target.closest("[data-cu-add]")) return;
+    const o = readOpts($("#custom-body"));
+    const sin = $$("[data-ing]", dlg).filter(i => !i.checked).map(i => i.dataset.ing);
+    const nota = $("#cu-note").value.trim().replace(/\s+/g, " ");
+    if (sin.length) o.sin = sin;
+    if (nota) o.nota = nota;
+    addToCart(cuKey, o);
+    announce(itemInfo({k:cuKey, o}).name);
+    $$("[data-count]").forEach(b => { b.classList.remove("roll"); void b.offsetWidth; b.classList.add("roll"); });
+    closeCustom();
+  });
+}
+
 /* ================= Booking ================= */
 function setupBooking(){
   if (!$("#book-form")) return () => {};
@@ -807,6 +874,7 @@ applyLang(lang, true);
 /* Events */
 document.addEventListener("click", e => {
   const add = e.target.closest("[data-add]"); if (add) return onAdd(add);
+  const cu = e.target.closest("[data-custom]"); if (cu) return openCustom(cu);
   if (e.target.closest("[data-open-cart]")){ if (!count() && innerWidth <= 860 && e.target.closest(".bar")){ location.href = menuHref(); return; } return openCart(); }
   if (e.target.closest("[data-close-cart]")) return closeCart();
   const tab = e.target.closest(".tab"); if (tab){ e.preventDefault(); return selectCat(tab.dataset.cat, e.detail === 0); }
@@ -834,7 +902,7 @@ $("#cart-close").addEventListener("click", closeCart);
 document.addEventListener("change", e => {
   if (e.target.matches('select[data-opt="pizza"]')){ e.target.removeAttribute("aria-invalid"); $("#" + e.target.getAttribute("aria-describedby")).textContent = ""; }
   if (e.target.matches('[data-opt="bowl"]')) $("[data-pasta-price]").textContent = money(PASTA.p + (e.target.checked ? PASTA.bowl : 0));
-  if (e.target.matches('#panels [data-opt="pizza"], #panels [data-opt="pasta"], #panels [data-opt="sauce"]')) updateMeta(e.target.closest("[data-key]"));
+  if (e.target.matches('#panels [data-opt="pizza"], #panels [data-opt="pasta"], #panels [data-opt="sauce"], #panels [data-opt="sg"]')) updateMeta(e.target.closest("[data-key]"));
 });
 document.addEventListener("keydown", e => {
   if (e.key === "Escape"){ if ($("#drawer").classList.contains("is-open")) closeCart(); else toggleMenu(false); }

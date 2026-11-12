@@ -346,6 +346,53 @@ button{cursor:pointer;touch-action:manipulation}
   .dish-img{width:76px;height:76px;border-radius:16px}
   .dish-ico svg{width:46px;height:40px}
 }
+/* Pizzas en tarjetas: foto redonda sobre azul noche, opciones a la vista, Personalizar y Añadir */
+.pizza-cards{grid-template-columns:1fr;gap:16px;margin-top:16px}
+@media (min-width:640px){.pizza-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1024px){.pizza-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.pcard{display:flex;flex-direction:column;padding:0;border:0;border-radius:var(--r-l);background:var(--surface);overflow:hidden}
+.pc-media{display:grid;place-items:center;height:216px;overflow:hidden;background:radial-gradient(circle at 50% 42%,#2E3842,var(--ink) 72%)}
+.pc-img{width:176px;height:176px;border-radius:50%;object-fit:cover;box-shadow:0 16px 32px rgba(0,0,0,.45);transition:transform .7s var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.pcard:hover .pc-img{transform:rotate(10deg) scale(1.03)}}
+.pc-body{display:flex;flex-direction:column;flex:1;padding:20px 20px 22px}
+.pcard .dish-name{font-size:21px}
+.pcard .dish-price{font-size:20px}
+.pcard .dish-meta{margin-top:12px}
+.pc-opt{margin-top:14px}
+.pc-opt .seg{background:var(--bg)}
+.sg-check{margin:12px 0 0;min-height:40px}
+.pcard .sg-check{font-size:15px}
+.cu-sec .sg-check{margin-top:14px}
+.pc-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:auto;padding-top:18px}
+.btn-outline{border-color:var(--accent);color:var(--accent-ink);background:transparent;padding:0 14px}
+@media (hover:hover) and (pointer:fine){.btn-outline:hover{background:var(--accent);color:var(--on-accent)}}
+.pcard .add{width:auto;height:auto;min-height:52px;padding:0 14px;justify-content:center;border-color:var(--accent);background:var(--accent);color:var(--on-accent);font-size:16px}
+.pcard .add span{position:static;width:auto;height:auto;overflow:visible;clip:auto}
+@media (hover:hover) and (pointer:fine){.pcard .add:hover{background:var(--accent-ink);border-color:var(--accent-ink)}}
+.pcard .add.is-done{background:var(--ink);border-color:var(--ink)}
+
+/* Panel Personalizar: hoja desde abajo en el móvil, ventana centrada en el ordenador */
+.custom{width:min(520px,100%);max-height:min(88svh,760px);margin:auto;padding:0;border:0;border-radius:var(--r-l);background:var(--bg);color:var(--ink);box-shadow:0 24px 64px rgba(28,35,43,.3)}
+.custom::backdrop{background:rgba(28,35,43,.5)}
+.custom[open]{display:flex;flex-direction:column}
+.custom-body{display:flex;flex-direction:column;min-height:0;flex:1}
+.cu-head{display:flex;align-items:center;gap:16px;padding:20px 20px 16px;border-bottom:1px solid var(--line-soft)}
+.cu-head h2{margin:0;font-weight:600;font-size:24px;letter-spacing:-.02em;line-height:1.15}
+.cu-img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
+.cu-price{margin:2px 0 0;font-weight:600;color:var(--accent-ink)}
+.cu-close{margin-left:auto;flex:none}
+.cu-scroll{overflow-y:auto;overscroll-behavior:contain;padding:8px 20px 4px;flex:1}
+.cu-sec{margin:16px 0;border:0;padding:0}
+.cu-sec h3,.cu-sec legend{margin:0 0 10px;padding:0;font-weight:600;font-size:16px}
+.cu-sec .help-before{margin:-4px 0 12px}
+.chip-ing input:not(:checked) + span{color:var(--ink-dim);text-decoration:line-through;border-style:dashed}
+.cu-foot{padding:16px 20px calc(16px + env(safe-area-inset-bottom));border-top:1px solid var(--line-soft)}
+@media (max-width:640px){
+  .custom{width:100%;max-width:none;margin:auto 0 0;border-radius:var(--r-l) var(--r-l) 0 0}
+}
+.anim .custom[open]{animation:sheetIn .25s var(--ease-out)}
+@keyframes sheetIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
 /* Leyenda de iconos, dentro de "Alérgenos y sin gluten" */
 .al-legend{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px 18px;list-style:none;margin:16px 0 0;padding:0;font-size:14px}
 .al-legend li{display:flex;align-items:center;gap:10px}
@@ -385,7 +432,7 @@ button{cursor:pointer;touch-action:manipulation}
   .fchip svg{width:16px;height:16px}
 }
 /* Carta en mesa (?mesa, el QR de las mesas): solo la carta; el pedido se hace al camarero */
-.is-mesa main > :not(#carta),.is-mesa .foot-nav,.is-mesa .bar,.is-mesa .cart-btn,.is-mesa .nav-links,.is-mesa .menu-toggle,.is-mesa .mobile-menu,.is-mesa .add,.is-mesa .scrim,.is-mesa .drawer{display:none!important}
+.is-mesa .pc-actions,.is-mesa .custom,.is-mesa main > :not(#carta),.is-mesa .foot-nav,.is-mesa .bar,.is-mesa .cart-btn,.is-mesa .nav-links,.is-mesa .menu-toggle,.is-mesa .mobile-menu,.is-mesa .add,.is-mesa .scrim,.is-mesa .drawer{display:none!important}
 /* Páginas sin hero (carta, reservar, mesa): el contenido empieza bajo la barra superior fija */
 .page-top{padding-top:calc(var(--nav-h) + clamp(28px,5vw,64px))}
 .mesa-only{display:none}
