@@ -77,13 +77,21 @@ setTimeout(() => {
 MARKER = re.compile(r"(<!--pre:([a-z-]+)-->).*?(<!--/pre:\2-->)", re.S)
 
 
-def browser():
+def browsers():
+    """Navegadores instalados, en orden de preferencia."""
+    found = []
     for b in BROWSERS:
         if os.path.isabs(b) and os.path.exists(b):
-            return b
-        if not os.path.isabs(b) and which(b):
-            return which(b)
-    sys.exit("No encuentro Edge ni Chrome.")
+            found.append(b)
+        elif not os.path.isabs(b) and which(b):
+            found.append(which(b))
+    if not found:
+        sys.exit("No encuentro Edge ni Chrome.")
+    return found
+
+
+def browser():
+    return browsers()[0]
 
 
 def assemble(page, body, title, desc, opts):
@@ -121,15 +129,20 @@ def prerender(name, page_html):
         return page_html, []
     tmp = ROOT / f"_prerender_{name}"
     tmp.write_text(page_html.replace("</body>", EXTRACT % json.dumps(ids) + "</body>"), encoding="utf-8")
+    m = None
     try:
-        dom = subprocess.run(
-            # idioma fijo: la página elige el del navegador y el HTML base tiene que salir en castellano
-            [browser(), "--headless=new", "--disable-gpu", "--virtual-time-budget=4000", "--lang=es-ES", "--accept-lang=es-ES",
-             "--window-size=1440,900", "--dump-dom", tmp.as_uri()],
-            capture_output=True, text=True, encoding="utf-8", timeout=120).stdout
+        # Si un navegador no devuelve nada (a veces Edge en segundo plano), se prueba el siguiente
+        for exe in browsers():
+            dom = subprocess.run(
+                # idioma fijo: la página elige el del navegador y el HTML base tiene que salir en castellano
+                [exe, "--headless=new", "--disable-gpu", "--virtual-time-budget=4000", "--lang=es-ES", "--accept-lang=es-ES",
+                 "--window-size=1440,900", "--dump-dom", tmp.as_uri()],
+                capture_output=True, text=True, encoding="utf-8", timeout=120).stdout or ""
+            m = re.search(r'<pre id="__PRERENDER__">(.*?)</pre>', dom, re.S)
+            if m:
+                break
     finally:
         tmp.unlink(missing_ok=True)
-    m = re.search(r'<pre id="__PRERENDER__">(.*?)</pre>', dom, re.S)
     if not m:
         sys.exit(f"El navegador no devolvió el contenido de {name}.")
     parts = json.loads(html.unescape(m.group(1)))
