@@ -351,9 +351,9 @@ button{cursor:pointer;touch-action:manipulation}
 @media (min-width:640px){.pizza-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:1024px){.pizza-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .pcard{display:flex;flex-direction:column;padding:0;border:0;border-radius:var(--r-l);background:var(--surface);overflow:hidden}
-.pc-media{display:grid;place-items:center;height:216px;overflow:hidden;background:radial-gradient(circle at 50% 42%,#2E3842,var(--ink) 72%)}
-.pc-img{width:176px;height:176px;border-radius:50%;object-fit:cover;box-shadow:0 16px 32px rgba(0,0,0,.45);transition:transform .7s var(--ease-out)}
-@media (hover:hover) and (pointer:fine){.pcard:hover .pc-img{transform:rotate(10deg) scale(1.03)}}
+.pc-media{aspect-ratio:5/4;overflow:hidden;background:var(--surface-2)}
+.pc-img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.pcard:hover .pc-img{transform:scale(1.04)}}
 .pc-body{display:flex;flex-direction:column;flex:1;padding:20px 20px 22px}
 .pcard .dish-name{font-size:21px}
 .pcard .dish-price{font-size:20px}
@@ -371,27 +371,61 @@ button{cursor:pointer;touch-action:manipulation}
 @media (hover:hover) and (pointer:fine){.pcard .add:hover{background:var(--accent-ink);border-color:var(--accent-ink)}}
 .pcard .add.is-done{background:var(--ink);border-color:var(--ink)}
 
-/* Panel Personalizar: hoja desde abajo en el móvil, ventana centrada en el ordenador */
-.custom{width:min(520px,100%);max-height:min(88svh,760px);margin:auto;padding:0;border:0;border-radius:var(--r-l);background:var(--bg);color:var(--ink);box-shadow:0 24px 64px rgba(28,35,43,.3)}
-.custom::backdrop{background:rgba(28,35,43,.5)}
+/* Panel Personalizar: foto arriba, secciones, pie fijo con cantidad y precio.
+   Hoja desde abajo en el móvil, ventana centrada en el ordenador */
+.custom{width:min(560px,100%);max-height:min(90svh,820px);margin:auto;padding:0;border:0;border-radius:var(--r-l);background:var(--bg);color:var(--ink);overflow:hidden;box-shadow:0 24px 64px rgba(28,35,43,.3)}
+.custom::backdrop{background:rgba(28,35,43,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
 .custom[open]{display:flex;flex-direction:column}
 .custom-body{display:flex;flex-direction:column;min-height:0;flex:1}
-.cu-head{display:flex;align-items:center;gap:16px;padding:20px 20px 16px;border-bottom:1px solid var(--line-soft)}
-.cu-head h2{margin:0;font-weight:600;font-size:24px;letter-spacing:-.02em;line-height:1.15}
-.cu-img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
-.cu-price{margin:2px 0 0;font-weight:600;color:var(--accent-ink)}
-.cu-close{margin-left:auto;flex:none}
-.cu-scroll{overflow-y:auto;overscroll-behavior:contain;padding:8px 20px 4px;flex:1}
-.cu-sec{margin:16px 0;border:0;padding:0}
-.cu-sec h3,.cu-sec legend{margin:0 0 10px;padding:0;font-weight:600;font-size:16px}
-.cu-sec .help-before{margin:-4px 0 12px}
-.chip-ing input:not(:checked) + span{color:var(--ink-dim);text-decoration:line-through;border-style:dashed}
-.cu-foot{padding:16px 20px calc(16px + env(safe-area-inset-bottom));border-top:1px solid var(--line-soft)}
+.cu-hero{position:relative;flex:none;aspect-ratio:16/9;max-height:34svh;width:100%;background:var(--surface-2);overflow:hidden}
+.cu-img{width:100%;height:100%;object-fit:cover;display:block}
+.cu-close{position:absolute;top:14px;right:14px;display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:var(--ink);box-shadow:0 4px 14px rgba(28,35,43,.25)}
+.cu-close svg{width:20px;height:20px}
+@media (hover:hover) and (pointer:fine){.cu-close:hover{background:#fff}}
+.cu-scroll{overflow-y:auto;overscroll-behavior:contain;padding:20px 22px 8px;flex:1;min-height:0}
+.cu-title{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.cu-title h2{margin:0;font-weight:600;font-size:28px;letter-spacing:-.025em;line-height:1.1}
+.cu-price{font-weight:600;font-size:22px;color:var(--accent-ink);white-space:nowrap}
+.cu-desc{margin:6px 0 0;color:var(--ink-dim);font-size:15px}
+.cu-sec{margin:22px 0 0;padding:18px 0 0;border:0;border-top:1px solid var(--line-soft)}
+.cu-sec h3,.cu-sec legend,.cu-label{display:block;margin:0 0 12px;padding:0;font-weight:600;font-size:16px}
+fieldset.cu-sec legend{float:left;width:100%}
+fieldset.cu-sec legend + *{clear:both}
+.cu-label .opt{font-weight:400;color:var(--ink-dim)}
+.cu-help{margin:0 0 12px;font-size:14px;color:var(--ink-dim);clear:both}
+.seg-full{display:flex;width:100%;background:var(--surface)}
+.seg-full label{flex:1}
+.seg-full span{width:100%;justify-content:center;min-height:44px}
+.cu-ings{display:flex;flex-wrap:wrap;gap:8px}
+.cu-ing{position:relative}
+.cu-ing input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.cu-ing span{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px 0 12px;border-radius:999px;background:var(--ink);color:var(--paper);font-size:15px;transition:background-color .15s ease,color .15s ease}
+.cu-ing svg{width:16px;height:16px;flex:none}
+.cu-ing .ic-off{display:none}
+.cu-ing input:not(:checked) + span{background:var(--surface);color:var(--ink-dim);text-decoration:line-through}
+.cu-ing input:not(:checked) + span .ic-on{display:none}
+.cu-ing input:not(:checked) + span .ic-off{display:block;color:var(--accent)}
+.cu-ing input:focus-visible + span{outline:2px solid var(--accent-ink);outline-offset:2px}
+.custom textarea.input{min-height:76px}
+.cu-foot{flex:none;display:flex;align-items:center;gap:12px;padding:14px 22px calc(14px + env(safe-area-inset-bottom));border-top:1px solid var(--line-soft);background:var(--bg)}
+.cu-qty{display:flex;align-items:center;gap:4px;padding:4px;border-radius:999px;background:var(--surface)}
+.cu-qty .qty-btn{width:40px;height:40px;border:0;background:var(--bg)}
+.cu-qty .qty{min-width:26px;font-weight:600;font-size:17px}
+.cu-add{flex:1;min-width:0;min-height:52px;padding:0 16px;white-space:nowrap}
 @media (max-width:640px){
-  .custom{width:100%;max-width:none;margin:auto 0 0;border-radius:var(--r-l) var(--r-l) 0 0}
+  .custom{width:100%;max-width:none;max-height:94svh;margin:auto 0 0;border-radius:var(--r-l) var(--r-l) 0 0}
+  .cu-hero{aspect-ratio:16/10}
+  .cu-scroll{padding:18px 18px 8px}
+  .cu-foot{padding-inline:18px}
+  .cu-title h2{font-size:24px}
+  .cu-foot{gap:10px}
+  .cu-qty .qty-btn{width:36px;height:36px}
+  .cu-add{font-size:15px;padding:0 12px}
 }
-.anim .custom[open]{animation:sheetIn .25s var(--ease-out)}
-@keyframes sheetIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.anim .custom[open]{animation:sheetIn .3s var(--ease-out)}
+@media (max-width:640px){.anim .custom[open]{animation-name:sheetUp}}
+@keyframes sheetIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
 
 /* Leyenda de iconos, dentro de "Alérgenos y sin gluten" */
 .al-legend{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px 18px;list-style:none;margin:16px 0 0;padding:0;font-size:14px}

@@ -13,7 +13,7 @@ const STR = {
     formas_t:"Más allá de la pizza redonda",formas_sub:"La misma masa, en cuatro formas de la casa.",
     menu_t:"La carta",menu_a:"La ",menu_m:"carta",menu_b:"",book_a:"Reserva tu ",book_m:"mesa",book_b:"",menu_sub:"Añade lo que te apetezca y envíanos el pedido por WhatsApp. Lo tendrás listo para recoger en C/ Josep Carner 4.",
     c_pizzas:"Pizzas",c_especiales:"Especialidades",c_pasta:"Pasta fresca",c_ensaladas:"Ensaladas",c_tapas:"Tapas",c_postres:"Postres",
-    add:"Añadir",added:"Añadido",custom:"Personalizar",sg_dough:"Masa sin gluten",cu_opts:"Opciones",cu_ing:"Ingredientes",cu_ing_help:"Toca un ingrediente para quitarlo.",cu_note:"Nota para la cocina",cu_note_ph:"Por ejemplo: muy hecha, cortada en 8 trozos…",cu_add:"Añadir al pedido",cu_without:"sin",cu_added:"Añadido al pedido",base:"Base",opt_tomate:"Tomate",opt_nata:"Nata",opt_carne:"Carne",opt_pollo:"Pollo",opt_cocido:"Jamón cocido",opt_curado:"Jamón curado",meat:"Carne",ham:"Jamón",choose_pizza:"Elige tu pizza",
+    add:"Añadir",added:"Añadido",custom:"Personalizar",sg_dough:"Masa sin gluten",cu_dough:"Masa",dough_normal:"Normal",cu_qty:"Cantidad",cu_opts:"Opciones",cu_ing:"Ingredientes",cu_ing_help:"Toca un ingrediente para quitarlo.",cu_note:"Nota para la cocina",cu_note_ph:"Por ejemplo: muy hecha, cortada en 8 trozos…",cu_add:"Añadir al pedido",cu_without:"sin",cu_added:"Añadido al pedido",base:"Base",opt_tomate:"Tomate",opt_nata:"Nata",opt_carne:"Carne",opt_pollo:"Pollo",opt_cocido:"Jamón cocido",opt_curado:"Jamón curado",meat:"Carne",ham:"Jamón",choose_pizza:"Elige tu pizza",
     pasta_t:"Pasta fresca casera",pasta_desc:"Elige la pasta y la salsa. Si quieres, te la servimos dentro de un bol de masa de pizza.",pick_pasta:"Elige tu pasta",pick_sauce:"Elige tu salsa",bowl:"En bol de masa de pizza (+3 €)",
     tapas_note:"Todas las tapas a 7,50 €.",desserts:"Postres caseros del momento, preparados con producto fresco. Pregúntanos qué hay hoy.",salads_note:"Ensaladas a 11 €.",
     
@@ -41,7 +41,7 @@ const STR = {
     formas_t:"Més enllà de la pizza rodona",formas_sub:"La mateixa massa, en quatre formes de la casa.",
     menu_t:"La carta",menu_a:"La ",menu_m:"carta",menu_b:"",book_a:"Reserva la teva ",book_m:"taula",book_b:"",menu_sub:"Afegeix el que et vingui de gust i envia'ns la comanda per WhatsApp. La tindràs a punt per recollir al C/ Josep Carner 4.",
     c_pizzas:"Pizzes",c_especiales:"Especialitats",c_pasta:"Pasta fresca",c_ensaladas:"Amanides",c_tapas:"Tapes",c_postres:"Postres",
-    add:"Afegir",added:"Afegit",custom:"Personalitzar",sg_dough:"Massa sense gluten",cu_opts:"Opcions",cu_ing:"Ingredients",cu_ing_help:"Toca un ingredient per treure'l.",cu_note:"Nota per a la cuina",cu_note_ph:"Per exemple: ben feta, tallada en 8 trossos…",cu_add:"Afegir a la comanda",cu_without:"sense",cu_added:"Afegit a la comanda",base:"Base",opt_tomate:"Tomàquet",opt_nata:"Nata",opt_carne:"Carn",opt_pollo:"Pollastre",opt_cocido:"Pernil dolç",opt_curado:"Pernil curat",meat:"Carn",ham:"Pernil",choose_pizza:"Tria la teva pizza",
+    add:"Afegir",added:"Afegit",custom:"Personalitzar",sg_dough:"Massa sense gluten",cu_dough:"Massa",dough_normal:"Normal",cu_qty:"Quantitat",cu_opts:"Opcions",cu_ing:"Ingredients",cu_ing_help:"Toca un ingredient per treure'l.",cu_note:"Nota per a la cuina",cu_note_ph:"Per exemple: ben feta, tallada en 8 trossos…",cu_add:"Afegir a la comanda",cu_without:"sense",cu_added:"Afegit a la comanda",base:"Base",opt_tomate:"Tomàquet",opt_nata:"Nata",opt_carne:"Carn",opt_pollo:"Pollastre",opt_cocido:"Pernil dolç",opt_curado:"Pernil curat",meat:"Carn",ham:"Pernil",choose_pizza:"Tria la teva pizza",
     pasta_t:"Pasta fresca casolana",pasta_desc:"Tria la pasta i la salsa. Si vols, te la servim dins d'un bol de massa de pizza.",pick_pasta:"Tria la pasta",pick_sauce:"Tria la salsa",bowl:"En bol de massa de pizza (+3 €)",
     tapas_note:"Totes les tapes a 7,50 €.",desserts:"Postres casolanes del dia, fetes amb producte fresc. Pregunta'ns què hi ha avui.",salads_note:"Amanides a 11 €.",
     
@@ -69,7 +69,7 @@ const STR = {
     formas_t:"Beyond the round pizza",formas_sub:"The same dough, baked into four house shapes.",
     menu_t:"The menu",menu_a:"The ",menu_m:"menu",menu_b:"",book_a:"Book your ",book_m:"table",book_b:"",menu_sub:"Add what you fancy and send us the order on WhatsApp. It'll be ready to pick up at C/ Josep Carner 4.",
     c_pizzas:"Pizzas",c_especiales:"Specialities",c_pasta:"Fresh pasta",c_ensaladas:"Salads",c_tapas:"Tapas",c_postres:"Desserts",
-    add:"Add",added:"Added",custom:"Customise",sg_dough:"Gluten-free base",cu_opts:"Options",cu_ing:"Ingredients",cu_ing_help:"Tap an ingredient to leave it out.",cu_note:"Note for the kitchen",cu_note_ph:"For example: well done, cut into 8 slices…",cu_add:"Add to order",cu_without:"without",cu_added:"Added to your order",base:"Base",opt_tomate:"Tomato",opt_nata:"Cream",opt_carne:"Beef",opt_pollo:"Chicken",opt_cocido:"Cooked ham",opt_curado:"Cured ham",meat:"Meat",ham:"Ham",choose_pizza:"Choose your pizza",
+    add:"Add",added:"Added",custom:"Customise",sg_dough:"Gluten-free base",cu_dough:"Base",dough_normal:"Regular",cu_qty:"Quantity",cu_opts:"Options",cu_ing:"Ingredients",cu_ing_help:"Tap an ingredient to leave it out.",cu_note:"Note for the kitchen",cu_note_ph:"For example: well done, cut into 8 slices…",cu_add:"Add to order",cu_without:"without",cu_added:"Added to your order",base:"Base",opt_tomate:"Tomato",opt_nata:"Cream",opt_carne:"Beef",opt_pollo:"Chicken",opt_cocido:"Cooked ham",opt_curado:"Cured ham",meat:"Meat",ham:"Ham",choose_pizza:"Choose your pizza",
     pasta_t:"Homemade fresh pasta",pasta_desc:"Pick your pasta and sauce. We can also serve it inside a pizza-dough bowl.",pick_pasta:"Choose your pasta",pick_sauce:"Choose your sauce",bowl:"In a pizza-dough bowl (+€3)",
     tapas_note:"All tapas €7.50.",desserts:"Homemade desserts of the day, made with fresh produce. Ask us what's on today.",salads_note:"Salads €11.",
     
@@ -367,10 +367,11 @@ function dishHTML(key, name, price, desc, opt, photo){
 }
 /* Masa sin gluten: se puede pedir en cualquier pizza, sin coste */
 const sgHTML = on => `<label class="check sg-check"><input type="checkbox" data-opt="sg"${on ? " checked" : ""}><span>${esc(t("sg_dough"))}</span></label>`;
-/* Tarjeta de pizza: foto redonda sobre azul noche, opciones a la vista y dos botones */
+const cardImg = (id, cls, sizes, eager) => PHOTOS[id] ? `<img class="${cls}" src="Imagenes/Carta/${id}-card-480.webp" srcset="Imagenes/Carta/${id}-card-480.webp 480w, Imagenes/Carta/${id}-card-720.webp 720w" sizes="${sizes}" width="480" height="384" ${eager ? "" : 'loading="lazy" '}decoding="async" alt="">` : "";
+/* Tarjeta de pizza: foto a sangre arriba, opciones a la vista y dos botones */
 function pizzaCardHTML(p){
   const key = "pizza:" + p.id, uid = key.replace(/[^a-z0-9]/gi, "-");
-  const img = PHOTOS[p.id] ? `<img class="pc-img" src="Imagenes/Carta/${p.id}-sq.webp" width="240" height="240" loading="lazy" decoding="async" alt="">` : "";
+  const img = cardImg(p.id, "pc-img", "(max-width:639px) calc(100vw - 32px), (max-width:1023px) 46vw, 380px");
   return `<li class="dish pcard" data-key="${key}"><div class="pc-media" aria-hidden="true">${img}</div><div class="pc-body">
     <div class="dish-head"><h3 class="dish-name">${esc(p.n)}</h3><span class="dish-price">${money(p.p)}</span></div>
     <p class="dish-desc">${esc(ingText(p.ing))}</p>${metaBox(key)}${p.opt ? `<div class="pc-opt">${optsHTML(uid, p.opt)}</div>` : ""}${sgHTML(F.gf)}
@@ -564,16 +565,17 @@ function itemInfo(line, l=lang){
   if (o.nota) opts.push(`«${o.nota}»`);
   return {name, price, opts};
 }
-const lineKey = (k, o) => k + "|" + JSON.stringify(o);
+// Mismas opciones, misma línea, se elijan desde la tarjeta o desde Personalizar (el orden de las claves no cuenta)
+const lineKey = (k, o) => k + "|" + JSON.stringify(Object.fromEntries(Object.entries(o || {}).sort()));
 function announce(name){
   const el = $("#announce");
   el.textContent = "";
   setTimeout(() => { el.textContent = t("added_sr", {n:name, c:count()}); }, 60);
 }
-function addToCart(k, o){
+function addToCart(k, o, n = 1){
   const key = lineKey(k, o);
   const ex = cart.find(l => lineKey(l.k, l.o) === key);
-  if (ex) ex.q++; else cart.push({k, o, q:1});
+  if (ex) ex.q += n; else cart.push({k, o, q:n});
   save(); renderCart();
 }
 const count = () => cart.reduce((a,l) => a + l.q, 0);
@@ -728,27 +730,43 @@ function onAdd(btn){
 /* ================= Personalizar una pizza ================= */
 // Ingredientes que van con la opción elegida (tomate o nata, carne o pollo) no se quitan desde aquí
 const FIXED_ING = new Set(["tomnata", "picpollo"]);
-let cuKey = null, cuFrom = null;
+let cuKey = null, cuFrom = null, cuQty = 1, cuPrice = 0;
 function openCustom(btn){
   const dlg = $("#custom");
   if (!dlg?.showModal) return;
-  cuKey = btn.dataset.custom; cuFrom = btn;
+  cuKey = btn.dataset.custom; cuFrom = btn; cuQty = 1;
   const p = PIZZAS.find(x => "pizza:" + x.id === cuKey), card = btn.closest("[data-key]");
   const cur = readOpts(card);
-  const opts = p.opt ? optsHTML("cu", p.opt).replace(/ checked/g, "").replace(new RegExp(`value="(${Object.values(cur).join("|")})"`, "g"), 'value="$1" checked') : "";
-  const img = PHOTOS[p.id] ? `<img class="cu-img" src="Imagenes/Carta/${p.id}-sq.webp" width="240" height="240" alt="">` : "";
-  $("#custom-body").innerHTML = `<div class="cu-head">${img}<div><h2 id="cu-t">${esc(p.n)}</h2><p class="cu-price">${money(p.p)}</p></div>
-    <button class="icon-btn cu-close" type="button" data-cu-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span class="sr-only">${esc(t("close"))}</span></button></div>
+  cuPrice = p.p;
+  const opts = p.opt ? optsHTML("cu", p.opt).replace(/ checked/g, "").replace(new RegExp(`value="(${Object.values(cur).filter(v => typeof v === "string").join("|")})"`, "g"), 'value="$1" checked') : "";
+  const icOn = '<svg class="ic-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  const icOff = '<svg class="ic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>';
+  const dough = `<fieldset class="seg seg-full"><legend>${esc(t("cu_dough"))}</legend>` +
+    [["", t("dough_normal")], ["1", t("sg_dough")]].map(([v, n]) => `<label><input type="radio" name="cu-sg" value="${v}" data-opt="sg" ${(!!cur.sg) === (v === "1") ? "checked" : ""}><span>${esc(n)}</span></label>`).join("") + `</fieldset>`;
+  $("#custom-body").innerHTML = `
+    <div class="cu-hero">${cardImg(p.id, "cu-img", "(max-width:640px) 100vw, 560px", true)}
+      <button class="cu-close" type="button" data-cu-close><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span class="sr-only">${esc(t("close"))}</span></button></div>
     <div class="cu-scroll">
-      <div class="cu-sec">${opts ? `<h3>${esc(t("cu_opts"))}</h3>${opts}` : ""}${sgHTML(!!cur.sg)}</div>
-      <fieldset class="cu-sec"><legend>${esc(t("cu_ing"))}</legend><p class="help help-before">${esc(t("cu_ing_help"))}</p>
-        <div class="chips">${p.ing.filter(k => !FIXED_ING.has(k)).map(k => `<label class="chip chip-ing"><input type="checkbox" checked data-ing="${k}"><span>${esc(cap(ING[k][lang]))}</span></label>`).join("")}</div></fieldset>
-      <div class="field cu-sec"><label for="cu-note"><span>${esc(t("cu_note"))}</span> <span class="opt">${esc(t("optional"))}</span></label>
+      <div class="cu-title"><h2 id="cu-t">${esc(p.n)}</h2><span class="cu-price">${money(p.p)}</span></div>
+      <p class="cu-desc">${esc(ingText(p.ing))}</p>
+      <div class="cu-sec"><h3>${esc(t("cu_dough"))}</h3>${dough}</div>
+      ${opts ? `<div class="cu-sec"><h3>${esc(t("cu_opts"))}</h3>${opts.replace('class="seg"', 'class="seg seg-full"')}</div>` : ""}
+      <fieldset class="cu-sec"><legend>${esc(t("cu_ing"))}</legend><p class="cu-help">${esc(t("cu_ing_help"))}</p>
+        <div class="cu-ings">${p.ing.filter(k => !FIXED_ING.has(k)).map(k => `<label class="cu-ing"><input type="checkbox" checked data-ing="${k}"><span>${icOn}${icOff}${esc(cap(ING[k][lang]))}</span></label>`).join("")}</div></fieldset>
+      <div class="cu-sec"><label class="cu-label" for="cu-note">${esc(t("cu_note"))} <span class="opt">${esc(t("optional"))}</span></label>
         <textarea class="input" id="cu-note" maxlength="140" rows="2" placeholder="${esc(t("cu_note_ph"))}"></textarea></div>
     </div>
-    <div class="cu-foot"><button class="btn btn-gold btn-block" type="button" data-cu-add><span class="btn-t">${esc(t("cu_add"))} · ${money(p.p)}</span></button></div>`;
+    <div class="cu-foot">
+      <div class="cu-qty" role="group" aria-label="${esc(t("cu_qty"))}">
+        <button class="qty-btn" type="button" data-cu-qty="-1" aria-label="${esc(t("less"))}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg></button>
+        <span class="qty" data-cu-n aria-live="polite">1</span>
+        <button class="qty-btn" type="button" data-cu-qty="1" aria-label="${esc(t("more"))}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 6v12M6 12h12"/></svg></button>
+      </div>
+      <button class="btn btn-gold cu-add" type="button" data-cu-add><span class="btn-t">${esc(t("cu_add"))} · <span data-cu-total>${money(p.p)}</span></span></button>
+    </div>`;
   document.body.style.overflow = "hidden";
   dlg.showModal();
+  $(".cu-scroll", dlg).scrollTop = 0;
 }
 function closeCustom(){
   const dlg = $("#custom");
@@ -761,13 +779,21 @@ if ($("#custom")){
   dlg.addEventListener("click", e => {
     if (e.target === dlg) return closeCustom();
     if (e.target.closest("[data-cu-close]")) return closeCustom();
+    const qb = e.target.closest("[data-cu-qty]");
+    if (qb){
+      cuQty = Math.min(20, Math.max(1, cuQty + +qb.dataset.cuQty));
+      $("[data-cu-n]", dlg).textContent = cuQty;
+      $("[data-cu-total]", dlg).textContent = money(cuPrice * cuQty);
+      return;
+    }
     if (!e.target.closest("[data-cu-add]")) return;
     const o = readOpts($("#custom-body"));
+    if (o.sg) o.sg = true; else delete o.sg;
     const sin = $$("[data-ing]", dlg).filter(i => !i.checked).map(i => i.dataset.ing);
     const nota = $("#cu-note").value.trim().replace(/\s+/g, " ");
     if (sin.length) o.sin = sin;
     if (nota) o.nota = nota;
-    addToCart(cuKey, o);
+    addToCart(cuKey, o, cuQty);
     announce(itemInfo({k:cuKey, o}).name);
     $$("[data-count]").forEach(b => { b.classList.remove("roll"); void b.offsetWidth; b.classList.add("roll"); });
     closeCustom();
