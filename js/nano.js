@@ -25,7 +25,7 @@ const STR = {
     book_submit:"Enviar reserva por WhatsApp",book_ok:"Hemos abierto WhatsApp con tu reserva. Envía el mensaje y te confirmamos la mesa.",
     err_name:"Escribe tu nombre.",err_phone:"Escribe un teléfono de al menos 9 cifras para poder confirmarte.",err_date:"Elige una fecha a partir de hoy.",err_time:"Elige una hora.",
     find_t:"Dónde estamos",directions:"Cómo llegar",hours_t:"Horario",closed:"Cerrado",today_tag:"Hoy",
-    d_mt:"Lunes a jueves",d_fs:"Viernes y sábado",d_su:"Domingo",
+    d_mt:"Martes a jueves",d_fs:"Viernes y sábado",d_su:"Domingo y lunes",
     cart_t:"Tu pedido",close:"Cerrar",empty_t:"Tu pedido está vacío",empty_p:"Añade lo que te apetezca desde la carta.",see_in_menu:"Elegir en la carta",see_menu:"Ver la carta",
     pickup_where:"Para recoger en C/ Josep Carner 4, Reus.",pickup_time:"Hora de recogida",asap:"Lo antes posible",total:"Total",cart_send:"Enviar pedido por WhatsApp",
     closed_pickup:"Ahora estamos cerrados: elige una hora de la próxima apertura.",cart_ok:"Hemos abierto WhatsApp con tu pedido. Envíalo y te confirmamos la hora de recogida.",
@@ -55,7 +55,7 @@ const STR = {
     book_submit:"Enviar reserva per WhatsApp",book_ok:"Hem obert WhatsApp amb la reserva. Envia el missatge i et confirmem la taula.",
     err_name:"Escriu el teu nom.",err_phone:"Escriu un telèfon d'almenys 9 xifres perquè et puguem confirmar.",err_date:"Tria una data a partir d'avui.",err_time:"Tria una hora.",
     find_t:"On som",directions:"Com arribar-hi",hours_t:"Horari",closed:"Tancat",today_tag:"Avui",
-    d_mt:"Dilluns a dijous",d_fs:"Divendres i dissabte",d_su:"Diumenge",
+    d_mt:"Dimarts a dijous",d_fs:"Divendres i dissabte",d_su:"Diumenge i dilluns",
     cart_t:"La teva comanda",close:"Tancar",empty_t:"La comanda és buida",empty_p:"Afegeix el que et vingui de gust des de la carta.",see_in_menu:"Triar a la carta",see_menu:"Veure la carta",
     pickup_where:"Per recollir al C/ Josep Carner 4, Reus.",pickup_time:"Hora de recollida",asap:"Com més aviat millor",total:"Total",cart_send:"Enviar comanda per WhatsApp",
     closed_pickup:"Ara som tancats: tria una hora de la propera obertura.",cart_ok:"Hem obert WhatsApp amb la comanda. Envia-la i et confirmem l'hora de recollida.",
@@ -85,7 +85,7 @@ const STR = {
     book_submit:"Send booking via WhatsApp",book_ok:"WhatsApp is open with your booking. Send the message and we'll confirm your table.",
     err_name:"Enter your name.",err_phone:"Enter a phone number of at least 9 digits so we can confirm.",err_date:"Choose a date from today onwards.",err_time:"Choose a time.",
     find_t:"Find us",directions:"Get directions",hours_t:"Opening hours",closed:"Closed",today_tag:"Today",
-    d_mt:"Monday to Thursday",d_fs:"Friday and Saturday",d_su:"Sunday",
+    d_mt:"Tuesday to Thursday",d_fs:"Friday and Saturday",d_su:"Sunday and Monday",
     cart_t:"Your order",close:"Close",empty_t:"Your order is empty",empty_p:"Add what you fancy from the menu.",see_in_menu:"Choose it on the menu",see_menu:"See the menu",
     pickup_where:"For pickup at C/ Josep Carner 4, Reus.",pickup_time:"Pickup time",asap:"As soon as possible",total:"Total",cart_send:"Send order via WhatsApp",
     closed_pickup:"We're closed right now: choose a time from our next opening.",cart_ok:"WhatsApp is open with your order. Send it and we'll confirm the pickup time.",
@@ -231,8 +231,8 @@ const DIET = {
   "sauce:pesto":{al:"lacteos frutos",veg:1}, "sauce:bolonesa":{al:"apio"}, "sauce:carbonara":{al:"huevo lacteos"}, "sauce:gorgonzola":{al:"lacteos",veg:1}, "sauce:tresquesos":{al:"lacteos",veg:1}
 };
 
-/* Hours: 0=Sun … 6=Sat. Domingo no figura en la carta: se asume cerrado. */
-const HOURS = {0:[],1:[["12:30","15:30"],["19:30","22:30"]],2:[["12:30","15:30"],["19:30","22:30"]],3:[["12:30","15:30"],["19:30","22:30"]],4:[["12:30","15:30"],["19:30","22:30"]],5:[["12:30","15:30"],["19:30","23:30"]],6:[["12:30","15:30"],["19:30","23:30"]]};
+/* Hours: 0=Sun … 6=Sat. Domingo y lunes, cerrado. */
+const HOURS = {0:[],1:[],2:[["12:30","15:30"],["19:30","22:30"]],3:[["12:30","15:30"],["19:30","22:30"]],4:[["12:30","15:30"],["19:30","22:30"]],5:[["12:30","15:30"],["19:30","23:30"]],6:[["12:30","15:30"],["19:30","23:30"]]};
 const toMin = s => { const [h,m] = s.split(":").map(Number); return h*60+m; };
 const fromMin = m => String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");
 
@@ -277,7 +277,7 @@ function renderStatus(){
 }
 function renderHours(){
   const d = new Date().getDay();
-  const rows = [["d_mt",[1,2,3,4],HOURS[1]],["d_fs",[5,6],HOURS[5]],["d_su",[0],[]]];
+  const rows = [["d_mt",[2,3,4],HOURS[2]],["d_fs",[5,6],HOURS[5]],["d_su",[0,1],[]]];
   const hours = $("#hours");
   if (hours) hours.innerHTML = `<caption>${esc(t("hours_t"))}</caption><tbody>` + rows.map(([k,days,h]) => {
     const isT = days.includes(d);
