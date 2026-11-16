@@ -476,7 +476,7 @@ fieldset.cu-sec legend + *{clear:both}
   .fchip svg{width:16px;height:16px}
 }
 /* Carta en mesa (?mesa, el QR de las mesas): solo la carta; el pedido se hace al camarero */
-.is-mesa .pc-actions,.is-mesa .custom,.is-mesa main > :not(#carta),.is-mesa .foot-nav,.is-mesa .bar,.is-mesa .cart-btn,.is-mesa .nav-links,.is-mesa .menu-toggle,.is-mesa .mobile-menu,.is-mesa .add,.is-mesa .scrim,.is-mesa .drawer{display:none!important}
+.is-mesa .pc-actions,.is-mesa .custom,.is-mesa main > :not(#carta):not(.page-hero),.is-mesa .foot-nav,.is-mesa .bar,.is-mesa .cart-btn,.is-mesa .nav-links,.is-mesa .menu-toggle,.is-mesa .mobile-menu,.is-mesa .add,.is-mesa .scrim,.is-mesa .drawer{display:none!important}
 /* Páginas sin hero (carta, reservar, mesa): el contenido empieza bajo la barra superior fija */
 .page-top{padding-top:calc(var(--nav-h) + clamp(28px,5vw,64px))}
 .mesa-only{display:none}
@@ -976,3 +976,92 @@ button.how-step:focus-visible{outline:2px solid var(--accent-ink);outline-offset
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* Titular del hero legible sobre la llama: velo oscuro detrás del texto (izquierda y centro) y sombra suave en las letras */
+.hero-bg::after{background:
+  linear-gradient(90deg,rgba(28,35,43,.62) 0%,rgba(28,35,43,.42) 45%,rgba(28,35,43,.12) 75%,rgba(28,35,43,0) 100%),
+  linear-gradient(180deg,rgba(28,35,43,.5) 0%,rgba(28,35,43,.12) 28%,rgba(28,35,43,.32) 55%,rgba(28,35,43,.88) 100%)}
+.hero-t{text-shadow:0 2px 28px rgba(0,0,0,.38),0 1px 3px rgba(0,0,0,.28)}
+@media (max-width:640px){.hero-bg::after{background:linear-gradient(180deg,rgba(28,35,43,.55) 0%,rgba(28,35,43,.38) 30%,rgba(28,35,43,.5) 55%,rgba(28,35,43,.9) 100%)}}
+
+/* Fondo del hero animado: la foto se acerca y se desplaza muy despacio, la llama late y suben chispas.
+   Solo transform y opacity (no repintan); todo se para con prefers-reduced-motion. */
+.anim .hero-bg{animation:drift 26s ease-in-out 1.8s infinite alternate;will-change:transform}
+@keyframes drift{from{transform:none}to{transform:scale(1.09) translate3d(1.6%,-1.2%,0)}}
+.hero-glow{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 45% 55% at 24% 34%,rgba(255,140,40,.34),rgba(255,110,20,.12) 45%,rgba(255,100,0,0) 70%);opacity:.55}
+.anim .hero-glow{animation:flicker 4.2s steps(1,end) infinite}
+@keyframes flicker{0%{opacity:.55}9%{opacity:.8}17%{opacity:.6}26%{opacity:.95}34%{opacity:.7}47%{opacity:.85}58%{opacity:.5}66%{opacity:.9}78%{opacity:.65}88%{opacity:1}}
+.hero-bg::after{z-index:2}
+.hero-sparks{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+.hero-sparks i{position:absolute;bottom:-12px;width:4px;height:4px;border-radius:50%;background:#FFC27A;box-shadow:0 0 8px 2px rgba(255,150,50,.7);opacity:0}
+.anim .hero-sparks i{animation:spark 7s linear infinite}
+.hero-sparks i:nth-child(1){left:8%;animation-delay:.2s;animation-duration:6.5s}
+.hero-sparks i:nth-child(2){left:16%;animation-delay:2.4s;animation-duration:8s}
+.hero-sparks i:nth-child(3){left:22%;animation-delay:4.1s;animation-duration:7s;width:3px;height:3px}
+.hero-sparks i:nth-child(4){left:29%;animation-delay:1.1s;animation-duration:9s}
+.hero-sparks i:nth-child(5){left:35%;animation-delay:5.6s;animation-duration:6.8s;width:3px;height:3px}
+.hero-sparks i:nth-child(6){left:41%;animation-delay:3.2s;animation-duration:8.4s}
+.hero-sparks i:nth-child(7){left:12%;animation-delay:6.3s;animation-duration:7.6s;width:3px;height:3px}
+.hero-sparks i:nth-child(8){left:52%;animation-delay:1.8s;animation-duration:9.5s}
+.hero-sparks i:nth-child(9){left:60%;animation-delay:4.8s;animation-duration:7.2s;width:3px;height:3px}
+.hero-sparks i:nth-child(10){left:70%;animation-delay:.9s;animation-duration:8.8s}
+.hero-sparks i:nth-child(11){left:80%;animation-delay:3.7s;animation-duration:7.9s;width:3px;height:3px}
+.hero-sparks i:nth-child(12){left:90%;animation-delay:5.1s;animation-duration:9.2s}
+@keyframes spark{0%{transform:translate3d(0,0,0);opacity:0}10%{opacity:.95}50%{transform:translate3d(18px,-45vh,0);opacity:.75}100%{transform:translate3d(-14px,-95vh,0);opacity:0}}
+@media (max-width:640px){.hero-sparks i:nth-child(n+9){display:none}}
+.hero-glow{will-change:opacity}.hero-sparks i{will-change:transform,opacity}
+
+/* ===== Revisión de diseño (noviembre) ===== */
+/* Pantallas grandes: la página aprovecha el ancho y la carta enseña 4 pizzas por fila */
+@media (min-width:1600px){
+  :root{--maxw:1380px}
+  .pizza-cards{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+
+/* Cabecera con foto en carta y reservas: el título sobre el horno, con velo oscuro para que se lea */
+.page-hero{position:relative;z-index:2;isolation:isolate;overflow:hidden;background:var(--ink);color:#fff;padding-top:calc(var(--nav-h) + var(--tb) + clamp(40px,7vw,96px));padding-bottom:clamp(36px,6vw,80px)}
+.page-hero-bg{position:absolute;inset:0;z-index:-1}
+.page-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.page-hero-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(28,35,43,.86) 0%,rgba(28,35,43,.66) 42%,rgba(28,35,43,.3) 78%,rgba(28,35,43,.16) 100%),
+  linear-gradient(180deg,rgba(28,35,43,.55) 0%,rgba(28,35,43,.1) 45%,rgba(28,35,43,.55) 100%)}
+.page-hero .h-big{text-shadow:0 2px 28px rgba(0,0,0,.4)}
+.page-hero .mk{--mk-t:#F2D3AE;text-shadow:0 2px 16px rgba(0,0,0,.45)}
+.page-hero .lede{color:rgba(255,255,255,.9);max-width:48ch}
+.section.after-hero{padding-top:clamp(28px,4vw,56px)}
+.anim .page-hero-bg img{animation:settle 1.6s var(--ease-out) both}
+@media (max-width:640px){
+  .page-hero{padding-top:calc(var(--nav-h) + var(--tb) + 26px);padding-bottom:22px}
+  .page-hero .lede{font-size:15.5px;margin-top:10px}
+  .page-hero-bg::after{background:linear-gradient(180deg,rgba(28,35,43,.72) 0%,rgba(28,35,43,.6) 100%)}
+  .section.after-hero{padding-top:20px}
+  .is-mesa .page-hero{padding-bottom:18px}
+}
+
+/* Banda final: la pizza junto a las brasas detrás de la pregunta */
+.hungry{overflow:hidden}
+.hungry-bg{position:absolute;inset:0;z-index:-2}
+.hungry-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.hungry-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 50%,rgba(28,35,43,.74),rgba(28,35,43,.5) 60%,rgba(28,35,43,.72) 100%)}
+.hungry .h-big{text-shadow:0 2px 30px rgba(0,0,0,.5)}
+
+/* Preguntas frecuentes: título a la izquierda y preguntas a la derecha en el ordenador */
+@media (min-width:961px){
+  .faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,6vw,96px);align-items:start}
+  .faq-grid .section-head{margin:0;position:sticky;top:calc(var(--nav-h) + 40px)}
+  .faq-grid .faq{max-width:none;margin:0}
+}
+.faq-item summary{transition:background-color .2s var(--ease-out)}
+@media (hover:hover){.faq-item:not([open]) summary:hover{background:var(--surface-2);border-radius:var(--r-m)}}
+
+/* Lo esencial: recuadros con fondo cálido en vez de solo borde */
+.ess-i{border:0;background:var(--surface);padding:22px 22px 24px}
+.ess-i h3{font-size:13.5px;letter-spacing:.01em;margin-bottom:8px}
+.ess-i p{font-size:16px}
+
+/* Postres: banda oscura a todo el ancho */
+.desserts{max-width:none;background:var(--ink);color:#fff;padding:clamp(28px,5vw,64px)}
+.desserts span{background:rgba(184,141,98,.5)}
+
+/* Contraste de la etiqueta «Por WhatsApp» */
+.rc-pill{color:#0B2A17}

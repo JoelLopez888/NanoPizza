@@ -1190,7 +1190,7 @@ function applyLang(l, initial){
 
 /* ================= Init ================= */
 refillTimes = setupBooking();
-if (MESA) $("#carta .lede").dataset.i18n = "menu_sub_mesa";
+if (MESA) $(".page-hero .lede").dataset.i18n = "menu_sub_mesa";
 applyLang(lang, true);
 
 /* Enlace directo a la carta (QR de mesa, redes): ?carta o #carta abren la página ya en la carta,

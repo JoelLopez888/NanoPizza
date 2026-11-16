@@ -12,6 +12,7 @@ Uso (desde la carpeta del proyecto):  python scripts/build.py
 Vuelve a ejecutarlo cada vez que cambies algo en src/, la carta o los textos del JavaScript.
 Necesita Microsoft Edge o Google Chrome instalado.
 """
+import hashlib
 import html
 import json
 import os
@@ -132,6 +133,10 @@ def assemble(page, body, title, desc, opts):
                  .replace("{{page}}", page)
                  .replace("{{title}}", html.escape(title))
                  .replace("{{description}}", html.escape(desc)))
+    # Versión en la dirección del CSS y del JS: si cambian, el navegador no usa la copia guardada
+    for asset in ("css/nano.css", "js/nano.js"):
+        v = hashlib.md5((ROOT / asset).read_bytes()).hexdigest()[:8]
+        out = out.replace(f'"{asset}"', f'"{asset}?v={v}"')
     # Página actual marcada en el menú (escritorio y móvil)
     out = out.replace(f'data-nav="{page}"', f'data-nav="{page}" aria-current="page"')
     left = re.findall(r"\{\{[a-z_]+\}\}", out)
