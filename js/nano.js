@@ -375,12 +375,12 @@ function dishHTML(key, name, price, desc, opt, photo){
 }
 /* Masa sin gluten: se puede pedir en cualquier pizza, sin coste */
 const sgHTML = on => `<label class="check sg-check"><input type="checkbox" data-opt="sg"${on ? " checked" : ""}><span>${esc(t("sg_dough"))}</span></label>`;
-const cardImg = (id, cls, sizes, eager) => PHOTOS[id] ? `<img class="${cls}" src="Imagenes/Carta/${id}-card-480.webp" srcset="Imagenes/Carta/${id}-card-480.webp 480w, Imagenes/Carta/${id}-card-720.webp 720w" sizes="${sizes}" width="480" height="384" ${eager ? (eager === "high" ? 'fetchpriority="high" ' : "") : 'loading="lazy" '}decoding="async" alt="">` : "";
+const cardImg = (id, cls, sizes, eager) => PHOTOS[id] ? `<img class="${cls}" src="Imagenes/Carta/${id}-card-480.webp" srcset="Imagenes/Carta/${id}-card-320.webp 320w, Imagenes/Carta/${id}-card-480.webp 480w, Imagenes/Carta/${id}-card-720.webp 720w" sizes="${sizes}" width="480" height="384" ${eager ? (eager === "high" ? 'fetchpriority="high" ' : "") : 'loading="lazy" '}decoding="async" alt="">` : "";
 /* Tarjeta de pizza: foto a sangre arriba, opciones a la vista y dos botones */
 function pizzaCardHTML(p, i){
   const key = "pizza:" + p.id, uid = key.replace(/[^a-z0-9]/gi, "-");
   // La primera foto es lo más grande al abrir la carta: se pide antes que el resto
-  const img = cardImg(p.id, "pc-img", "(max-width:1023px) 46vw, 380px", i === 0 ? "high" : i < 3);
+  const img = cardImg(p.id, "pc-img", "(max-width:639px) 46vw, (max-width:1023px) 46vw, 380px", i === 0 ? "high" : i < 3);
   return `<li class="dish pcard" data-key="${key}"><div class="pc-media" aria-hidden="true">${img}</div><div class="pc-body">
     <div class="dish-head"><h3 class="dish-name">${esc(p.n)}</h3><span class="dish-price">${money(p.p)}</span></div>
     <p class="dish-desc">${esc(ingText(p.ing))}</p>${metaBox(key)}${p.opt ? `<div class="pc-opt">${optsHTML(uid, p.opt)}</div>` : ""}${sgHTML(F.gf)}

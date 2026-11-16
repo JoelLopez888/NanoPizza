@@ -22,6 +22,8 @@ from pathlib import Path
 from shutil import which
 
 ROOT = Path(__file__).resolve().parent.parent
+# Dirección pública de la web (p. ej. "https://nanopizza.es"). Vacía: no se generan canónicas ni sitemap
+SITE_URL = ""
 SRC = ROOT / "src"
 
 # Direcciones de la antigua web de una sola página (?carta, ?mesa, #carta, #reservar) -> su página nueva
@@ -94,6 +96,28 @@ def browser():
     return browsers()[0]
 
 
+def page_url(page):
+    return SITE_URL.rstrip("/") + "/" + ("" if page == "inicio" else f"{page}.html")
+
+
+def seo_extra(page, opts):
+    """Canónica y og:url (solo con dominio y en páginas indexables)."""
+    if not SITE_URL or opts.get("robots"):
+        return ""
+    u = page_url(page)
+    return f'\n<link rel="canonical" href="{u}">\n<meta property="og:url" content="{u}">'
+
+
+def write_seo_files():
+    lines = ["User-agent: *", "Allow: /"]
+    if SITE_URL:
+        lines.append(f"Sitemap: {SITE_URL.rstrip('/')}/sitemap.xml")
+        urls = [page_url(p) for _, p, _, _, _, o in PAGES if not o.get("robots")]
+        (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            + "".join(f"  <url><loc>{u}</loc></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
+    (ROOT / "robots.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def assemble(page, body, title, desc, opts):
     layout = (SRC / "layout.html").read_text(encoding="utf-8")
     main = (SRC / "pages" / body).read_text(encoding="utf-8").rstrip("\n")
@@ -103,6 +127,7 @@ def assemble(page, body, title, desc, opts):
                  .replace("{{jsonld}}", jsonld)
                  .replace("{{head_extra}}", opts.get("head_extra", ""))
                  .replace("{{robots}}", opts.get("robots", ""))
+                 .replace("{{seo_extra}}", seo_extra(page, opts))
                  .replace("{{html_class}}", opts.get("html_class", ""))
                  .replace("{{page}}", page)
                  .replace("{{title}}", html.escape(title))
@@ -151,6 +176,7 @@ def prerender(name, page_html):
 
 
 def main():
+    write_seo_files()
     for out, page, body, title, desc, opts in PAGES:
         page_html, done = prerender(out, assemble(page, body, title, desc, opts))
         (ROOT / out).write_text(page_html, encoding="utf-8")
