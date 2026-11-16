@@ -69,12 +69,13 @@ button{cursor:pointer;touch-action:manipulation}
 .section-head-center{text-align:center}
 .section-head-center .sample-note{margin-inline:auto;text-align:left}
 /* Palabra marcada: un bloque de color detrás, como un rotulador */
-.mk{position:relative;display:inline-block;padding:0 .06em 0 0;margin:0;background:none;color:var(--mk-t);font-family:var(--ff-accent);font-style:italic;font-weight:500;font-size:1.06em;letter-spacing:-.015em;line-height:.9;white-space:nowrap;transition:color .3s ease .35s}
+.mk{position:relative;display:inline-block;padding:0 .06em 0 0;margin:0;background:none;color:var(--mk-t);font-family:var(--ff-accent);font-style:italic;font-weight:600;font-optical-sizing:none;font-variation-settings:"opsz" 14;font-size:1.06em;letter-spacing:-.01em;line-height:.9;white-space:nowrap;transition:color .3s ease .35s}
 .mk::before{content:"";position:absolute;left:.04em;right:.08em;bottom:-.02em;height:.045em;min-height:2px;border-radius:2px;background:currentColor;opacity:.35;transform-origin:0 50%;transition:transform .9s var(--ease-out) .25s}
 .mk-red{--mk-t:var(--accent)}
 .mk-bronze{--mk-t:var(--bronze-ink)}
 .mk-navy{--mk-t:var(--ink)}
-.hero .mk,.hungry .mk{--mk-t:var(--bronze-lt)}
+.hero .mk,.hungry .mk{--mk-t:#F2D3AE}
+.hero .mk{text-shadow:0 2px 16px rgba(0,0,0,.45)}
 
 /* ---------- Buttons ---------- */
 /* Píldoras; al pasar el ratón el texto sube y entra una copia desde abajo */
